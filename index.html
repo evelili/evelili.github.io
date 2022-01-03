@@ -1,60 +1,167 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
+        <title>evelili</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>evelili</title>
-		<link rel="stylesheet" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-		
-	</head>
-	
-	<body style="background-color: #212121">
-		<header>
-			<nav>
-				<a href="#contact"><img class="contain" src="blue solo.png" alt="contact logo">contact</a>
-				<a href="#projects"><img class="contain" src="green solo.png" alt="projects logo">projects</a>
-				<a href="#portfolio"><img class="contain" src="yellow solo.png" alt="portfolio logo">portfolio</a>
-				<a href="#about"><img class="contain" src="red solo.png" alt="about logo">about</a>
-				<a href="#home">
-					<img class="contain-logo" src="base.png" onmouseover="this.src='base hover.png'" onmouseout="this.src='base.png'" alt="home logo">
-					<img class="contain-red" src="red.png" onmouseover="this.src='red hover.png'" onmouseout="this.src='red.png'" alt="red logo">
-					<img class="contain-yellow" src="yellow.png" onmouseover="this.src='yellow hover.png'" onmouseout="this.src='yellow.png'" alt="yellow logo">
-					<img class="contain-green" src="green.png" onmouseover="this.src='green hover.png'" onmouseout="this.src='green.png'" alt="green logo">
-					<img class="contain-blue" src="blue.png" onmouseover="this.src='blue hover.png'" onmouseout="this.src='blue.png'" alt="blue logo">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer src="scripts.js"></script>
+    </head>
+
+    <body>
+        <!-- main page of the website -->
+        <header>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
+            <nav id="navbar">
+                <a class="headlink" href="#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
+				<a class="headlink" href="#projects-data"><img class="contain" src="green.svg" alt="green triangle">projects</a>
+				<a class="headlink" href="#portfolio-data"><img class="contain" src="yellow.svg" alt="yellow triangle">portfolio</a>
+				<a id="heightcheck" class="headlink" href="#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
+				<a id="hlogo" href="#home-data" class="active headlink">
+					<img id="logo1" src="main logo.svg" alt="two interlocking white triangles">
+					<img id="logo2" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
+					<img id="logo3" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
+					<img id="logo4" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
+					<img id="logo5" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
 				</a>
-			</nav>
-		</header>
-		<div class="main">
-			<span class="anchor" id="home"></span>
-			<section id="home-data">
-				<h1>evelili</h1>
-				<h3>by Lydia Choong</h3>
-			</section>
-			<span class="anchor" id="about"></span>
-			<section id="about-data" style="background: #212121; color: #f2f2f2;">
-				<img class="section-pic" src="about pic.png" alt="about pic">
-				<h2>I'm Lili</h2>
-				<p>I'm a computer science student who's passionate about games.</p>
-				<p>This website is a home for all of my works. Please treat them with care.</p>
-			</section>
-			<span class="anchor" id="portfolio"></span>
-			<section id="portfolio-data" style="background: #212121; color: #f2f2f2;">
-				<h2>portfolio</h2>
-			</section>
-			<span class="anchor" id="projects"></span>
-			<section id="projects-data" style="background: #212121; color: #f2f2f2;">
-				<h2>projects</h2>
-			</section>
-			<span class="anchor" id="contact"></span>
-			<section id="contact-data" style="background: #212121; color: #f2f2f2;">
-				<h2>contact</h2>
-			</section>
-		</div>
-		<footer>
-		
-		</footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="scripts.js"></script>
-	</body>
+            </nav>
+        </header>
+
+        <div id="main" class="main">
+            <!-- main div of homepage with 5 sections -->
+            <span class="anchor" id="home"></span>
+            <section id="home-data">
+                    <h1>evelili</h1>
+                    <p class="main-subtitle">by lydia choong</p>
+            </section>
+
+            <span class="anchor" id="about"></span>
+            <section id="about-data">
+                <div id="about-header" class="head-icon">
+                    <img src="red.svg" alt="a red triangle">
+                    <h2>about</h2>
+                </div>
+                
+                <p>I'm a computer science student who's passionate about games and design.<br><br>
+
+                    Good design is inherently accessible. Accessible design is good design. I strive to be a conscious designer and consider user experience from the very start of the design process. Conducting user interviews is one of my favourite parts of designing—I love sitting down with an actual person to hear their thoughts, good and bad alike. Everything can be improved on, always.<br><br>
+
+                    In my free time, I like to draw, cosplay, 3D model and print swords, and play a little too much TFT.<br><br>
+
+                    This website is a home for some works I'm proud of, divided into two sections: <span class="yellow-text">portfolio</span> for art and <span class="green-text">projects</span> for design, games, and anything else. I hope you enjoy.
+                </p>
+            </section>
+
+            <span class="anchor" id="portfolio"></span>
+            <section id="portfolio-data">
+                
+                <div id="portfolio-header" class="head-icon">
+                    <img src="yellow.svg" alt="a yellow triangle">
+                    <h2>portfolio</h2>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="huevember.html"><img src="huevember/16.png" alt="purple drawing of girl"></a>
+                        </div>
+                        <h3>huevember</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="kdarpg.html"><img src="kda rpg/kda rpg title card.png" alt="drawing of four girls standing under the text RPG"></a>
+                        </div>
+                        <h3>kda rpg animation</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="battleacademia.html"><img src="battle academia/ba outfit concepts sera + samira.png" alt="drawing of two girls standing"></a>
+                        </div>
+                        <h3>battle academia fan skins</h3>
+                    </div>
+                </div>
+            
+            </section>
+
+            <span class="anchor" id="projects"></span>
+            <section id="projects-data">
+                <div id="projects-header" class="head-icon">
+                    <img src="green.svg" alt="a green triangle">
+                    <h2>projects</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="politichaos.html"><img src="politichaos/politichaos front 2.png" alt="photo of a card game box with colourful characters"></a>
+                        </div>
+                        <h3>politiCHAOS</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="outtolaunch.html"><img src="outtolaunch/out to launch example.png" alt="screenshot of a space themed tower defense game"></a>
+                        </div>
+                        <h3>Out to Launch</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="recipetutor.html"><img src="recipetutor/recipetutor paper proto profile.PNG" alt="screenshot of a figma board"></a>
+                        </div>
+                        <h3>RecipeTutor</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="website.html"><img src="website/website figma screenshot.PNG" alt="screenshot of a figma board"></a>
+                        </div>
+                        <h3>website</h3>
+                    </div>
+                </div>
+
+            </section>
+
+            <span class="anchor" id="contact"></span>
+            <section id="contact-data">
+                <div id="contact-header" class="head-icon">
+                    <img src="blue.svg" alt="a blue triangle">
+                    <h2>contact</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <a href="mailto:ljmchoong@gmail.com">
+                        <div class="contact-image">
+                            <img src="contact/email icon.svg" alt="envelope icon">
+                            <h3>email</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://www.artstation.com/evelili">
+                        <div class="contact-image">
+                            <img src="contact/artstation icon-cropped.svg" alt="artstation logo">
+                            <h3>artstation</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/lydiachoong/">
+                        <div class="contact-image">
+                            <img src="contact/linkedin icon.png" alt="linkedin logo">
+                            <h3>linkedin</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/evelili">
+                        <div class="contact-image">
+                            <img src="contact/github icon.png" alt="github logo">
+                            <h3>github</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </body>
 </html>

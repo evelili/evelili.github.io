@@ -1,287 +1,462 @@
-/*header 1 style*/
-h1 {
-	text-align: center;
-	letter-spacing: 5px;
-	font-size: 100px;
-	line-height: 0px;
-	padding-top: 200px;
-	margin-top: 15vh;
+/* global variable (definitely scuffed) */
+:root {
+    --navheight: 80px;
 }
 
-/*header 2 style*/
-h2 {
-	text-align: center;
-	font-size: 50px;
-	line-height: 0px;
-	padding-bottom: 5px;
+/* text colours */
+.yellow-text {
+	color:#FFE335
 }
 
-/*header 3 style*/
-h3 {
-	text-align: center;
-	font-size: 15px;
-	letter-spacing: 3px;
-	padding-top: 5px;
-}
-
-/*paragraph style*/
-p {
-	text-align: center;
+.green-text {
+	color: #3EFF35;
 }
 
 body {
-	font-family: 'Roboto Mono', monospace;
-	margin: 0;
+    font-family: Bahnschrift, sans-serif;
+    font-size: 20px;
+    color: #f2f2f2;
+    background-color: #212121;
+    padding: 0;
+    margin: 0;
+	overflow-anchor: none;
+}
+
+/* title */
+h1 {
+    font-size: 144px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+/* headings */
+h2 {
+    font-size: 72px;
+    font-weight: normal;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+h3 {
+	font-family: Bahnschrift Light, Bahnschrift, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+/* other styling */
+.main-subtitle {
+	font-family: Bahnschrift, sans-serif;
+	font-size: 36px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+	width: auto;
+	line-height: normal;
+}
+
+p {
+    line-height: 150%;
+    font-family: Bahnschrift Light, Bahnschrift, sans-serif;
+	text-align: left;
+	width: 60vw;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* thicker underline */
+u {
+    text-decoration-thickness: 3;
+}
+
+/* smaller caption; possibly bad practice*/
+small {
+    font-size: 80%;
+}
+
+/* fix navbar in place */
+nav {
+	overflow: hidden;
+	background-color: #121212;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 /*fit header images*/
 .contain {
 	width: 100%;
-	height: 50px;
+	height: 20px;
 	object-fit: contain;
-	margin-top: -14px;
-	margin-bottom: -16px;
 }
 
-/*fit logo image*/
-.contain-logo {
+/*fit logo images*/
+#logo1 {
 	width: 100%;
-	height: 100px;
+	height: 58px;
 	object-fit: contain;
-	margin-top: -14px;
-	margin-bottom: -16px;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
 }
 
-.contain-red {
+#logo2 {
 	width: 20%;
-	height: 100px;
+	height: 58px;
 	object-fit: contain;
-	margin-top: -14px;
 	position: absolute;
 	left: 0;
 	visibility: hidden;
 }
 
-.contain-yellow {
+#logo3 {
 	width: 20%;
-	height: 100px;
+	height: 58px;
 	object-fit: contain;
-	margin-top: -14px;
 	position: absolute;
 	left: 0;
 	visibility: hidden;
 }
 
-.contain-green {
+#logo4 {
 	width: 20%;
-	height: 100px;
+	height: 58px;
 	object-fit: contain;
-	margin-top: -14px;
 	position: absolute;
 	left: 0;
 	visibility: hidden;
 }
 
-.contain-blue {
+#logo5 {
 	width: 20%;
-	height: 100px;
+	height: 58px;
 	object-fit: contain;
-	margin-top: -14px;
 	position: absolute;
 	left: 0;
 	visibility: hidden;
 }
 
-/*fixed navbar*/
-nav {
-	overflow: auto;
-	background-color: #121212;
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
+/* boxes in nav bar */
 nav a {
 	float: right;
 	display: block;
 	color: #f2f2f2;
 	text-align: center;
-	padding: 14px 0px 16px 0px;
-	font-size: 30px;
+	padding: 10px 0px 8px 0px;
+	font-size: 24px;
 	text-decoration: none;
 	width: 20%;
 	transition: all 0.2s ease;
 }
 
+/* stuff for the dynamic changes (was a pain) */
 nav a:nth-child(5) {
-	border-bottom: 5px solid #f2f2f2;
+	border-bottom: 4px solid #f2f2f2;
+    line-height: 0px;
 }
 
 nav a:nth-child(5):hover {
 	background-color: #f2f2f2;
-	color: #121212;
 }
 
-nav a:nth-child(5).active .contain-logo{
+nav a:nth-child(5).active #logo1{
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 0.2s ease, opacity 0.2s ease;
 }
 
-nav a:nth-child(5).active .contain-red,
-nav a:nth-child(5).active .contain-yellow,
-nav a:nth-child(5).active .contain-green,
-nav a:nth-child(5).active .contain-blue{
+nav a:nth-child(5).active #logo2,
+nav a:nth-child(5).active #logo3,
+nav a:nth-child(5).active #logo4,
+nav a:nth-child(5).active #logo5{
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 nav a:nth-child(4) {
-	border-bottom: 5px solid #FF353F;
+	border-bottom: 4px solid #FF353F;
 }
 
 nav a:nth-child(4):hover {
 	background-color: #f2f2f2;
 	color: #121212;
-	border-bottom: 5px solid #FF353F;
+	border-bottom: 4px solid #FF353F;
 }
 
-nav a:nth-child(4).active ~ a .contain-red{
+nav a:nth-child(4).active ~ a #logo2{
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 0.2s ease, opacity 0.2s ease;
 }
 
-nav a:nth-child(4).active ~ a .contain-logo,
-nav a:nth-child(4).active ~ a .contain-yellow,
-nav a:nth-child(4).active ~ a .contain-green,
-nav a:nth-child(4).active ~ a .contain-blue{
+nav a:nth-child(4).active ~ a #logo1,
+nav a:nth-child(4).active ~ a #logo3,
+nav a:nth-child(4).active ~ a #logo4,
+nav a:nth-child(4).active ~ a #logo5{
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 nav a:nth-child(3) {
-	border-bottom: 5px solid #FFE335;
+	border-bottom: 4px solid #FFE335;
 }
 
 nav a:nth-child(3):hover {
 	background-color: #f2f2f2;
 	color: #121212;
-	border-bottom: 5px solid #FFE335;
+	border-bottom: 4px solid #FFE335;
 }
 
-nav a:nth-child(3).active ~ a .contain-yellow{
+nav a:nth-child(3).active ~ a #logo3{
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 0.2s ease, opacity 0.2s ease;
 }
 
 nav a:nth-child(3).active ~ a .contain-logo,
-nav a:nth-child(3).active ~ a .contain-red,
-nav a:nth-child(3).active ~ a .contain-green,
-nav a:nth-child(3).active ~ a .contain-blue{
+nav a:nth-child(3).active ~ a #logo2,
+nav a:nth-child(3).active ~ a #logo4,
+nav a:nth-child(3).active ~ a #logo5{
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 nav a:nth-child(2) {
-	border-bottom: 5px solid #3EFF35;
+	border-bottom: 4px solid #3EFF35;
 }
 
 nav a:nth-child(2):hover {
 	background-color: #f2f2f2;
 	color: #121212;
-	border-bottom: 5px solid #3EFF35;
+	border-bottom: 4px solid #3EFF35;
 }
 
-nav a:nth-child(2).active ~ a .contain-green{
+nav a:nth-child(2).active ~ a #logo4{
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 0.2s ease, opacity 0.2s ease;
 }
 
 nav a:nth-child(2).active ~ a .contain-logo,
-nav a:nth-child(2).active ~ a .contain-red,
-nav a:nth-child(2).active ~ a .contain-yellow,
-nav a:nth-child(2).active ~ a .contain-blue{
+nav a:nth-child(2).active ~ a #logo2,
+nav a:nth-child(2).active ~ a #logo3,
+nav a:nth-child(2).active ~ a #logo5{
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 nav a:nth-child(1) {
-	border-bottom: 5px solid #3546FF;
+	border-bottom: 4px solid #3546FF;
 }
 
 nav a:nth-child(1):hover {
 	background-color: #f2f2f2;
 	color: #121212;
-	border-bottom: 5px solid #3546FF;
+	border-bottom: 4px solid #3546FF;
 }
 
-nav a:nth-child(1).active ~ a .contain-blue{
+nav a:nth-child(1).active ~ a #logo5{
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 0.2s ease, opacity 0.2s ease;
 }
 
 nav a:nth-child(1).active ~ a .contain-logo,
-nav a:nth-child(1).active ~ a .contain-red,
-nav a:nth-child(1).active ~ a .contain-yellow,
-nav a:nth-child(1).active ~ a .contain-green{
+nav a:nth-child(1).active ~ a #logo2,
+nav a:nth-child(1).active ~ a #logo3,
+nav a:nth-child(1).active ~ a #logo4{
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
+/* end of header stuff (still a pain) */
 
 /*start page after header*/
-.main {
-	padding: 16px;
-	margin-top: 100px;
+#main {
+	margin-top: var(--navheight);
 }
 
-/*anchor settings*/
-.anchor{
+/* anchors for the links; probably scuffed */
+.anchor {
 	display: block;
-	height: 200px;
-	margin-top: -200px;
+	height: var(--navheight);
+	margin-top: calc(var(--navheight) * -1);
 	visibility: hidden;
 }
 
-.section-pic {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 40%;
-	margin-top: -150px;
-	margin-bottom: -125px;
-}
-
+/* size the page sections depending on the size of the screen */
 #home-data {
-	height: 100vh;
-	color: #f2f2f2;
-	background: #212121 url('base hover.png');
+	height: calc(100vh - var(--navheight));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	background-image: url("main logo dark.svg");
 	background-repeat: no-repeat;
-	background-attachment: relative;
-	background-size: 565px, 565px;
-	background-position: center -38px;
+	background-attachment: scroll;
+	background-size: auto 75%;
+	background-position: center center;
 }
 
 #about-data {
-	height: 100vh;
+	min-height: calc(100vh - var(--navheight));
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #portfolio-data {
-	height: 100vh;
+	min-height: calc(100vh - var(--navheight));
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #projects-data {
-	height: 100vh;
+	min-height: calc(100vh - var(--navheight));
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #contact-data {
-	height: 100vh;
+	min-height: calc(100vh - var(--navheight));
+}
+
+/* logo icon triangle thingys styling */
+.head-icon {
+	display: block;
+	text-align: center;
+	margin-top: 8vh;
+	margin-bottom: 10px;
+}
+
+/* cards for home page */
+.card-image img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+.card-image {
+	display: block;
+	text-align: center;
+	filter: brightness(100%);
+	transition: all 0.2s ease;
+}
+
+.card-image:hover {
+	filter: brightness(50%);
+	transition: all 0.2s ease;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	/*width: 300px;*/
+	gap: 10px;
+	word-wrap: break-word;
+}
+
+.card-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3vw;
+	justify-content: center;
+	align-items: center;
+	/*width: 0;
+	min-width: 60vw;*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+/* contact images and styling */
+.contact-image {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-image img {
+	height: 75px;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+}
+
+.contact-image h3 {
+	color: #f2f2f2;
+	font-family: Bahnschrift Light, Bahnschrift, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+	text-decoration: none;
+}
+
+.contact-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8vw;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+}
+
+/* for smaller screens */
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+
+	nav a {
+		font-size: 4vw;
+	}
+
+	#logo5, #logo4, #logo3, #logo2, #logo1 {
+		height: calc(var(--navheight) - 20px);
+	}
+
+	h1 {
+		font-size: 24vw;
+	}
+
+	h2 {
+		font-size: 12vw;
+	}
+
+	.main-subtitle {
+		font-size: 6vw;
+	}
+
+	h3 {
+		font-size: 4vw;
+		width: auto;
+	}
+
+	.contain {
+		height: calc(var(--navheight) * 0.25);
+	}
+
+	#home-data {
+		background-size: 75% auto;
+	}
+
+	.card-image img {
+		width: 50vw;
+		height: 50vw;
+	}
 }

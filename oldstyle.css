@@ -1,0 +1,287 @@
+/*header 1 style*/
+h1 {
+	text-align: center;
+	letter-spacing: 5px;
+	font-size: 100px;
+	line-height: 0px;
+	padding-top: 200px;
+	margin-top: 15vh;
+}
+
+/*header 2 style*/
+h2 {
+	text-align: center;
+	font-size: 50px;
+	line-height: 0px;
+	padding-bottom: 5px;
+}
+
+/*header 3 style*/
+h3 {
+	text-align: center;
+	font-size: 15px;
+	letter-spacing: 3px;
+	padding-top: 5px;
+}
+
+/*paragraph style*/
+p {
+	text-align: center;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	margin: 0;
+}
+
+/*fit header images*/
+.contain {
+	width: 100%;
+	height: 50px;
+	object-fit: contain;
+	margin-top: -14px;
+	margin-bottom: -16px;
+}
+
+/*fit logo image*/
+.contain-logo {
+	width: 100%;
+	height: 100px;
+	object-fit: contain;
+	margin-top: -14px;
+	margin-bottom: -16px;
+}
+
+.contain-red {
+	width: 20%;
+	height: 100px;
+	object-fit: contain;
+	margin-top: -14px;
+	position: absolute;
+	left: 0;
+	visibility: hidden;
+}
+
+.contain-yellow {
+	width: 20%;
+	height: 100px;
+	object-fit: contain;
+	margin-top: -14px;
+	position: absolute;
+	left: 0;
+	visibility: hidden;
+}
+
+.contain-green {
+	width: 20%;
+	height: 100px;
+	object-fit: contain;
+	margin-top: -14px;
+	position: absolute;
+	left: 0;
+	visibility: hidden;
+}
+
+.contain-blue {
+	width: 20%;
+	height: 100px;
+	object-fit: contain;
+	margin-top: -14px;
+	position: absolute;
+	left: 0;
+	visibility: hidden;
+}
+
+/*fixed navbar*/
+nav {
+	overflow: auto;
+	background-color: #121212;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+nav a {
+	float: right;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 0px 16px 0px;
+	font-size: 30px;
+	text-decoration: none;
+	width: 20%;
+	transition: all 0.2s ease;
+}
+
+nav a:nth-child(5) {
+	border-bottom: 5px solid #f2f2f2;
+}
+
+nav a:nth-child(5):hover {
+	background-color: #f2f2f2;
+	color: #121212;
+}
+
+nav a:nth-child(5).active .contain-logo{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:nth-child(5).active .contain-red,
+nav a:nth-child(5).active .contain-yellow,
+nav a:nth-child(5).active .contain-green,
+nav a:nth-child(5).active .contain-blue{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+nav a:nth-child(4) {
+	border-bottom: 5px solid #FF353F;
+}
+
+nav a:nth-child(4):hover {
+	background-color: #f2f2f2;
+	color: #121212;
+	border-bottom: 5px solid #FF353F;
+}
+
+nav a:nth-child(4).active ~ a .contain-red{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:nth-child(4).active ~ a .contain-logo,
+nav a:nth-child(4).active ~ a .contain-yellow,
+nav a:nth-child(4).active ~ a .contain-green,
+nav a:nth-child(4).active ~ a .contain-blue{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+nav a:nth-child(3) {
+	border-bottom: 5px solid #FFE335;
+}
+
+nav a:nth-child(3):hover {
+	background-color: #f2f2f2;
+	color: #121212;
+	border-bottom: 5px solid #FFE335;
+}
+
+nav a:nth-child(3).active ~ a .contain-yellow{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:nth-child(3).active ~ a .contain-logo,
+nav a:nth-child(3).active ~ a .contain-red,
+nav a:nth-child(3).active ~ a .contain-green,
+nav a:nth-child(3).active ~ a .contain-blue{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+nav a:nth-child(2) {
+	border-bottom: 5px solid #3EFF35;
+}
+
+nav a:nth-child(2):hover {
+	background-color: #f2f2f2;
+	color: #121212;
+	border-bottom: 5px solid #3EFF35;
+}
+
+nav a:nth-child(2).active ~ a .contain-green{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:nth-child(2).active ~ a .contain-logo,
+nav a:nth-child(2).active ~ a .contain-red,
+nav a:nth-child(2).active ~ a .contain-yellow,
+nav a:nth-child(2).active ~ a .contain-blue{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+nav a:nth-child(1) {
+	border-bottom: 5px solid #3546FF;
+}
+
+nav a:nth-child(1):hover {
+	background-color: #f2f2f2;
+	color: #121212;
+	border-bottom: 5px solid #3546FF;
+}
+
+nav a:nth-child(1).active ~ a .contain-blue{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:nth-child(1).active ~ a .contain-logo,
+nav a:nth-child(1).active ~ a .contain-red,
+nav a:nth-child(1).active ~ a .contain-yellow,
+nav a:nth-child(1).active ~ a .contain-green{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+/*start page after header*/
+.main {
+	padding: 16px;
+	margin-top: 100px;
+}
+
+/*anchor settings*/
+.anchor{
+	display: block;
+	height: 200px;
+	margin-top: -200px;
+	visibility: hidden;
+}
+
+.section-pic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	margin-top: -150px;
+	margin-bottom: -125px;
+}
+
+#home-data {
+	height: 100vh;
+	color: #f2f2f2;
+	background: #212121 url('base hover.png');
+	background-repeat: no-repeat;
+	background-attachment: relative;
+	background-size: 565px, 565px;
+	background-position: center -38px;
+}
+
+#about-data {
+	height: 100vh;
+}
+
+#portfolio-data {
+	height: 100vh;
+}
+
+#projects-data {
+	height: 100vh;
+}
+
+#contact-data {
+	height: 100vh;
+}
