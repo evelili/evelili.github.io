@@ -32,13 +32,7 @@ function resizeheaderlogo() {
 resizeheaderlogo();
 new ResizeObserver(resizeheaderlogo).observe(heightcheck);
 
-var main = document.getElementById("main");
 var navbar = document.getElementById("navbar");
-function resizetopmargin() {
-  main.style.marginTop = window.getComputedStyle(navbar).getPropertyValue("height");
-}
-resizetopmargin();
-new ResizeObserver(resizetopmargin).observe(navbar);
 
 /* set margin of sections */
 var root = document.querySelector(":root");
@@ -127,3 +121,15 @@ nav.find('a.headlink').on('click', function () {
   
   return false;
 });
+
+/* footlink scroll */
+$(document).ready(function() {
+  $("#footlink").click(function(event) {
+    event.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, 500);
+
+    return false;
+  })
+})
