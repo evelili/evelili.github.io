@@ -486,7 +486,6 @@ section {
 }
 
 /* one row of four pics */
-
 .fourpicgrid {
 	display: grid;
 	grid-template-columns: 15vw 15vw 15vw 15vw;
@@ -507,11 +506,139 @@ section {
 	padding: 0;
 }
 
-/* colour image example */
+.twothreegrid {
+	display: grid;
+	grid-template-columns: 30vw 30vw;
+	grid-template-rows: repeat(3, auto);
+	column-gap: 0;
+	row-gap: 0;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+/* two by two */
+.twopic-item img {
+	width: 30vw;
+}
+
+.twopic-item {
+	overflow: hidden;
+	display: flex;
+	height: auto;
+}
+
+.twotwopicgrid {
+	display: grid;
+	grid-template-columns: 30vw 30vw;
+	grid-template-rows: repeat(2, auto);
+	column-gap: 0;
+	row-gap: 0;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+/* and two by one */
+.twopicgrid {
+	display: grid;
+	grid-template-columns: 30vw 30vw;
+	column-gap: 0;
+	row-gap: 0;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+/* three by one oh boy */
+.threepic-item img {
+	width: 20vw;
+}
+
+.threepic-item {
+	overflow: hidden;
+	display: flex;
+	height: auto;
+}
+
+.threepicgrid {
+	display: grid;
+	grid-template-columns: 20vw 20vw 20vw;
+	column-gap: 0;
+	row-gap: 0;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+/* single squarish image */
 .halfimage img {
 	width: 30vw;
 	background-color: #121212;
 	margin: 10px 0 0 0;
+	display: flex;
+}
+
+.botimg {
+	margin: 10px 0 10px 0 !important;
+}
+
+#kdahalfimg img {
+	max-width: 384px;
+}
+
+/* embed a video */
+.embedvid {
+	position: relative;
+	overflow: hidden;
+	width: 60vw;
+	padding-bottom: 33.75vw;
+	height: 0;
+	margin: 10px 0 0 0;
+}
+
+.embedvid iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#mainvid {
+	margin: 10px 0 10px 0;
+}
+
+/* gif and other wide images */
+.wideimg {	
+	display: flex;
+	text-align: center;
+	margin: 10px 0 0 0;
+}
+
+.wideimg img {
+	object-fit: cover;
+	max-width: 60vw;
+}
+
+/* odd sized images */
+.oddsizeimages img {
+	object-fit: contain;
+	height: 20vw;
+	width: auto;
+}
+
+.oddsizeimages {
+	display: flex;
+	margin: 10px 0 0 0;
+}
+
+/* tall stuff for the recipe page */
+.tallsection img {
+	object-fit: contain;
+	height: 80vh;
+	width: auto;
+}
+.tallsection {
+	display: flex;
+	margin: 10px 0 0 0;
+	gap: 10px;
 }
 
 /* for smaller screens */

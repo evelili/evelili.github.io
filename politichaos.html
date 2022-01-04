@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>evelili | politiCHAOS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer src="scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
+            <nav id="navbar">
+                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
+				<a class="active headlink" href="index.html#projects-data"><img class="contain" src="green.svg" alt="green triangle">projects</a>
+				<a class="headlink" href="index.html#portfolio-data"><img class="contain" src="yellow.svg" alt="yellow triangle">portfolio</a>
+				<a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
+				<a id="hlogo" href="index.html#home-data" class="headlink">
+					<img id="logo1" src="main logo.svg" alt="two interlocking white triangles">
+					<img id="logo2" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
+					<img id="logo3" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
+					<img id="logo4" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
+					<img id="logo5" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
+				</a>
+            </nav>
+        </header>
+
+        <div id="politichaos" class="subpage">
+            <div id="politichaos-header" class="head-icon">
+                <img src="green.svg" alt="a green triangle">
+                <h2>politiCHAOS</h2>
+            </div>
+            <p><span class="green-text">programs //</span> Figma, Clip Studio Paint, nanDECK</p>
+
+            <p><span class="green-text">overview //</span> Myself and a classmate worked together to design and develop a card game as part of a game design course we took in fall 2020. I focused on incorporating user experience and player feedback into the development process and practiced iterative development as we refined the gameplay and mechanics. After the course we further refined the game and have playtested two prototype versions, and are currently gathering feedback to create a third version. The game design document from the course is available <a class="bodylink" href="https://drive.google.com/file/d/1oH9QqBdWJT2bHVAymZFgDBvJAC97DHrZ/view?usp=sharing"><span class="green-text"><u>here</u></span></a> for a more detailed report on our initial design process.</p>
+
+            <div class="twopicgrid botimg">
+                <div class="twopic-item">
+                    <img src="politichaos/politichaos front 2.png" alt="photo of a card game box with colourful characters">
+                </div>
+                <div class="twopic-item">
+                    <img src="politichaos/politichaos back 2.png" alt="photo of the back of a card game box">
+                </div>
+            </div>
+
+            <p><span class="green-text">process //</span> Our game went through several revisions throughout the course. The original prompt was to combine two themes from a provided list, so we chose “fantasy” and “politics” for a simple reason: orcs in suits. With this in mind, the first version was a territorial acquisition game where players solved problems with resources to gain support in different regions for an election campaign. However, we received feedback almost immediately that this was over-complicated and boring; it felt like a copy of other games with no unique mechanics and a fantasy theme slapped over the top.</p>
+
+            <div class="wideimg">
+                <img src="politichaos/politichaos initial brainstorm.png" alt="screenshot of notes on a virtual whiteboard">
+            </div>
+
+            <p class="small">our initial brainstorming for the first version of the game</p>
+
+            <p>We then held a brainstorming session to decide a better direction for the game using the concepts of reverse brainstorming and removal to identify the key problems. Once we identified the problems we came up with ideas on how to reverse the problems into solutions. The second version of our game introduced cards and removed the support system, instead having players move around the board to play action cards in regions specified by problem cards. We then ran playtesting sessions of this game remotely (which was a challenge in and of itself), and received even more feedback. Unfortunately, some new flaws developed between versions one and two—mainly, every player commented on how useless it felt moving around the board, which was a relic from version one. The numbers and balance were wildly off and the core gameplay loop did not engage players. However, players liked the concept of fantasy politics and solving problems with cards in their hand.</p>
+
+            <div class="halfimage">
+                <img src="politichaos/politichaos map.png" alt="sketch of a fantasy map">
+            </div>
+
+            <p class="small">sketch of the board used in the second version</p>
+
+            <p>Once again we sat down to fix our game, this time using the “batting cage” approach where for half an hour we threw ideas at each other and wrote them down no matter how weird or terrible they seemed. During this brainstorming session one of the ideas we came up with was “remove the board”. While this seemed crazy at first, it was actually the key factor to fix our game. The board had carried over from the territorial-acquisition-style game of version one and was the largest complaint from players. Once we realized this, we focused on what a card-only problem-solving game would look like, and the final idea to tie everything together was that players would create a “board” with cards instead. This focused our vision of gameplay into the set-collecting card game that politiCHAOS is today.</p>
+
+            <div class="halfimage">
+                <img src="politichaos/politichaos prototype.png" alt="homemade printed card game cards">
+            </div>
+
+            <p class="small">the printed prototype I used for my first gameplay tests</p>
+
+            <p>So we had our idea. Next we needed a design. I decided on a lineless flat-colour style for the character artwork, white text on black background for the packaging and rulebook, and bold, primary colour accents in the logo and as the resource cards. With these ideas in mind as well as a time limit as the end of the course approached, I designed six characters for the card art and a logo. This was all done in Clip Studio, which in hindsight was not the best idea since I had to manually add text, art, and logos to every. Single. Card. The box also reused the card art since I had no time to make a unique cover image before the course due date.</p>
+
+            <div class="twopicgrid">
+                <div class="twopic-item">
+                    <img src="politichaos/politichaos front 1.png" alt="photo of a card game box">
+                </div>
+                <div class="twopic-item">
+                    <img src="politichaos/politichaos contents 1.png" alt="spread out cards and rule page of a card game">
+                </div>
+            </div>
+
+            <p class="small">the first professionally printed prototype</p>
+
+            <p>After the course was done, we decided to get a copy of politiCHAOS printed to assess the quality and gather more player feedback, as seen above. This version was mostly the same from the course, the only difference being that I had to condense the rules to fit on a double-sided piece of paper. I organized a playtest session (in person this time, thank goodness), and I was so glad that my friends had a blast learning and playing our game. I gathered feedback from everyone during the game and after the fact, with key points being around some unclear card interactions, difficulty reading cards upside down if you were on the wrong side of the table, and the rulebook not being detailed enough.</p>
+
+            <div class="halfimage">
+                <img src="politichaos/politichaos gameplay.JPG" alt="person sitting at table playing card game">
+            </div>
+
+            <p class="small">some actual gameplay (that's me!)</p>
+
+            <p>Since I felt a lot of these issues could be addressed with a larger rulebook, I chose a different box size from the company that printed the game so I could have a twenty-page booklet instead of a piece of paper. This also meant a larger box, so I decided to redesign the box as well. To do all this I used Figma for both the pages of the booklet and the box.</p>
+
+            <p>Then since I also needed to address the clarity issues on the cards, I wanted to add symbols corresponding to each resource that could be read while upside down. However, remember that my initial method was to manually make each card? This came back to bite me, so I decided for a fresh start with the card-making program nanDECK. This allowed me to “program” each card using data from a spreadsheet, which was way faster than by hand, and had the added bonus of aligning all my text perfectly—no more being off by a few pixels. The only issue I had was that the transparent .png artwork had a white border around them when I exported the cards, so I ended up fixing the art manually after generation. This was still much faster than doing everything by hand.</p>
+
+            <div class="oddsizeimages">
+                <img src="politichaos/politichaos nandeck.png" alt="screenshot of a programming interface">
+                <img src="politichaos/politichaos nandeck white outlines.png" alt="closeup of a drawing with white artifacts on the edges">
+            </div>
+
+            <p class="small">the nanDECK editor and the pesky white outlines</p>
+
+            <div class="fourpicgrid">
+                <div class="picgrid-item">
+                    <img src="politichaos/politichaos resource card 1.png" alt="green game card with a drawing of a character">
+                </div>
+                <div class="picgrid-item">
+                    <img src="politichaos/politichaos resource card 2.png" alt="green game card with a drawing of a character">
+                </div>
+                <div class="picgrid-item">
+                    <img src="politichaos/politichaos problem card 1.png" alt="purple card game card">
+                </div>
+                <div class="picgrid-item">
+                    <img src="politichaos/politichaos problem card 2.png" alt="purple card game card">
+                </div>
+            </div>
+            
+            <p class="small">comparison of the cards after adding icons</p>
+
+            <div class="halfimage">
+                <img src="politichaos/politichaos rulebook figma.PNG" alt="screenshot of rulebook pages in Figma">
+            </div>
+
+            <p class="small">Figma screenshot of the new rulebook design</p>
+
+            <p>Finally, I had this second version of the game printed. While it's so much better than the previous version, I'm still not done—I've already gathered more feedback from a different set of players and have more improvements to make regarding readability and rulebook clarity, as well as game length. However, I can see a definite improvement between versions and am committed to designing the best possible version of our game before getting it out into the world. Stay tuned for updates; I'm sure you'll hear from me soon.</p>
+
+            <p><span class="green-text">reflection and learnings //</span> I've already addressed some of my learnings in the process section, such as the wonders of Figma and nanDECK, but I would also like to talk about my learnings around player feedback, user experience, and design. Throughout this whole process I've confirmed that listening to players is so much more important than our own perception as designers. It was really hard during the iteration process to hear that our game wasn't fun and didn't feel great to play. It was also hard to sit down together and turn a critical eye on our “baby” that we had worked so hard on, and it might have been easier to say “they're just a small group of players, they aren't our target audience, it's okay not to appeal to everyone”, and so on.</p>
+
+            <p>But the whole point of making a game is for the players. We needed to recognize when things weren't working, and I'm so much more happy with what our game became rather than the concept that it was. This constant process of gathering feedback and incorporating it is tough, especially when you have to spend time and energy reworking something you spent a lot of time on, but it is so worth it.</p>
+
+            <div class="halfimage botimg">
+                <img src="politichaos/politichaos cover art.png" alt="drawing of colourful characters as cover art for a card game">
+            </div>
+
+            <a id="footlink" class="footlink" href="politichaos.html#politichaos"><h3><u>back to top</u></h3></a>
+        </div>
+    </body>
+</html>

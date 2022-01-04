@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>evelili | Out to Launch</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer src="scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
+            <nav id="navbar">
+                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
+				<a class="active headlink" href="index.html#projects-data"><img class="contain" src="green.svg" alt="green triangle">projects</a>
+				<a class="headlink" href="index.html#portfolio-data"><img class="contain" src="yellow.svg" alt="yellow triangle">portfolio</a>
+				<a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
+				<a id="hlogo" href="index.html#home-data" class="headlink">
+					<img id="logo1" src="main logo.svg" alt="two interlocking white triangles">
+					<img id="logo2" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
+					<img id="logo3" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
+					<img id="logo4" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
+					<img id="logo5" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
+				</a>
+            </nav>
+        </header>
+
+        <div id="outtolaunch" class="subpage">
+            <div id="outtolaunch-header" class="head-icon">
+                <img src="green.svg" alt="a green triangle">
+                <h2>Out to Launch</h2>
+            </div>
+            <p><span class="green-text">programs //</span> Unity, Clip Studio Paint, VS Code, Miro, Figma</p>
+
+            <p><span class="green-text">overview //</span> Myself and two other friends took a game design course in Fall 2021. Over the course of a week we designed a game that implemented a general game mechanic we created in order to test the mechanic with potential users. We conducted user research in the form of task-based analysis and semi-structured interviews, and documented our findings in the form of a user testing report. This process was a small look into the experience of iterative UI design, and I really enjoyed getting feedback so that we could improve our game. You can play the <a class="bodylink" href="https://definitelynotagamejam.itch.io/out-to-launch-v1-12"><span class="green-text"><u>most recent version of the game</u></span></a> on itch.io using the password “DAC305”.</p>
+
+            <div class="wideimg botimg">
+                <img src="outtolaunch/out to launch example.png" alt="screenshot of a space-themed tower defense game">
+            </div>
+
+            <p><span class="green-text">process //</span> The first half of this project was to create a general game mechanic concept. Since this was a group assignment, we conducted a brainstorming session to see if there was anything we all were interested in studying, and came up with this: “Game objects change every turn, with an overlay of what change is coming next turn”. This became known as the “lookahead mechanic”. We created a brief presentation around this mechanic and our plans to test it, and I created an informative graphic in Miro that was shown alongside the presentation.</p>
+
+            <div class="halfimage">
+                <img src="outtolaunch/out to launch brainstorming.png" alt="infographic about a game mechanic">
+            </div>
+
+            <p class="small">the graphic I made for our initial game mechanic concept</p>
+
+            <p>Next we needed to actually create a game. Under the team name “Definitely Not a Game Jam”, we decided to create a tower defense game. Partly because we were familiar with them and thought that it would be interesting to apply our mechanic to the genre, and partly due to the looming course deadline. The idea was that the path changed randomly every few rounds, and that the player could only build towers on certain spots. Therefore, they needed to consider the paths aliens took and whether their tower setup was still effective when the path changed.</p>
+
+            <div class="twotwopicgrid">
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch red path 1.png" alt="path made of dashed lines">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch blue path 1.png" alt="path made of dashed lines">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch yellow path 1.png" alt="path made of dashed lines">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch green path 1.png" alt="path made of dashed lines">
+                </div>
+            </div>
+
+            <p class="small">the four path layouts we decided to use</p>
+
+            <p>With the mechanic ready to go we decided on a space theme, wrote down general ideas for the different types of towers and enemies, and threw ourselves into our very first game. Big shoutout to <a class="bodylink" href="https://www.raywenderlich.com/269-how-to-create-a-tower-defense-game-in-unity-part-1"><span class="green-text"><u>raywenderlich</u></span></a> for helping us get started with the skeleton of our game.</p>
+
+            <p>I was in charge of most of the artwork as well as the UI design (though I also helped with squashing some elusive bugs). I first created some concepts for the UI, and we collectively decided on what features we liked the best. Then I created basic visuals for the UI as well as tower, alien, projectile, and path sprites. Working every evening for around 4 hours, we managed to get a “functional” version of the game only four nights in—if your definition of functional includes “held together with scripts and a prayer”. From this point we kept at it and managed to finish the rest of the game before the end of the week, the highlights being the path-changing mechanic, the spinning “pulsar” tower, and the “worm” enemy that split into multiple enemies when it died.</p>
+
+            <div class="wideimg">
+                <img src="outtolaunch/out to launch ui 1.png" alt="screenshot of a space-themed tower defense game">
+            </div>
+
+            <p class="small">the first version of the game</p>
+
+            <p>Though the actual game creation was out of the way, we still had to complete the user research portion of the project. We conducted four user testing sessions using two versions of our game in each session: first the one with our lookahead mechanic and then the one without. You can play <a class="bodylink" href="https://definitelynotagamejam.itch.io/out-to-launch-v1-09"><span class="green-text"><u>both</u></span></a> of the <a class="bodylink" href="https://definitelynotagamejam.itch.io/out-to-launch-v1-09-nl"><span class="green-text"><u>versions</u></span></a> we used during testing on itch.io with the password “DAC305”.</p>
+
+            <p>Using two versions allowed us to compare the experiences of the players and gather feedback on the implementation of the mechanic. Our main research objective was to identify if the mechanic helped with player agency and reduced the frustrating aspects of random mechanics (in this case, the changing paths). Once we completed the interviews we organized our notes based on the <a class="bodylink" href="https://openpracticelibrary.com/practice/aeiou-observation-framework/"><span class="green-text"><u>AEIOU framework</u></span></a>, and further categorized our findings into six general categories.</p>
+
+            <div class="wideimg">
+                <img src="outtolaunch/out to launch checkpoint 3.png" alt="screenshot of notes on a virtual whiteboard">
+            </div>
+
+            <p class="small">screenshot of our findings board after discussion and categorization</p>
+
+            <p>We identified ten key issues with our game. If you would like to read our full user testing report, I'll include it <a class="bodylink" href="https://drive.google.com/file/d/1QqVbTu3XdUuCWN7vkwNFdFimLBjUCFdN/view?usp=sharing"><span class="green-text"><u>here</u></span></a>, but I'll discuss a few of the most prominent UI issues mentioned in the report here as well.</p>
+
+            <p><span class="green-text">issue 1 //</span> Players did not have easy access to the tower price. We accidentally created an unintuitive design pattern where players had to select a tower and then hover over a build point to even see how much a tower cost. This also fed into a problem where players did not know if they had enough to buy a tower or not. To solve this, we implemented a UI redesign to move the tower price to the top next to their total currency, and modified the design pattern so that price was immediately shown to players on button hover, rather than forcing them to try and build a tower first.</p>
+
+            <div class="twothreegrid">
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 1 1.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 1 4.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 1 2.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 1 5.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 1 3.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 1 6.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+            </div>
+
+            <p class="small">initial UI process to find the price of a tower (left) and the updated UI process (right)</p>
+
+            <p><span class="green-text">issue 2 //</span> Players could not see how upgrades affected a tower. Similar to the previous point, our first design pattern replaced the tower stats with the upgrade price when a player tried to upgrade a tower. This was partially influenced by not having enough space to show what we wanted in the text box. This also meant that some of our keywords for tower abilities were vague, such as “splash” or “spin”. In the UI redesign I made sure to add more space to the text box so we could fit in the information we wanted. We also identified that tooltips similar to the Bloons series would help players learn information such as tower and enemy abilities, but we were unable to implement this feature in time for the project deadline—though we hope to include it in the future.</p>
+
+            <div class="twopicgrid">
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 2 1.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+                <div class="twopic-item">
+                    <img src="outtolaunch/out to launch issue 2 2.png" alt="screenshot of a space-themed tower defense game">
+                </div>
+            </div>
+
+            <p class="small">initial UI for upgrading a tower (left) and the updated UI (right)</p>
+
+            <p><span class="green-text">issue 3 //</span> The sell and upgrade buttons were not explained. We used only icons for these buttons, which meant players had to figure out what they did themselves. I learned from previous projects that sometimes simple and direct is better than reinventing the wheel, so I went with the best option of adding “sell” and “upgrade” labels to the UI.</p>
+
+            <div class="wideimg">
+                <img src="outtolaunch/out to launch ui 2.png" alt="screenshot of a space-themed tower defense game">
+            </div>
+
+            <p class="small">the updated UI with the added labels</p>
+
+            <p><span class="green-text">reflection and learnings //</span> Where do I even start with this project? First of all, I am so incredibly proud of my teammates for working with me late into the night to get the game done. In the course we had the option to use a premade game for user testing in the case we couldn't complete our game, but I was set on testing our own mechanic and conducting research on it. I learned a ton about working as a team and dividing work, as well as how to break an intimidating task into achievable steps to work towards one at a time. It was especially satisfying when we solved the dreaded “green path bug” in a call together—you don't get that kind of celebration working on your own.</p>
+
+            <p>As well, I am very thankful for the opportunity to conduct user experience research on my own project. While I have a fair amount of experience now, before this point I had only assisted other researchers in their work. It's so much more rewarding to not only collect and analyze user feedback, but also recognize and improve upon your own designs. </p>
+
+            <p>I was able to create an interview script and organize the tasks around questions I had personal interest in, not to mention the fact I could analyze and report on all the findings afterwards. It felt like my first proper research endeavor from start to end, and it all went towards improving a game I helped make. I'm very happy with how everything turned out, and us at team “Definitely Not a Game Jam” hope to keep working on “Out to Launch” to make it the best possible game it can be.</p>
+
+            <div class="wideimg botimg">
+                <img src="outtolaunch/out to launch title screen.png" alt="screenshot of the title screen of a space-themed tower defense game">
+            </div>
+
+            <a id="footlink" class="footlink" href="outtolaunch.html#outtolaunch"><h3><u>back to top</u></h3></a>
+        </div>
+    </body>
+</html>
