@@ -1,5 +1,49 @@
 let isHoverLogo = false;
 
+/* fade in page, again from https://christopheraue.net/design/fading-pages-on-load-and-unload*/
+function fadeInPage() {
+  if (!window.AnimationEvent) {return;}
+
+  var fader = document.getElementById('fader');
+  fader.classList.add('fade-out');
+}
+fadeInPage();
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (!window.AnimationEvent) {return;}
+
+  var anchors = document.getElementsByTagName('a');
+  console.log(anchors);
+
+  for (var idx=0; idx<anchors.length; idx+=1) {
+    if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname) {
+      continue;
+    }
+
+    anchors[idx].addEventListener('click', function(event) {
+      var fader = document.getElementById('fader'), anchor = event.currentTarget;
+
+      var listener = function() {
+        window.location = anchor.href;
+        fader.removeEventListener('animationend', listener);
+      };
+      fader.addEventListener('animationend', listener);
+
+      event.preventDefault();
+
+      fader.classList.add('fade-in');
+    });
+  }
+});
+
+window.addEventListener('pageshow', function (event) {
+  if (!event.persisted) {
+    return;
+  }
+  var fader = document.getElementById('fader');
+  fader.classList.remove('fade-in');
+});
+
 /* fix hovering over logo in header when it changes / over border */
 var hlogo = document.getElementById("hlogo");
 var logo1 = document.getElementById("logo1");

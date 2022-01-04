@@ -20,20 +20,44 @@ body {
     padding: 0;
     margin: 0;
 	overflow-anchor: none;
-	/* hide scrollbar IE and Edge, hide scrollbar Firefox */
-	/*
-	-ms-overflow-style: none;
-  	scrollbar-width: none;
-	*/
 }
 
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+/* from here: https://christopheraue.net/design/fading-pages-on-load-and-unload */
+#fader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	pointer-events: none;
+	background: #212121;
+	animation-duration: 300ms;
+	animation-timing-function: ease-in-out;
+}
+
+#fader:before {
+	content: 'fade';
+}
+
+@keyframes fade-out {
+	from {opacity: 1}
+	to {opacity: 0}
+}
+
+@keyframes fade-in {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+#fader.fade-out {
+	opacity: 0;
+	animation-name: fade-out;
+}
+
+#fader.fade-in {
+	opacity: 1;
+	animation-name: fade-in;
 }
 
 /* custom scrollbar (might not be supported by all browsers) */
@@ -107,10 +131,6 @@ a {
 	color: #f2f2f2;
 }
 
-.main, .subpage {
-	animation: fadeIn 0.5s linear;
-}
-
 /* thicker underline */
 u {
     text-decoration-thickness: 3;
@@ -130,7 +150,7 @@ nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 }
 
 /*fit header images*/
@@ -452,6 +472,25 @@ section {
 	align-items: center;
 }
 
+/* logo banner */
+.singlelogo img, .fulllogo img {
+	max-width: 10vw;
+}
+
+.singlelogo, .fulllogo {
+	display: flex;
+}
+
+.logobanner {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	height: 30vh;
+	column-gap: 2vw;
+	margin: 10px 0 10px 0;
+	padding: 0;
+	align-items: center;
+}
+
 /* main huevember grid (pain) */
 .picgrid {
 	display: grid;
@@ -627,6 +666,7 @@ section {
 .oddsizeimages {
 	display: flex;
 	margin: 10px 0 0 0;
+	gap: 10px;
 }
 
 /* tall stuff for the recipe page */

@@ -27,12 +27,138 @@
             </nav>
         </header>
 
+        <svg id="fader"></svg>
+
         <div id="website" class="subpage">
             <div id="website-header" class="head-icon">
                 <img src="green.svg" alt="a green triangle">
                 <h2>website</h2>
             </div>
-            <p><span class="green-text">programs //</span></p>
+            <p><span class="green-text">programs //</span> Figma, Clip Studio Paint, VSCode, GitHub</p>
+
+            <p><span class="green-text">overview //</span> I created my first version of this website at the end of 2019, which only included the logo design and dynamic header. I dove right into HTML and CSS without bothering to learn them first, and while that site was full of flaws it was a great starting point for understanding how websites work. This version of my website has been fully prototyped in Figma and programmed to the best of my abilities, and I'm happy to see how much I've improved.</p>
+
+            <div class="logobanner">
+                <div class="singlelogo">
+                    <img src="red.svg" alt="red triangle">
+                </div>
+                <div class="singlelogo">
+                    <img src="green.svg" alt="green triangle">
+                </div>
+                <div class="fulllogo">
+                    <img src="main logo.svg" alt="two interlocking white triangles">
+                </div>
+                <div class="singlelogo">
+                    <img src="yellow.svg" alt="yellow triangle">
+                </div>
+                <div class="singlelogo">
+                    <img src="blue.svg" alt="blue triangle">
+                </div>
+            </div>
+
+            <p><span class="green-text">process //</span> I took my main logo and its sub-logos and created vector versions of them in Figma. I decided to keep the initial colour palette mostly the same and made sure to stay consistent across the site. I switched the font from Roboto Mono to Bahnschrift since I didn't like how some of the letters looked, and then I began creating the functional prototype in Figma.</p>
+
+            <div class="halfimage">
+                <img src="website/raster graphics.png" alt="blurry yellow triangle over the word portfolio">
+            </div>
+
+            <p class="small">the old raster images were blurry, and I didn't like the font as much</p>
+
+            <p>First, I started with the main page of the site. I created the components of each “button” that made up the header and made different versions of the headers for all the hover states. When I started this project, Figma had not released variant components to the public. I ended up going back to remake the headers once this feature came out, since it made the multiple header states much easier to work with. Once I had all the components, I then fixed the child header in place and added the home page information, making sure to put each section in its own frame to use the “scroll to” function properly. Once the main page was in a workable state I started designing each of the portfolio and project pages.</p>
+
+            <div class="wideimg">
+                <img src="website/website spaghetti header.PNG" alt="screenshot of prototype wiring in Figma">
+            </div>
+
+            <p class="small">look at this messy spaghetti</p>
+
+            <div class="wideimg">
+                <img src="website/website reusable spaghetti.PNG" alt="screenshot of prototype wiring in Figma">
+            </div>
+
+            <p class="small">reusable spaghetti!</p>
+
+            <p>Then for each additional page I scripted all the text I wanted to include (including this part!) and gathered the necessary images. I then added the content and wired up all the interactions as best as I could, making notes for things I wanted to include in the coded version that I couldn’t easily do in Figma (for example, changing the underline weight or navigating to a certain point on a different frame). The portfolio and project pages use slightly different headers, so once again variant components came in handy to keep things tidy. Throughout the design process I also made sure to write down features I wanted to include in the website that were either complicated or impossible in figma, such as videos, linking back to a specific section on the main page from a subpage, and adaptive page width. You can see my prototype of the website <a class="bodylink" href="https://www.figma.com/proto/mPucefRj1NYM0FS5fm2lIi/website-prototype?node-id=7%3A509&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=7%3A509"><span class="green-text"><u>here</u></span></a>.</p>
+            
+            <div class="wideimg">
+                <img src="website/website figma screenshot.PNG" alt="screenshot of website prototype in Figma">
+            </div>
+
+            <p class="small">the figma board for this website</p>
+
+            <p>Once I finished designing each page and gathering all my images, I could finally start coding. As I said earlier, I actually tried making a similar version of this website before (and it was very bad), so I salvaged whatever I could from that mess to start myself off. I first designed the header and the layout of the main page. You may have noticed I didn't mock up the card-like layout in Figma—this is because I was still deciding on the design up until the very end.</p>
+
+            <div class="wideimg">
+                <img src="website/old website.png" alt="screenshot of a website homepage">
+            </div>
+
+            <p class="small">pictured: the website in its awkward teen years</p>
+            
+            <p>After I was satisfied with the home page, I moved on to making each individual page linked in the portfolio and project sections. This part moved faster than the home page since the layout was very similar for each. And if you're reading this, I've clearly completed the website section but at the moment of writing that page still needs to be finished. Before that, though, I also implemented <a class="bodylink" href="https://christopheraue.net/design/fading-pages-on-load-and-unload"><span class="green-text"><u>this tutorial</u></span></a> to make the transition between pages smoother and tweaked the styling of the scrollbar for supported browsers.</p>
+
+            <div class="wideimg">
+                <img src="website/new website.png" alt="screenshot of a website homepage">
+            </div>
+
+            <p class="small">what a glow-up</p>
+
+            <p><span class="green-text">reflection and learnings //</span> I’m not going to lie, while the Figma prototype was easy enough to put together, actually implementing everything in real code was a journey and a half. I had minimal experience with web design before going into this, and as a result the clarity and reusability of my code suffered behind the scenes. I have no idea if the way I implemented the css and javascript files are good practice or not, and while I tried to stick to accessibility practices I failed to follow all guidelines correctly, most notably with headings and captions. I definitely want to improve on this, but I’m pretty sure that if I touch anything my entire code will fall apart.</p>
+
+            <div class="halfimage">
+                <img src="website/messy code.png" alt="screenshot of programming interface">
+            </div>
+
+            <p class="small">over 700 lines in a single css file isn't exactly the epitome of organized</p>
+
+            <p>For some specific challenges, getting the logo in the navbar to change smoothly and correctly took me an entire day. First it wouldn't change when the mouse was over the white bar at the bottom, and showed the wrong variant on scroll—no problem, move the scripts from the image to the entire container. But then the sections on the page weren't being properly detected, especially when the screen size changed, and the navbar image was wrong—okay, let's get rid of these custom spans acting as anchors; why did I even include them in the first place? They don't make sense! But then the section colours wouldn't load properly on refresh, but only half the time, and I was about to tear my hair out before I finally figured out that moving the script load to the head of the html fixed the issue. The relief at it finally working was only overshadowed by the grief that I wasted an entire day trying to figure it out.</p>
+
+            <div class="wideimg">
+                <img src="website/header bar.png" alt="screenshot of a website header bar">
+            </div>
+
+            <p class="small">this header bar is the bane of my existence</p>
+
+            <p>Another challenge was that I did not properly account for variable screen size from the very beginning, specifically around font sizes. Making sure everything resized appropriately on smaller screens took another day of work, and while the end result isn't perfect it's much better than before. The biggest takeaway from this for me is to always format all headings and divs properly at the very start, instead of creating them as you go. This also helps with the accessibility issue I mentioned before. Then for mobile devices, I also encountered the issue of the header bar click events not working properly, and even after messing around with touch events I wasn't able to figure out why. So that's a bit frustrating.</p>
+
+            <div class="oddsizeimages">
+                <img src="website/mobile screenshot.png" alt="screenshot of a mobile website">
+                <img src="website/desktop screenshot.png" alt="screenshot of a desktop website">
+            </div>
+
+            <p class="small">mobile vs desktop comparison</p>
+
+            <p>On a more positive note, I found that once things worked it was very easy to transfer my design from Figma to code. As well, making the Figma version first helped me identify parts of the design to fix before I even started, such as the font sizes and images being way too big. It’s much nicer to fix these problems before starting, since if I jumped straight into programming I’d have to go back and adjust everything a second time (and given my terribly organized code, that would not have been fun).</p>
+
+            <div class="twopicgrid">
+                <div class="twopic-item">
+                    <img src="website/font size 1.png" alt="screenshot of website text">
+                </div>
+                <div class="twopic-item">
+                    <img src="website/font size 2.png" alt="screenshot of website text">
+                </div>
+            </div>
+
+            <p class="small">since I work so zoomed out, the Figma text fullscreen was way too big</p>
+
+            <p>But in the end and despite the issues, I'm proud of what I managed to create. It's nice to finally have a place to share everything I've worked on and helped me have a more concrete idea of what I've accomplished. Furthermore, the entire design process, while messy, helped me solidify that I do like design and I do have the ability to take a vision from my head and make it real. So I'm glad to have proof of that.</p>
+
+            <div class="logobanner">
+                <div class="singlelogo">
+                    <img src="red.svg" alt="red triangle">
+                </div>
+                <div class="singlelogo">
+                    <img src="green.svg" alt="green triangle">
+                </div>
+                <div class="fulllogo">
+                    <img src="main logo.svg" alt="two interlocking white triangles">
+                </div>
+                <div class="singlelogo">
+                    <img src="yellow.svg" alt="yellow triangle">
+                </div>
+                <div class="singlelogo">
+                    <img src="blue.svg" alt="blue triangle">
+                </div>
+            </div>
 
             <a id="footlink" class="footlink" href="website.html#website"><h3><u>back to top</u></h3></a>
         </div>
