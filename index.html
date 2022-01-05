@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>evelili</title>
+        <link rel="icon" href="main logo dark.svg">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,17 +15,17 @@
         <header>
             <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
             <nav id="navbar">
-                <a class="headlink" href="#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
-				<a class="headlink" href="#projects-data"><img class="contain" src="green.svg" alt="green triangle">projects</a>
-				<a class="headlink" href="#portfolio-data"><img class="contain" src="yellow.svg" alt="yellow triangle">portfolio</a>
-				<a id="heightcheck" class="headlink" href="#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
-				<a id="hlogo" href="#home-data" class="active headlink">
-					<img id="logo1" src="main logo.svg" alt="two interlocking white triangles">
-					<img id="logo2" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
-					<img id="logo3" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
-					<img id="logo4" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
-					<img id="logo5" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
+                <a id="hlogo" href="#home-data" class="active headlink">
+					<img id="logo1" class="headlogo-home-data active" src="main logo.svg" alt="two interlocking white triangles">
+					<img id="logo2" class="headlogo-about-data" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
+					<img id="logo3" class="headlogo-projects-data" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
+					<img id="logo4" class="headlogo-portfolio-data" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
+					<img id="logo5" class="headlogo-contact-data" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
 				</a>
+                <a id="heightcheck" class="headlink" href="#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
+                <a class="headlink" href="#projects-data"><img class="contain" src="yellow.svg" alt="yellow triangle">projects</a>
+                <a class="headlink" href="#portfolio-data"><img class="contain" src="green.svg" alt="green triangle">portfolio</a>
+                <a class="headlink" href="#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
             </nav>
         </header>
 
@@ -45,48 +46,16 @@
                 
                 <p>I'm a computer science student who's passionate about games and design.</p>
 
-                <p>Good design is inherently accessible. Accessible design is good design. I strive to be a conscious designer and consider user experience from the very start of the design process. Conducting user interviews is one of my favourite parts of designing—I love sitting down with an actual person to hear their thoughts, good and bad alike. Everything can be improved on, always.</p>
+                <p>Good design is inherently accessible. Accessible design is good design. I strive to be a conscious designer and consider user experience from the very start of the design process. One of my favourite parts of user experience research is conducting interviews—I love sitting down with an actual person to hear their thoughts, good and bad alike. Everything can be improved on, always.</p>
 
-                <p>In my free time, I like to draw, cosplay, 3D model and print swords, and play a little too much TFT.</p>
+                <p>In my free time, I like to draw, cosplay, 3D print swords, build gunpla, and play a little too much TFT.</p>
 
-                <p>This website is a home for some works I'm proud of, divided into two sections: <span class="yellow-text">portfolio</span> for art and <span class="green-text">projects</span> for design, games, and anything else. I hope you enjoy.</p>
-            </section>
-
-            <section id="portfolio-data">
-                
-                <div id="portfolio-header" class="head-icon">
-                    <img src="yellow.svg" alt="a yellow triangle">
-                    <h2>portfolio</h2>
-                </div>
-                
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="huevember.html"><img src="huevember/16.png" alt="purple drawing of girl"></a>
-                        </div>
-                        <h3>huevember</h3>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="kdarpg.html"><img src="kda rpg/kda rpg title card.png" alt="drawing of four girls standing under the text RPG"></a>
-                        </div>
-                        <h3>kda rpg animation</h3>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="battleacademia.html"><img src="battle academia/ba outfit concepts sera + samira.png" alt="drawing of two girls standing"></a>
-                        </div>
-                        <h3>battle academia fan skins</h3>
-                    </div>
-                </div>
-            
+                <p>This website is a home for some works I'm proud of, divided into two sections: <span class="yellow-text">projects</span> for design and <span class="green-text">portfolio</span> for art. I hope you enjoy.</p>
             </section>
 
             <section id="projects-data">
                 <div id="projects-header" class="head-icon">
-                    <img src="green.svg" alt="a green triangle">
+                    <img src="yellow.svg" alt="a yellow triangle">
                     <h2>projects</h2>
                 </div>
 
@@ -120,6 +89,38 @@
                     </div>
                 </div>
 
+            </section>
+
+            <section id="portfolio-data">
+                
+                <div id="portfolio-header" class="head-icon">
+                    <img src="green.svg" alt="a green triangle">
+                    <h2>portfolio</h2>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="huevember.html"><img src="huevember/16.png" alt="purple drawing of girl"></a>
+                        </div>
+                        <h3>huevember</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="kdarpg.html"><img src="kda rpg/kda rpg title card.png" alt="drawing of four girls standing under the text RPG"></a>
+                        </div>
+                        <h3>kda rpg animation</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="battleacademia.html"><img src="battle academia/ba outfit concepts sera + samira.png" alt="drawing of two girls standing"></a>
+                        </div>
+                        <h3>battle academia fan skins</h3>
+                    </div>
+                </div>
+            
             </section>
 
             <section id="contact-data">

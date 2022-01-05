@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>evelili | RecipeTutor</title>
+        <link rel="icon" href="main logo yellow dark.svg">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -13,17 +14,17 @@
         <header>
             <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
             <nav id="navbar">
-                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
-				<a class="active headlink" href="index.html#projects-data"><img class="contain" src="green.svg" alt="green triangle">projects</a>
-				<a class="headlink" href="index.html#portfolio-data"><img class="contain" src="yellow.svg" alt="yellow triangle">portfolio</a>
-				<a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
-				<a id="hlogo" href="index.html#home-data" class="headlink">
-					<img id="logo1" src="main logo.svg" alt="two interlocking white triangles">
-					<img id="logo2" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
-					<img id="logo3" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
-					<img id="logo4" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
-					<img id="logo5" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
+                <a id="hlogo" href="index.html#home-data" class="headlink">
+					<img id="logo1" class="headlogo-home-data" src="main logo.svg" alt="two interlocking white triangles">
+					<img id="logo2" class="headlogo-about-data" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
+					<img id="logo3" class="headlogo-projects-data active" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
+					<img id="logo4" class="headlogo-portfolio-data" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
+					<img id="logo5" class="headlogo-contact-data" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
 				</a>
+                <a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
+                <a class="active headlink" href="index.html#projects-data"><img class="contain" src="yellow.svg" alt="yellow triangle">projects</a>
+                <a class="headlink" href="index.html#portfolio-data"><img class="contain" src="green.svg" alt="green triangle">portfolio</a>
+                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
             </nav>
         </header>
 
@@ -31,12 +32,12 @@
 
         <div id="recipetutor" class="subpage">
             <div id="outtolaunch-header" class="head-icon">
-                <img src="green.svg" alt="a green triangle">
+                <img src="yellow.svg" alt="a yellow triangle">
                 <h2>RecipeTutor</h2>
             </div>
-            <p><span class="green-text">programs //</span> Figma, Miro</p>
+            <p><span class="yellow-text">programs //</span> Figma, Miro</p>
 
-            <p><span class="green-text">overview //</span> I worked as part of a team of five to design a functional prototype of an application around the theme “supporting obtaining new skills”. We wanted to show the potential of a cooking application with a focus on progression and practical experience, as well as design solutions to some of the barriers in learning to cook. Over the course of the term we learned and practiced many parts of the design process, such as design evaluation, creating personas, user interviews, iterative design, prototyping, and HCI research methods.</p>
+            <p><span class="yellow-text">overview //</span> I worked as part of a team of five to design a functional prototype of an application around the theme “supporting obtaining new skills”. We wanted to show the potential of a cooking application with a focus on progression and practical experience, as well as design solutions to some of the barriers in learning to cook. Over the course of the term we learned and practiced many parts of the design process, such as design evaluation, creating personas, user interviews, iterative design, prototyping, and HCI research methods.</p>
 
             <div class="threepicgrid botimg">
                 <div class="threepic-item">
@@ -50,7 +51,7 @@
                 </div>
             </div>
 
-            <p><span class="green-text">process //</span> I'll actually link our team's end-of-term <a class="bodylink" href="https://medium.com/cs449-649-f21-uwaterloo/recipetutor-a-better-approach-to-learning-apps-8820773f1fd0"><span class="green-text"><u>Medium article</u></span></a> detailing our design process to give a general rundown of the whole project. Since that article is more high-level and a bit of a read, I'll also discuss some of the more granular design decisions and my own prototyping experience here.</p>
+            <p><span class="yellow-text">process //</span> I'll actually link our team's end-of-term <a class="bodylink" href="https://medium.com/cs449-649-f21-uwaterloo/recipetutor-a-better-approach-to-learning-apps-8820773f1fd0"><span class="yellow-text"><u>Medium article</u></span></a> detailing our design process to give a general rundown of the whole project. Since that article is more high-level and a bit of a read, I'll also discuss some of the more granular design decisions and my own prototyping experience here.</p>
 
             <p>The first real “design” activity we did were “Crazy 8” sketches, where we had 8 x 30 seconds to come up with 8 designs. While we didn't feel like the activity had much worth at the time, I do have to admit it's good to try and generate as many ideas as possible at the start of the design process without dwelling too much on the details. For instance, I was in charge of designing progression and motivation features. Since I have a bit of experience with gamification I used this activity to design quick layout ideas for achievements, stats, rating systems, and more. These sketches then became the basis for a more complete sketch of a user flow around progression and motivation located in the user's profile.</p>
 
@@ -108,7 +109,7 @@
 
             <p class="small">that's a lot of spaghetti</p>
 
-            <p><span class="green-text">reflection and learnings //</span> This was another learning experience in working as a team. I wholeheartedly believe that listening to others' ideas and giving positive, constructive feedback is an important part of the design process. However, we did encounter some hiccups during the design process where we had to have heavy discussion about how to implement certain features.</p>
+            <p><span class="yellow-text">reflection and learnings //</span> This was another learning experience in working as a team. I wholeheartedly believe that listening to others' ideas and giving positive, constructive feedback is an important part of the design process. However, we did encounter some hiccups during the design process where we had to have heavy discussion about how to implement certain features.</p>
 
             <p>For example, while some members of the team had a more concrete idea about how skills would work—a recipe has skill tags and users can search for recipes that use a skill—other members wanted a more dynamic approach that wouldn't work with a tagging system—users enter skills that they used during a recipe, in order to accommodate those who use different skills or skip over skills when omitting parts of the recipe. We didn't end up agreeing on how this should function, since both sides had valid reasons and criticisms, but we were able to come up with a plan to move on from the issue with little-to-no conflict afterwards.</p>
 

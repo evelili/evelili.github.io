@@ -5,11 +5,13 @@
 
 /* text colours */
 .yellow-text {
-	color:#FFE335
+	color:#FFE335 !important;
+	text-decoration-color: #FFE335;
 }
 
 .green-text {
 	color: #3EFF35;
+	text-decoration-color: #3EFF35;
 }
 
 body {
@@ -101,7 +103,7 @@ h3 {
     text-align: center;
 }
 
-/* other styling */
+/* other text styling */
 .main-subtitle {
 	font-family: Bahnschrift, sans-serif;
 	font-size: 36px;
@@ -126,9 +128,17 @@ p {
 	margin-bottom: 10px;
 }
 
+/* link styling */
 a {
 	text-decoration: none;
-	color: #f2f2f2;
+	color: inherit;
+	filter: brightness(100%);
+	transition: all 0.2s ease;
+}
+
+a:hover {
+	filter: brightness(50%);
+	transition: all 0.2s ease;
 }
 
 /* thicker underline */
@@ -151,6 +161,8 @@ nav {
 	top: 0;
 	width: 100%;
 	z-index: 2;
+	display: flex;
+	max-height: 80px;
 }
 
 /*fit header images*/
@@ -170,34 +182,7 @@ nav {
     visibility: hidden;
 }
 
-#logo2 {
-	width: 20%;
-	height: 58px;
-	object-fit: contain;
-	position: absolute;
-	left: 0;
-	visibility: hidden;
-}
-
-#logo3 {
-	width: 20%;
-	height: 58px;
-	object-fit: contain;
-	position: absolute;
-	left: 0;
-	visibility: hidden;
-}
-
-#logo4 {
-	width: 20%;
-	height: 58px;
-	object-fit: contain;
-	position: absolute;
-	left: 0;
-	visibility: hidden;
-}
-
-#logo5 {
+#logo2, #logo3, #logo4, #logo5 {
 	width: 20%;
 	height: 58px;
 	object-fit: contain;
@@ -207,66 +192,47 @@ nav {
 }
 
 /* boxes in nav bar */
-nav a {
-	float: right;
+.headlink {
 	display: block;
-	color: #f2f2f2;
 	text-align: center;
+	text-decoration: none !important;
+	filter: none !important;
 	padding: 10px 0px 8px 0px;
 	font-size: 24px;
-	text-decoration: none;
 	width: 20%;
 	transition: all 0.2s ease;
 }
 
 /* stuff for the dynamic changes (was a pain) */
-nav a:nth-child(5) {
+nav a:nth-child(1) {
 	border-bottom: 4px solid #f2f2f2;
     line-height: 0px;
 }
 
-nav a:nth-child(5):hover {
+nav a:nth-child(1):hover {
 	background-color: #f2f2f2;
 }
 
-nav a:nth-child(5).active #logo1{
-	visibility: visible;
+nav a:nth-child(1) > .active {
+	visibility: visible !important;
 	opacity: 1;
 	transition: visibility 0.2s ease, opacity 0.2s ease;
 }
 
-nav a:nth-child(5).active #logo2,
-nav a:nth-child(5).active #logo3,
-nav a:nth-child(5).active #logo4,
-nav a:nth-child(5).active #logo5{
-	visibility: hidden;
+nav a:nth-child(1) > :not(.active) {
+	visibility: hidden !important;
 	opacity: 0;
 	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
-nav a:nth-child(4) {
+nav a:nth-child(2) {
 	border-bottom: 4px solid #FF353F;
 }
 
-nav a:nth-child(4):hover {
+nav a:nth-child(2):hover {
 	background-color: #f2f2f2;
 	color: #121212;
 	border-bottom: 4px solid #FF353F;
-}
-
-nav a:nth-child(4).active ~ a #logo2{
-	visibility: visible;
-	opacity: 1;
-	transition: visibility 0.2s ease, opacity 0.2s ease;
-}
-
-nav a:nth-child(4).active ~ a #logo1,
-nav a:nth-child(4).active ~ a #logo3,
-nav a:nth-child(4).active ~ a #logo4,
-nav a:nth-child(4).active ~ a #logo5{
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 nav a:nth-child(3) {
@@ -279,69 +245,24 @@ nav a:nth-child(3):hover {
 	border-bottom: 4px solid #FFE335;
 }
 
-nav a:nth-child(3).active ~ a #logo3{
-	visibility: visible;
-	opacity: 1;
-	transition: visibility 0.2s ease, opacity 0.2s ease;
-}
-
-nav a:nth-child(3).active ~ a .contain-logo,
-nav a:nth-child(3).active ~ a #logo2,
-nav a:nth-child(3).active ~ a #logo4,
-nav a:nth-child(3).active ~ a #logo5{
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0.3s ease, opacity 0.3s ease;
-}
-
-nav a:nth-child(2) {
+nav a:nth-child(4) {
 	border-bottom: 4px solid #3EFF35;
 }
 
-nav a:nth-child(2):hover {
+nav a:nth-child(4):hover {
 	background-color: #f2f2f2;
 	color: #121212;
 	border-bottom: 4px solid #3EFF35;
 }
 
-nav a:nth-child(2).active ~ a #logo4{
-	visibility: visible;
-	opacity: 1;
-	transition: visibility 0.2s ease, opacity 0.2s ease;
-}
-
-nav a:nth-child(2).active ~ a .contain-logo,
-nav a:nth-child(2).active ~ a #logo2,
-nav a:nth-child(2).active ~ a #logo3,
-nav a:nth-child(2).active ~ a #logo5{
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0.3s ease, opacity 0.3s ease;
-}
-
-nav a:nth-child(1) {
+nav a:nth-child(5) {
 	border-bottom: 4px solid #3546FF;
 }
 
-nav a:nth-child(1):hover {
+nav a:nth-child(5):hover {
 	background-color: #f2f2f2;
 	color: #121212;
 	border-bottom: 4px solid #3546FF;
-}
-
-nav a:nth-child(1).active ~ a #logo5{
-	visibility: visible;
-	opacity: 1;
-	transition: visibility 0.2s ease, opacity 0.2s ease;
-}
-
-nav a:nth-child(1).active ~ a .contain-logo,
-nav a:nth-child(1).active ~ a #logo2,
-nav a:nth-child(1).active ~ a #logo3,
-nav a:nth-child(1).active ~ a #logo4{
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 /* end of header stuff (still a pain) */
 
@@ -359,26 +280,12 @@ section {
 	background-image: url("main logo dark.svg");
 	background-repeat: no-repeat;
 	background-attachment: scroll;
-	background-size: auto 75%;
+	background-size: auto min(75vw, 75vh);
 	background-position: center center;
 	background-origin: content-box;
 }
 
-#about-data {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-#portfolio-data {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-#projects-data {
+#about-data, #portfolio-data, #projects-data {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -403,13 +310,6 @@ section {
 .card-image {
 	display: block;
 	text-align: center;
-	filter: brightness(100%);
-	transition: all 0.2s ease;
-}
-
-.card-image:hover {
-	filter: brightness(50%);
-	transition: all 0.2s ease;
 }
 
 .card {
@@ -687,10 +587,6 @@ section {
 		font-size: 16px;
 	}
 
-	nav a {
-		font-size: 4vw;
-	}
-
 	#logo5, #logo4, #logo3, #logo2, #logo1 {
 		height: calc(var(--navheight) - 20px);
 	}
@@ -716,10 +612,6 @@ section {
 		height: calc(var(--navheight) * 0.25);
 	}
 
-	#home-data {
-		background-size: 75% auto;
-	}
-
 	.card-image img {
 		width: 50vw;
 		height: 50vw;
@@ -740,5 +632,12 @@ section {
 
 	.head-icon {
 		margin-top: 4vh;
+	}
+
+	.headlink {
+		font-size: 4vw;
+		width: 20%;
+		overflow: hidden;
+		height: calc(100vw * calc(58 / 600));
 	}
 }

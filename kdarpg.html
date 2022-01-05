@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>evelili | kda rpg animation</title>
+        <link rel="icon" href="main logo green dark.svg">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -13,17 +14,17 @@
         <header>
             <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
             <nav id="navbar">
-                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
-				<a class="headlink" href="index.html#projects-data"><img class="contain" src="green.svg" alt="green triangle">projects</a>
-				<a class="active headlink" href="index.html#portfolio-data"><img class="contain" src="yellow.svg" alt="yellow triangle">portfolio</a>
-				<a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
-				<a id="hlogo" href="index.html#home-data" class="headlink">
-					<img id="logo1" src="main logo.svg" alt="two interlocking white triangles">
-					<img id="logo2" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
-					<img id="logo3" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
-					<img id="logo4" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
-					<img id="logo5" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
+                <a id="hlogo" href="index.html#home-data" class="headlink">
+					<img id="logo1" class="headlogo-home-data" src="main logo.svg" alt="two interlocking white triangles">
+					<img id="logo2" class="headlogo-about-data" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
+					<img id="logo3" class="headlogo-projects-data" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
+					<img id="logo4" class="headlogo-portfolio-data active" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
+					<img id="logo5" class="headlogo-contact-data" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
 				</a>
+                <a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
+                <a class="headlink" href="index.html#projects-data"><img class="contain" src="yellow.svg" alt="yellow triangle">projects</a>
+                <a class="active headlink" href="index.html#portfolio-data"><img class="contain" src="green.svg" alt="green triangle">portfolio</a>
+                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
             </nav>
         </header>
 
@@ -31,18 +32,18 @@
 
         <div id="kdarpg" class="subpage">
             <div id="kdarpg-header" class="head-icon">
-                <img src="yellow.svg" alt="a yellow triangle">
+                <img src="green.svg" alt="a green triangle">
                 <h2>kda rpg animation</h2>
             </div>
-            <p><span class="yellow-text">programs //</span> Clip Studio Paint, Windows Movie Maker, Adobe Premiere Pro</p>
+            <p><span class="green-text">programs //</span> Clip Studio Paint, Windows Movie Maker, Adobe Premiere Pro</p>
 
-            <p><span class="yellow-text">overview //</span> In fall 2019, despite never having animated more than a frame-to-frame animation meme before, I decided to board an animatic to the song <a class="bodylink" href="https://www.youtube.com/watch?v=E286KqzpkKw"><span class="yellow-text"><u>RPG</u></span></a>. The premise was ridiculous but simple: “What if the K/DA members were online friends who played games together?”. After sketching the animatic it took almost two years on-and-off to complete and is my most ambitious project to date.</p>
+            <p><span class="green-text">overview //</span> In fall 2019, despite never having animated more than a frame-to-frame animation meme before, I decided to board an animatic to the song <a class="bodylink" href="https://www.youtube.com/watch?v=E286KqzpkKw"><span class="green-text"><u>RPG</u></span></a>. The premise was ridiculous but simple: “What if the K/DA members were online friends who played games together?”. After sketching the animatic it took almost two years on-and-off to complete and is my most ambitious project to date.</p>
 
             <div id="mainvid" class="embedvid">
                 <iframe width="1280" height="720" src="https://www.youtube.com/embed/59aMKj_ZzJU" frameborder="0" allowfullscreen></iframe>
             </div>
 
-            <p><span class="yellow-text">process //</span> I started with a point form script of moments I wanted to include, as well as an outline of the story. After I designed the outfits I then sketched the entire animatic using the script as a guide and threw together the images in Movie Maker to get an idea of the timings. Then came the long and tedious part—actually finishing it. Every frame had to have a second clean sketch, line art, colour, and shading. I experimented with vectors for the fully animated sections which helped speed up the colouring process later on. Once everything was completed I exported the frames and backgrounds separately and edited everything together in Premiere.</p>
+            <p><span class="green-text">process //</span> I started with a point form script of moments I wanted to include, as well as an outline of the story. After I designed the outfits I then sketched the entire animatic using the script as a guide and threw together the images in Movie Maker to get an idea of the timings. Then came the long and tedious part—actually finishing it. Every frame had to have a second clean sketch, line art, colour, and shading. I experimented with vectors for the fully animated sections which helped speed up the colouring process later on. Once everything was completed I exported the frames and backgrounds separately and edited everything together in Premiere.</p>
 
             <div class="embedvid">
                 <iframe width="1280" height="720" src="https://www.youtube.com/embed/nrD46BZ1gqA" frameborder="0" allowfullscreen></iframe>
@@ -56,7 +57,7 @@
 
             <p class="small">cleaned vector lineart example</p>
 
-            <p><span class="yellow-text">reflection and learnings //</span> This was a crazy project and I'm so proud that I managed to finish it. I learned a lot about speeding up my workflow through shortcuts and trying out new techniques such as the vector line art. One little road bump is that Clip Studio is definitely not meant to have a long animation in one file (the lag!), so I had to periodically save as a new file and merge completed frames together. This meant if I had to go back and fix something it was a pain to find a version of the file where it wasn't merged. If I could go back I'd split it into separate files for different scenes rather than one large file.</p>
+            <p><span class="green-text">reflection and learnings //</span> This was a crazy project and I'm so proud that I managed to finish it. I learned a lot about speeding up my workflow through shortcuts and trying out new techniques such as the vector line art. One little road bump is that Clip Studio is definitely not meant to have a long animation in one file (the lag!), so I had to periodically save as a new file and merge completed frames together. This meant if I had to go back and fix something it was a pain to find a version of the file where it wasn't merged. If I could go back I'd split it into separate files for different scenes rather than one large file.</p>
             
             <div id="kdahalfimg" class="halfimage">
                 <img src="kda rpg/kda rpg layer count.PNG" alt="screenshot of the layer panel UI in a drawing program">
