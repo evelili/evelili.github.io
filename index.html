@@ -3,160 +3,214 @@
     <head>
         <meta charset="UTF-8">
         <title>evelili</title>
-        <link rel="icon" href="main logo dark.svg">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- temporary file references for testing; need to properly add when building the real site -->
+        <link rel="icon" href="img/site/main_logo.svg">
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script defer src="scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
         <!-- main page of the website -->
         <header>
-            <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, adventures, contact) -->
             <nav id="navbar">
-                <a id="hlogo" href="#home-data" class="active headlink">
-					<img id="logo1" class="headlogo-home-data active" src="main logo.svg" alt="two interlocking white triangles">
-					<img id="logo2" class="headlogo-about-data" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
-					<img id="logo3" class="headlogo-projects-data" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
-					<img id="logo4" class="headlogo-portfolio-data" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
-					<img id="logo5" class="headlogo-contact-data" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
-				</a>
-                <a id="heightcheck" class="headlink" href="#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
-                <a class="headlink" href="#projects-data"><img class="contain" src="yellow.svg" alt="yellow triangle">projects</a>
-                <a class="headlink" href="#portfolio-data"><img class="contain" src="green.svg" alt="green triangle">portfolio</a>
-                <a class="headlink" href="#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
+                <div class="headlink headleft">
+                    <!-- <img class="headlogo" src="page design elements/main logo.svg" alt="two interlocking triangles"> -->
+                    <a class="logolink" href="#home-data">
+                        <svg class="headlogo" width="54" height="56" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5122 3.96677L21.736 0L23.9598 3.96677L32.2966 18.7164H53.3199L34.4878 52.0332L32.264 56L30.0402 52.0332L21.7034 37.2836H0.680054L19.5122 3.96677ZM27.5755 37.2836L32.264 45.5822L36.9525 37.2836H27.5755ZM39.8712 32.1176L44.5449 23.8451H35.1954L39.8712 32.1176ZM29.3221 23.8451L34.0169 32.1549H24.6779L19.9831 23.8451H29.3221ZM26.4245 18.7164L21.736 10.4178L17.0475 18.7164H26.4245ZM14.1288 23.8824L18.8046 32.1549H9.45509L14.1288 23.8824Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <a class="headlink" href="#about-data">
+                    <!-- <img class="headicon" src="page design elements/tri section about.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;About
+                </a>
+                <a class="headlink" href="#portfolio-data">
+                    <!-- <img class="headicon" src="page design elements/tri section portfolio.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>  
+                    &nbsp;Portfolio
+                </a>
+                <a class="headlink" href="#adventures-data">
+                    <!-- <img class="headicon" src="page design elements/tri section adventures.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Adventures
+                </a>
+                <a class="headlink" href="#contact-data">
+                    <!-- <img class="headicon" src="page design elements/tri section contact.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Contact
+                </a>
             </nav>
         </header>
 
-        <svg id="fader"></svg>
-
-        <div id="main" class="main">
-            <!-- main div of homepage with 5 sections -->
+        <div id="main">
+            <!-- main div of homepage to lay out the 5 sections vertically-->
             <section id="home-data">
-                    <h1>evelili</h1>
-                    <p class="main-subtitle">by lydia choong</p>
+                <!-- the home section / landing page -->
+                <h1>I’m <span class="red-text">Lydia Choong</span>.</h1>
+                <p class="main-subtitle">UX Researcher + Designer</p>
+                <!-- <img class="section-footer" src="page design elements/home divider pattern.svg"> -->
             </section>
 
             <section id="about-data">
-                <div id="about-header" class="head-icon">
-                    <img src="red.svg" alt="a red triangle">
-                    <h2>about</h2>
+                <!-- the about section -->
+                <div class="section-header header-black">
+                    <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    <h2>About</h2>
                 </div>
-                
-                <p>I'm a computer science student who's passionate about games and design.</p>
-
-                <p>Good design is inherently accessible. Accessible design is good design. I strive to be a conscious designer and consider user experience from the very start of the design process. One of my favourite parts of user experience research is conducting interviews—I love sitting down with an actual person to hear their thoughts, good and bad alike. Everything can be improved on, always.</p>
-
-                <p>In my free time, I like to draw, cosplay, 3D print swords, build gunpla, and play a little too much TFT.</p>
-
-                <p>This website is a home for some works I'm proud of, divided into two sections: <span class="yellow-text">projects</span> for design and <span class="green-text">portfolio</span> for art. I hope you enjoy.</p>
+                <div class="about-content">
+                    <img class="about-pic" src="img/site/about_pfp_border.svg">
+                    <div class="paragraph">
+                        <p>
+                            Hi! I'm Lydia “Lili” Choong. I'm a Computer Science student at the University of Waterloo and an aspiring doer-of-everything.
+                        </p>
+                        <p>
+                            Professionally, I create <span class="red-text">functional prototypes</span>, design and lead <span class="red-text">user interviews</span>, and <span class="red-text">solve design problems</span> with user feedback. Casually, I'm a Figma wrangler, a master of adding the “semi” to “semi-structured interview”, and the lucky person who gets to turn a hundred points of feedback into a single actionable goal.
+                        </p>
+                        <p>
+                            In my free time I collect hobbies like hobbyists collect Pokémon cards. At the moment my favourite hobbies are digital art, 3D printing swords, building gunpla, and playing maybe a little too much TFT.
+                        </p>
+                    </div>
+                </div>
             </section>
-
-            <section id="projects-data">
-                <div id="projects-header" class="head-icon">
-                    <img src="yellow.svg" alt="a yellow triangle">
-                    <h2>projects</h2>
-                </div>
-
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="politichaos.html"><img src="politichaos/politichaos front 2.png" alt="photo of a card game box with colourful characters"></a>
-                        </div>
-                        <h3>politiCHAOS</h3>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="outtolaunch.html"><img src="outtolaunch/out to launch example.png" alt="screenshot of a space themed tower defense game"></a>
-                        </div>
-                        <h3>Out to Launch</h3>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="recipetutor.html"><img src="recipetutor/recipetutor paper proto profile.PNG" alt="screenshot of a figma board"></a>
-                        </div>
-                        <h3>RecipeTutor</h3>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="website.html"><img src="website/website figma screenshot.PNG" alt="screenshot of a figma board"></a>
-                        </div>
-                        <h3>website</h3>
-                    </div>
-                </div>
-
-            </section>
-
-            <section id="portfolio-data">
-                
-                <div id="portfolio-header" class="head-icon">
-                    <img src="green.svg" alt="a green triangle">
-                    <h2>portfolio</h2>
-                </div>
-                
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="huevember.html"><img src="huevember/16.png" alt="purple drawing of girl"></a>
-                        </div>
-                        <h3>huevember</h3>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="kdarpg.html"><img src="kda rpg/kda rpg title card.png" alt="drawing of four girls standing under the text RPG"></a>
-                        </div>
-                        <h3>kda rpg animation</h3>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="battleacademia.html"><img src="battle academia/ba outfit concepts sera + samira.png" alt="drawing of two girls standing"></a>
-                        </div>
-                        <h3>battle academia fan skins</h3>
-                    </div>
-                </div>
             
+            <section id="portfolio-data">
+                <!-- splash between about and portfolio -->
+                <div class="top-splash"><img src="img/site/home_splash_1_full.svg"></div>
+                <!-- the portfolio section; will vary in height as new cards are added -->
+                <!-- <img class="section-footer" src="page design elements/home divider pattern.svg"> -->
+                <div class="section-header header-white">
+                    <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg> 
+                    <h2>Portfolio</h2>
+                </div>
+
+                <div class="card-column">
+
+                    <div class="card-base card-left border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">UX Research + Game Design</p>
+                            <h3>politiCHAOS | Card Game</h3>
+                            <p>Designing and testing a card game using an iterative design process. Includes fantasy politics, thoughts on solving the “sitting-on-the-wrong-side-of-the-table” problem, and a eureka moment of literally throwing away the board.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-base card-right border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">UX Research + Game Design</p>
+                            <h3>Out to Launch | Digital Game</h3>
+                            <p>Designing a unique game mechanic for a tower defense game followed by conducting user experience research on how the mechanic affected the game. Charming space-themed graphics and developed in an impromptu game jam over the course of a week.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-base card-left border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">Game Development</p>
+                            <h3>Elysium Demo | Digital Game</h3>
+                            <p>Designing and building a visual novel prototype in Unity. A two month journey of script-writing, sprite animation, interface design, bug-squashing, and trying to beat Unity into submission with nothing but a keyboard and a dream.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-base card-right border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">UX Research + Design</p>
+                            <h3>RecipeTutor | Cooking App</h3>
+                            <p>Conducting user experience research to prototype a cooking app with a focus on helping users learn to cook through recipes. Refined a functional prototype in Figma following an iterative design process with a focus on achievement and progress-tracking systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-base card-left border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">Design</p>
+                            <h3>Portfolio Website</h3>
+                            <p>Taking a website from prototype to code using only my bare hands, my computer, and the wonders of the internet. Features learning HTML on the fly, a complete redesign of a redesign, and the reluctant adaptation of capitalization.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="adventures-data">
+                <!-- the adventures section; will vary in height as new cards are added -->
+                <!-- <img class="section-footer" src="page design elements/home splash 2.svg"> -->
+                <div class="section-header header-black">
+                    <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    <h2>Adventures</h2>
+                </div>
+
+                <div class="card-column">
+
+                    <div class="card-base card-left border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">Illustration</p>
+                            <h3>Huevember</h3>
+                            <p>Creating one piece of art every day of November 2020 using a set of 30 preselected hues. Exploration of colour theory as well as experimentation with a lineless art style and limited colour palette.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-base card-right border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">Animation</p>
+                            <h3>K/DA RPG</h3>
+                            <p>Person who has no animation experience tries to animate. Results less disastrous than expected. Includes the opportunistic use of an Adobe product and over-complicated RPG-esque designs for the characters of K/DA.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-base card-left border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">Illustration</p>
+                            <h3>Battle Academia Fan Skins</h3>
+                            <p>Designing a skin line based on League of Legends's “Battle Academia” thematic. Emphasis on readable silhouettes similar to in-game characters rather than unrestrained design. Also, guns and swords and sword-guns all in neon-rainbow gradients.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-base card-right border">
+                        <div class="card-pic border"><img src="img/politichaos/politichaos_front_2.png"></div>
+                        <div class="card-text paragraph">
+                            <p class="card-header">Programming</p>
+                            <h3>Raytracer</h3>
+                            <p>CS student actually does CS for once and builds a ray tracer in C++ from scratch (mostly). Unstoppable programmer meets the immovable constraints of a CPU and spends over thirty straight hours rendering seven seconds worth of frames.</p>
+                        </div>
+                    </div>
+
+                </div>
             </section>
 
             <section id="contact-data">
-                <div id="contact-header" class="head-icon">
-                    <img src="blue.svg" alt="a blue triangle">
-                    <h2>contact</h2>
-                </div>
-
-                <div class="contact-grid">
-                    <a href="mailto:ljmchoong@gmail.com">
-                        <div class="contact-image">
-                            <img src="contact/email icon.svg" alt="envelope icon">
-                            <h3>email</h3>
-                        </div>
-                    </a>
-
-                    <a href="https://www.artstation.com/evelili">
-                        <div class="contact-image">
-                            <img src="contact/artstation icon-cropped.svg" alt="artstation logo">
-                            <h3>ArtStation</h3>
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/lydiachoong/">
-                        <div class="contact-image">
-                            <img src="contact/linkedin icon.png" alt="linkedin logo">
-                            <h3>LinkedIn</h3>
-                        </div>
-                    </a>
-                    
-                    <a href="https://github.com/evelili">
-                        <div class="contact-image">
-                            <img src="contact/github icon.png" alt="github logo">
-                            <h3>GitHub</h3>
-                        </div>
-                    </a>
+                <!-- the contact section -->
+                <!-- <img class="section-footer" src="page design elements/home footer pattern.svg"> -->
+                <div class="section-header header-black">
+                    <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    <h2>Contact</h2>
                 </div>
             </section>
         </div>

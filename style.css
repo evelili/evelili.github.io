@@ -1,643 +1,472 @@
-/* global variable (definitely scuffed) */
+@import url("https://rsms.me/inter/inter.css");
+
 :root {
-    --navheight: 80px;
+    --offwhite: #fdfbfb;
+    --red: #ef233c;
+    --grey: #8d99ae;
+    --offblack: #141522;
+    font-family: 'Inter', sans-serif;
 }
 
-/* text colours */
-.yellow-text {
-	color:#FFE335 !important;
-	text-decoration-color: #FFE335;
+.red-text {
+    color: var(--red) !important;
+    text-decoration-color: var(--red);
 }
 
-.green-text {
-	color: #3EFF35;
-	text-decoration-color: #3EFF35;
+/* main header bar */
+nav {
+    background-color: var(--offwhite);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 96px;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
 }
 
-body {
-    font-family: Bahnschrift, sans-serif;
-    font-size: 20px;
-    color: #f2f2f2;
-    background-color: #212121;
-    padding: 0;
-    margin: 0;
-	overflow-anchor: none;
+/* header bar hover stuff */
+nav a.headlink, nav a.headlink svg {
+    transition: all 0.15s ease-in-out;
 }
 
-/* from here: https://christopheraue.net/design/fading-pages-on-load-and-unload */
-#fader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	pointer-events: none;
-	background: #212121;
-	animation-duration: 300ms;
-	animation-timing-function: ease-in-out;
+nav a.headlink:hover {
+    background-color: var(--red);
+    color: var(--offwhite);
 }
 
-#fader:before {
-	content: 'fade';
+nav a.headlink:hover svg {
+    color: var(--offwhite);
 }
 
-@keyframes fade-out {
-	from {opacity: 1}
-	to {opacity: 0}
+/* logo in header bar */
+.headlogo {
+    display: block;
+    height: 56px;
+    width: auto;
+    color: var(--offblack);
+    transition: color 0.15s ease-in-out;
 }
 
-@keyframes fade-in {
-	from {opacity: 0}
-	to {opacity: 1}
+.headlogo:hover {
+    color: var(--red);
 }
 
-#fader.fade-out {
-	opacity: 0;
-	animation-name: fade-out;
+/* icons in header bar*/
+.headicon {
+    width: auto;
+    height: 17px;
+    object-fit: contain;
+    color: var(--offblack);
 }
 
-#fader.fade-in {
-	opacity: 1;
-	animation-name: fade-in;
+/* the link in header bar that's only the logo (nested)*/
+.logolink {
+    display: block;
+    width: 54px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* custom scrollbar (might not be supported by all browsers) */
-body::-webkit-scrollbar {
-	width: 15px;
+/* the div surrounding the header logo link*/
+.headlink.headleft {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: auto;
 }
 
-body::-webkit-scrollbar-track {
-	background-color:black;
-}
-
-body::-webkit-scrollbar-thumb {
-	background: #121212;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-	background: #f2f2f2;
-}
-
-/* title */
-h1 {
-    font-size: 144px;
-    font-weight: normal;
-    margin: 0;
+/* the links with words in the header bar */
+.headlink {
+    display: block;
     text-align: center;
+    width: 192px;
+    min-width: 192px;
+    text-decoration: none !important;
+    filter: none !important;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--offblack);
+    padding-top: 34px;
+    padding-bottom: 33px;
 }
 
-/* headings */
+/* text styling */
+h1 {
+    font-size: min(144px, 10vw);
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
 h2 {
     font-size: 72px;
-    font-weight: normal;
-    margin: 20px 0 0 0;
+    font-weight: 500;
     text-align: center;
+    margin: 0;
 }
 
 h3 {
-	font-family: Bahnschrift Light, Bahnschrift, sans-serif;
-    font-size: 24px;
-    font-weight: normal;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
     margin: 0;
-    text-align: center;
-}
-
-/* other text styling */
-.main-subtitle {
-	font-family: Bahnschrift, sans-serif;
-	font-size: 36px;
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
-	width: auto;
-	line-height: normal;
-}
-
-.footlink {
-	margin-top: 4vh;
-	margin-bottom: 8vh;
+    transition: color 0.15s ease;
 }
 
 p {
-    line-height: 150%;
-    font-family: Bahnschrift Light, Bahnschrift, sans-serif;
-	text-align: left;
-	width: 60vw;
-	margin-top: 10px;
-	margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.36;
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+    transition: color 0.15s ease;
 }
 
-/* link styling */
-a {
-	text-decoration: none;
-	color: inherit;
-	filter: brightness(100%);
-	transition: all 0.2s ease;
+.card-header {
+    font-size: 24px;
+    color: var(--red);
+    transition: color 0.15s ease;
 }
 
-a:hover {
-	filter: brightness(50%);
-	transition: all 0.2s ease;
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* thicker underline */
-u {
-    text-decoration-thickness: 3;
+.main-subtitle {
+    font-size: min(64px, 4.44vw);
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10vh;
 }
 
-/* smaller caption */
-.small {
-    font-size: 80%;
-	text-align: center;
-	margin-top: 8px;
-}
-
-/* fix navbar in place */
-nav {
-	overflow: hidden;
-	background-color: #121212;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 2;
-	display: flex;
-	max-height: 80px;
-}
-
-/*fit header images*/
-.contain {
-	width: 100%;
-	height: 20px;
-	object-fit: contain;
-}
-
-/*fit logo images*/
-#logo1 {
-	width: 100%;
-	height: 58px;
-	object-fit: contain;
+/* body styling */
+body {
+    background-color: var(--offwhite);
     margin: 0;
     padding: 0;
-    visibility: hidden;
 }
 
-#logo2, #logo3, #logo4, #logo5 {
-	width: 20%;
-	height: 58px;
-	object-fit: contain;
-	position: absolute;
-	left: 0;
-	visibility: hidden;
+/* the outer wrapper of the main page */
+#main {
+    flex-direction: column;
+    display: flex;
+    gap: 0px;
 }
 
-/* boxes in nav bar */
-.headlink {
-	display: block;
-	text-align: center;
-	text-decoration: none !important;
-	filter: none !important;
-	padding: 10px 0px 8px 0px;
-	font-size: 24px;
-	width: 20%;
-	transition: all 0.2s ease;
+/* wrapper for h2 (triangle icon and then text) */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding-bottom: 32px;
 }
 
-/* stuff for the dynamic changes (was a pain) */
-nav a:nth-child(1) {
-	border-bottom: 4px solid #f2f2f2;
-    line-height: 0px;
+/* change the colour of section headers */
+.header-white {
+    color: var(--offwhite);
 }
 
-nav a:nth-child(1):hover {
-	background-color: #f2f2f2;
+.header-black svg {
+    color: var(--red);
 }
 
-nav a:nth-child(1) > .active {
-	visibility: visible !important;
-	opacity: 1;
-	transition: visibility 0.2s ease, opacity 0.2s ease;
-}
-
-nav a:nth-child(1) > :not(.active) {
-	visibility: hidden !important;
-	opacity: 0;
-	transition: visibility 0.3s ease, opacity 0.3s ease;
-}
-
-nav a:nth-child(2) {
-	border-bottom: 4px solid #FF353F;
-}
-
-nav a:nth-child(2):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #FF353F;
-}
-
-nav a:nth-child(3) {
-	border-bottom: 4px solid #FFE335;
-}
-
-nav a:nth-child(3):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #FFE335;
-}
-
-nav a:nth-child(4) {
-	border-bottom: 4px solid #3EFF35;
-}
-
-nav a:nth-child(4):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #3EFF35;
-}
-
-nav a:nth-child(5) {
-	border-bottom: 4px solid #3546FF;
-}
-
-nav a:nth-child(5):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #3546FF;
-}
-/* end of header stuff (still a pain) */
-
-/* size the page sections depending on the size of the screen */
-section {
-	padding-top: var(--navheight);
-	min-height: calc(100vh - var(--navheight));
-}
-
+/* the first section on the main page */
 #home-data {
-	height: calc(100vh - var(--navheight));
+    height: 100vh;
+    background-image: url("img/site/home_divider_pattern_repeating.svg");
+    background-repeat: repeat-x;
+    background-size: auto 35%;
+    background-position: center bottom;
     display: flex;
     flex-direction: column;
     justify-content: center;
-	background-image: url("main logo dark.svg");
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-size: auto min(75vw, 75vh);
-	background-position: center center;
-	background-origin: content-box;
+    gap: min(24px, 1.66vw);
 }
 
-#about-data, #portfolio-data, #projects-data {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+/* the second section on the main page */
+#about-data {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* logo icon triangle thingys styling */
-.head-icon {
-	display: block;
-	text-align: center;
-	margin-top: 8vh;
-	margin-bottom: 10px;
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: min(56px, 5%);
+    /*width: max(900px, 58%);*/
+    width: max(900px, min(58%, 1111px));
+    padding-bottom: 100px;
 }
 
-/* cards for home page */
-.card-image img {
-	width: 300px;
-	height: 300px;
-	object-fit: cover;
+.about-pic {
+    width: 30%;
+    height: auto;
 }
 
-.card-image {
-	display: block;
-	text-align: center;
+/* top splash styling */
+.top-splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    overflow: clip;
+    position: absolute;
+    margin-top: -560px;
+    z-index: -1;
 }
 
-.card {
-	display: flex;
-	flex-direction: column;
-	/*width: 300px;*/
-	gap: 10px;
-	word-wrap: break-word;
+/* card column styling */
+.card-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 68px;
 }
 
-.card-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 3vw;
-	justify-content: center;
-	align-items: center;
-	/*width: 0;
-	min-width: 60vw;*/
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 5vw;
-	margin-right: 5vw;
+.card-base {
+    display: flex;
+    width: max(900px, min(80%, 1280px));
+    gap: max(31px, min(3.5%, 120px));
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--offwhite);
+    padding-top: 79px;
+    padding-bottom: 79px;
+    transition: background-color 0.15s ease-in-out;
 }
 
-/* contact images and styling */
-.contact-image {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	align-items: center;
-	justify-content: center;
+.card-left {
+    display: flex;
+    flex-direction: row;
 }
 
-.contact-image img {
-	height: 75px;
-	object-fit: contain;
-	display: block;
-	margin: 0 auto;
+.card-right {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-.contact-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8vw;
-	justify-content: center;
-	align-items: center;
-	margin-top: 8vh;
-	margin-left: 8vw;
-	margin-right: 8vw;
-	margin-bottom: 8vh;
+.border {
+    border-style: solid;
+    border-width: 8px;
+    border-color: var(--offblack);
+    border-radius: 16px;
 }
 
-/* subpage stuff */
-.subpage {
-	padding-top: var(--navheight);
-	min-height: calc(100vh - var(--navheight));
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+.card-pic {
+    width: 320px;
+    height: 320px;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -22px 22px 0px 0px var(--red);
+    margin: 0px 0px 22px 22px;
+    transition: box-shadow 0.15s ease;
 }
 
-/* logo banner */
-.singlelogo img, .fulllogo img {
-	max-width: 10vw;
+.card-pic img {
+    flex-shrink: 1;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
 }
 
-.singlelogo, .fulllogo {
-	display: flex;
+.card-text {
+    width: max(416px, min(46.25%, 592px));
+    height: auto;
 }
 
-.logobanner {
-	display: grid;
-	grid-template-columns: auto auto auto auto auto;
-	height: 30vh;
-	column-gap: 2vw;
-	margin: 10px 0 10px 0;
-	padding: 0;
-	align-items: center;
+/* card hover stuff */
+.card-base:hover {
+    background-color: var(--red);
 }
 
-/* main huevember grid (pain) */
-.picgrid {
-	display: grid;
-	grid-template-columns: 15vw 15vw 15vw 15vw;
-	grid-template-rows: repeat(8, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 10px 0;
-	padding: 0;
+.card-base:hover .card-pic {
+    box-shadow: -22px 22px 0px 0px var(--offblack);
 }
 
-.picgrid-item img {
-	width: 15vw;
+.card-base:hover h3 {
+    color: var(--offwhite);
 }
 
-.picgrid-item {
-	overflow: hidden;
-	display: flex;
-	height: auto;
+.card-base:hover p {
+    color: var(--offwhite);
 }
 
-.picgrid .picgrid-item:last-child img, .picgrid .picgrid-item:nth-last-child(2) img {
-	width: 30vw;
+.card-base:hover .card-header {
+    color: var(--offwhite);
 }
 
-.picgrid .picgrid-item:last-child {
-	grid-column: 3 / 5;
+/* the third section on the main page */
+#portfolio-data {
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
 }
 
-.picgrid .picgrid-item:nth-last-child(2) {
-	grid-column: 1 / 3;
+/* the fourth section on the min page */
+#adventures-data {
+    padding-top: 150px;
 }
 
-/* one row of four pics */
-.fourpicgrid {
-	display: grid;
-	grid-template-columns: 15vw 15vw 15vw 15vw;
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
-}
-
-/* two rows of three pics... there has to be a better way to do this lol*/
-.threetwogrid {
-	display: grid;
-	grid-template-columns: 15vw 15vw 15vw;
-	grid-template-rows: repeat(2, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
-}
-
-.twothreegrid {
-	display: grid;
-	grid-template-columns: 30vw 30vw;
-	grid-template-rows: repeat(3, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
-}
-
-/* two by two */
-.twopic-item img {
-	width: 30vw;
-}
-
-.twopic-item {
-	overflow: hidden;
-	display: flex;
-	height: auto;
-}
-
-.twotwopicgrid {
-	display: grid;
-	grid-template-columns: 30vw 30vw;
-	grid-template-rows: repeat(2, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
-}
-
-/* and two by one */
-.twopicgrid {
-	display: grid;
-	grid-template-columns: 30vw 30vw;
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
-}
-
-/* three by one oh boy */
-.threepic-item img {
-	width: 20vw;
-}
-
-.threepic-item {
-	overflow: hidden;
-	display: flex;
-	height: auto;
-}
-
-.threepicgrid {
-	display: grid;
-	grid-template-columns: 20vw 20vw 20vw;
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
-}
-
-/* single squarish image */
-.halfimage img {
-	width: 30vw;
-	background-color: #121212;
-	margin: 10px 0 0 0;
-	display: flex;
-}
-
-.botimg {
-	margin: 10px 0 10px 0 !important;
-}
-
-#kdahalfimg img {
-	max-width: 384px;
-}
-
-/* embed a video */
-.embedvid {
-	position: relative;
-	overflow: hidden;
-	width: 60vw;
-	padding-bottom: 33.75vw;
-	height: 0;
-	margin: 10px 0 0 0;
-}
-
-.embedvid iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-#mainvid {
-	margin: 10px 0 10px 0;
-}
-
-/* gif and other wide images */
-.wideimg {	
-	display: flex;
-	text-align: center;
-	margin: 10px 0 0 0;
-}
-
-.wideimg img {
-	object-fit: cover;
-	max-width: 60vw;
-}
-
-/* odd sized images */
-.oddsizeimages img {
-	object-fit: contain;
-	height: 20vw;
-	width: auto;
-}
-
-.oddsizeimages {
-	display: flex;
-	margin: 10px 0 0 0;
-	gap: 10px;
-}
-
-/* tall stuff for the recipe page */
-.tallsection img {
-	object-fit: contain;
-	height: 80vh;
-	width: auto;
-}
-.tallsection {
-	display: flex;
-	margin: 10px 0 0 0;
-	gap: 10px;
+/* the last section on the main page */
+#contact-data {
+    padding-top: 150px;
 }
 
 /* for smaller screens */
-@media only screen and (max-width: 600px) {
-	body {
-		font-size: 16px;
-	}
+@media only screen and (max-width: 960px) {
+	nav {
+        max-height: 10vw;
+        width: 100vw;
+    }
 
-	#logo5, #logo4, #logo3, #logo2, #logo1 {
-		height: calc(var(--navheight) - 20px);
-	}
+    .headlink {
+        width: 20vw;
+        min-width: 20vw;
+        font-size: 2.5vw;
+        font-weight: 500;
+        padding-top: 3.5vw;
+        padding-bottom: 3.5vw;
+    }
 
-	h1 {
-		font-size: 24vw;
-	}
+    .headlink.headleft {
+        padding-top: 2.1vw;
+        padding-bottom: 2.1vw;
+    }
 
-	h2 {
-		font-size: 12vw;
-	}
+    .logolink {
+        width: 5.625vw;
+    }
 
-	.main-subtitle {
-		font-size: 6vw;
-	}
+    .headlogo {
+        height: 5.83vw;
+    }
 
-	h3 {
-		font-size: 4vw;
-		width: auto;
-	}
+    .headicon {
+        height: 1.77vw;
+    }
 
-	.contain {
-		height: calc(var(--navheight) * 0.25);
-	}
+    .section-header {
+        gap: 3vw;
+        padding-bottom: 3.33vw;;
+    }
 
-	.card-image img {
-		width: 50vw;
-		height: 50vw;
-	}
+    .section-tri {
+        height: max(5.5vw, 13px);
+        width: auto;
+    }
 
-	.card {
-		gap: 0;
-	}
+    h2 {
+        font-size: max(7.5vw, 18px);
+    }
 
-	.card-grid {
-		margin-top: 3vh;
-		margin-bottom: 3vh;
-	}
+    h3 {
+        font-size: max(3.75vw, 16px);
+    }
 
-	.head-icon img {
-		width: 12vw;
-	}
+    .card-header {
+        font-size: max(2.5vw, 12px);
+    }
 
-	.head-icon {
-		margin-top: 4vh;
-	}
+    p {
+        font-size: max(2vw, 12px);
+    }
 
-	.headlink {
-		font-size: 4vw;
-		width: 20%;
-		overflow: hidden;
-		height: calc(100vw * calc(58 / 600));
-	}
+    .paragraph {
+        gap: max(1.5vw, 9px);
+    }
+
+    .about-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+        width: 80vw;
+        padding-bottom: 0;
+    }
+
+    .about-pic {
+        width: 50vw;
+        height: auto;
+    }
+
+    #about-data {
+        height: fit-content;
+        padding-top: 15.625vw;
+        padding-bottom: 15.625vw;
+    }
+
+    .top-splash {
+        margin-top: -30vw;
+    }
+
+    .top-splash img {
+        height: 70vw;
+    }
+
+    #portfolio-data {
+        padding-top: 15.625vw;
+    }
+
+    #adventures-data {
+        padding-top: 15.625vw;
+    }
+
+    .card-column {
+        gap: 5vw;
+    }
+
+    .card-base {
+        width: 90vw;
+        height: fit-content;
+        gap: 3vw;
+        padding-top: 8.2vw;
+        padding-bottom: 8.2vw;
+    }
+
+    .card-base:hover .card-pic {
+        box-shadow: -2.29vw 2.29vw 0px 0px var(--offblack);
+    }
+
+    .card-left {
+        flex-direction: column;
+    }
+
+    .card-right {
+        flex-direction: column;
+    }
+    
+    .card-pic {
+        width: 70vw;
+        height: 70vw;
+        box-shadow: -2.29vw 2.29vw 0px 0px var(--red);
+        margin: 0px 0px 2.29vw 2.29vw;
+    }
+    
+    .card-text {
+        width: 70vw;
+        height: auto;
+    }
+
+    .border {
+        border-style: solid;
+        border-width: 0.83vw;
+        border-color: var(--offblack);
+        border-radius: 1.66vw;
+    }
 }
