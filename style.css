@@ -24,6 +24,7 @@ nav {
     overflow: visible;
     display: flex;
     justify-content: flex-end;
+    z-index: 10;
 }
 
 /* header bar hover stuff */
@@ -164,7 +165,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 68px;
 }
 
 /* change the colour of section headers */
@@ -176,13 +177,17 @@ body {
     color: var(--red);
 }
 
+/* divider pattern */
+.divider-pattern {
+    background-image: url("img/site/home_divider_pattern_repeating.svg");
+    background-repeat: repeat-x;
+    background-size: auto 35vh;
+    background-position: center bottom;
+}
+
 /* the first section on the main page */
 #home-data {
     height: 100vh;
-    background-image: url("img/site/home_divider_pattern_repeating.svg");
-    background-repeat: repeat-x;
-    background-size: auto 35%;
-    background-position: center bottom;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,7 +209,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: min(56px, 5%);
-    /*width: max(900px, 58%);*/
     width: max(900px, min(58%, 1111px));
     padding-bottom: 100px;
 }
@@ -234,6 +238,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 68px;
+    padding-bottom: 214px;
 }
 
 .card-base {
@@ -313,19 +318,61 @@ body {
 
 /* the third section on the main page */
 #portfolio-data {
-    display: flex;
-    flex-direction: column;
     padding-top: 150px;
 }
 
 /* the fourth section on the min page */
 #adventures-data {
     padding-top: 150px;
+    background-image: url("img/site/home_splash_2_full.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 
 /* the last section on the main page */
 #contact-data {
+    height: min(960px, 70vh);
     padding-top: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    text-decoration: none;
+    color: var(--offblack);
+    transition: color 0.15s ease;
+    align-items: center;
+}
+
+.contact-link:hover {
+    color: var(--red);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+    margin: auto;
+}
+
+.contact-icon {
+    height: 36px;
+    width: auto;
+}
+
+.footer-splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    margin-left: 730px;
+    margin-top: 165px;
 }
 
 /* for smaller screens */
@@ -363,7 +410,7 @@ body {
 
     .section-header {
         gap: 3vw;
-        padding-bottom: 3.33vw;;
+        padding-bottom: 5vw;
     }
 
     .section-tri {
@@ -419,6 +466,15 @@ body {
         height: 70vw;
     }
 
+    .footer-splash {
+        bottom: -45vw;
+        margin: 0;
+    }
+
+    .footer-splash img {
+        width: 200%;
+    }
+
     #portfolio-data {
         padding-top: 15.625vw;
     }
@@ -468,5 +524,18 @@ body {
         border-width: 0.83vw;
         border-color: var(--offblack);
         border-radius: 1.66vw;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: fit-content;
+        gap: 2vw;
+        padding: 5vw;
+    }
+
+    .contact-icon {
+        height: max(3.75vw, 16px);
     }
 }
