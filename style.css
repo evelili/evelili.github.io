@@ -5,6 +5,7 @@
     --red: #ef233c;
     --grey: #8d99ae;
     --offblack: #141522;
+    --transblack: #141522cc;
     font-family: 'Inter', sans-serif;
 }
 
@@ -32,15 +33,6 @@ nav a.headlink, nav a.headlink svg {
     transition: all 0.15s ease-in-out;
 }
 
-nav a.headlink:hover {
-    background-color: var(--red);
-    color: var(--offwhite);
-}
-
-nav a.headlink:hover svg {
-    color: var(--offwhite);
-}
-
 /* logo in header bar */
 .headlogo {
     display: block;
@@ -48,10 +40,6 @@ nav a.headlink:hover svg {
     width: auto;
     color: var(--offblack);
     transition: color 0.15s ease-in-out;
-}
-
-.headlogo:hover {
-    color: var(--red);
 }
 
 /* icons in header bar*/
@@ -93,6 +81,15 @@ nav a.headlink:hover svg {
     padding-bottom: 33px;
 }
 
+/* subpage header bar */
+#sub-navbar {
+    background-color: var(--red);
+}
+
+#sub-navbar .headlogo, #sub-navbar .headicon, #sub-navbar .headlink {
+    color: var(--offwhite);
+}
+
 /* text styling */
 h1 {
     font-size: min(144px, 10vw);
@@ -106,6 +103,11 @@ h2 {
     font-weight: 500;
     text-align: center;
     margin: 0;
+}
+
+.subpage-header h2 {
+    white-space: nowrap;
+    /* font-size: min(72px, 5.5vw); */
 }
 
 h3 {
@@ -142,7 +144,7 @@ p {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    padding-bottom: 10vh;
+    padding-bottom: max(10vh, 80px);
 }
 
 /* body styling */
@@ -166,6 +168,7 @@ body {
     justify-content: center;
     gap: 32px;
     padding-bottom: 68px;
+    flex-wrap: wrap;
 }
 
 /* change the colour of section headers */
@@ -180,27 +183,32 @@ body {
 /* divider pattern */
 .divider-pattern {
     background-image: url("img/site/home_divider_pattern_repeating.svg");
+}
+
+.footer-pattern {
+    background-image: url("img/site/home_footer_pattern_repeating.svg");
+}
+
+.divider-pattern, .footer-pattern {
     background-repeat: repeat-x;
-    background-size: auto 35vh;
+    background-size: auto max(35vh, 280px);
     background-position: center bottom;
 }
 
-/* the first section on the main page */
-#home-data {
+/* page section stuff */
+#home-data, #about-data, #contact-data {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#home-data {
     gap: min(24px, 1.66vw);
 }
 
-/* the second section on the main page */
-#about-data {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#home-data, #about-data, #contact-data {
+    min-height: 800px;
 }
 
 .about-content {
@@ -210,7 +218,7 @@ body {
     align-items: center;
     gap: min(56px, 5%);
     width: max(900px, min(58%, 1111px));
-    padding-bottom: 100px;
+    padding-bottom: max(10vh, 80px);
 }
 
 .about-pic {
@@ -281,6 +289,7 @@ body {
     box-shadow: -22px 22px 0px 0px var(--red);
     margin: 0px 0px 22px 22px;
     transition: box-shadow 0.15s ease-in-out;
+    background-color: var(--offblack);
 }
 
 .card-pic img {
@@ -295,44 +304,21 @@ body {
     height: auto;
 }
 
-/* card hover stuff */
-.card-base:hover {
-    background-color: var(--red);
-}
-
-.card-base:hover .card-pic {
-    box-shadow: -22px 22px 0px 0px var(--offblack);
-}
-
-.card-base:hover h3 {
-    color: var(--offwhite);
-}
-
-.card-base:hover p {
-    color: var(--offwhite);
-}
-
-.card-base:hover .card-header {
-    color: var(--offwhite);
-}
-
-/* the third section on the main page */
-#portfolio-data {
+#portfolio-data, #adventures-data {
     padding-top: 150px;
 }
 
-/* the fourth section on the min page */
 #adventures-data {
-    padding-top: 150px;
     background-image: url("img/site/home_splash_2_full.svg");
     background-position: center bottom;
     background-repeat: no-repeat;
 }
 
-/* the last section on the main page */
+#about-data, #contact-data {
+    align-items: center;
+}
+
 #contact-data {
-    height: min(960px, 70vh);
-    padding-top: 150px;
     position: relative;
     overflow: hidden;
 }
@@ -347,16 +333,13 @@ body {
     align-items: center;
 }
 
-.contact-link:hover {
-    color: var(--red);
-}
-
 .contact-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 800px;
-    margin: auto;
+    margin: 0 auto;
+    padding-bottom: max(10vh, 80px);
 }
 
 .contact-icon {
@@ -371,8 +354,177 @@ body {
     height: fit-content;
     position: absolute;
     bottom: -940px;
-    /* margin-left: 730px;
-    margin-top: 165px; */
+    pointer-events: none;
+}
+
+/* subpage stuff */
+.subpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 16.25vw;
+    background-image: url("img/site/subpage_footer_pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+}
+
+.subpage-splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    overflow: clip;
+    position: absolute;
+    margin-top: -500px;
+    z-index: -1;
+}
+
+.banner-pic {
+    width: 900px;
+    aspect-ratio: 900 / 500;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--offblack);
+    margin-bottom: 40px;
+}
+
+.banner-pic img {
+    flex-shrink: 1;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.project-details {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: min(5vw, 64px);
+}
+
+.tools-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subpage-text, ul {
+    font-size: 24px;
+}
+
+ul {
+    margin: 0;
+}
+
+.sub-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 16px;
+}
+
+.row img {
+    flex-grow: calc(var(--r));
+    display: block;
+    flex-basis: 0px;
+    width: 0px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--transblack);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.2s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    color: var(--offwhite);
+    transition: all 0.15s ease-in-out;
+    top: 2%;
+    right: 3%;
+    font-size: 56px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.divider {
+    display: block;
+    width: 8px;
+    height: auto;
+    background-color: var(--red);
+    flex-shrink: 0;
+}
+
+.round-corners {
+    border-radius: 8px;
+}
+
+.bullet-list .subpage-text{
+    color: var(--red);
+}
+
+.left-bar {
+    border-left: 8px solid var(--red);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-bar div {
+    margin-left: 16px;
+}
+
+.goal {
+    background-color: var(--red);
+    padding: 28px 72px 28px 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+}
+
+.goal p {
+    color: var(--offwhite);
+    text-align: center;
 }
 
 /* for smaller screens */
@@ -422,11 +574,15 @@ body {
         font-size: max(7.5vw, 18px);
     }
 
+    /* .subpage-header h2 {
+        font-size: 5.5vw;
+    } */
+
     h3 {
         font-size: max(3.75vw, 16px);
     }
 
-    .card-header {
+    .card-header, .subpage-text, ul {
         font-size: max(2.5vw, 12px);
     }
 
@@ -444,7 +600,6 @@ body {
         align-items: center;
         gap: 5vw;
         width: 80vw;
-        padding-bottom: 0;
     }
 
     .about-pic {
@@ -452,10 +607,21 @@ body {
         height: auto;
     }
 
-    #about-data {
+    #about-data, #contact-data {
         height: fit-content;
-        padding-top: 15.625vw;
-        padding-bottom: 15.625vw;
+    }
+
+    #home-data, #about-data, #contact-data {
+        min-height: fit-content;
+    }
+
+    #adventures-data {
+        background-image: url("img/site/home_splash_2.svg");
+        background-size: 100% auto;
+    }
+
+    .footer-pattern {
+        background-size: auto 20vh;
     }
 
     .top-splash {
@@ -467,61 +633,46 @@ body {
     }
 
     .footer-splash {
-        bottom: -45vw;
         margin: 0;
     }
 
-    .footer-splash img {
-        width: 200%;
-    }
-
-    #portfolio-data {
-        padding-top: 15.625vw;
-    }
-
-    #adventures-data {
-        padding-top: 15.625vw;
+    #about-data, #portfolio-data, #adventures-data, #contact-data {
+        padding-top: 20vw;
     }
 
     .card-column {
         gap: 5vw;
+        padding-bottom: 22.29vw;
     }
 
     .card-base {
         width: 90vw;
         height: fit-content;
-        gap: 3vw;
-        padding-top: 8.2vw;
-        padding-bottom: 8.2vw;
+        gap: max(3vw, 16px);
+        padding-top: 4.1vw;
+        padding-bottom: 6.15vw;
     }
 
-    .card-base:hover .card-pic {
-        box-shadow: -2.29vw 2.29vw 0px 0px var(--offblack);
-    }
-
-    .card-left {
-        flex-direction: column;
-    }
-
-    .card-right {
+    .card-left, .card-right {
         flex-direction: column;
     }
     
     .card-pic {
-        width: 70vw;
-        height: 70vw;
+        width: 75vw;
+        height: 75vw;
         box-shadow: -2.29vw 2.29vw 0px 0px var(--red);
         margin: 0px 0px 2.29vw 2.29vw;
     }
     
     .card-text {
-        width: 70vw;
+        width: 75vw;
         height: auto;
+        gap: 1.5vw !important;
     }
 
     .border {
         border-style: solid;
-        border-width: 0.83vw;
+        border-width: max(0.83vw, 2px);
         border-color: var(--offblack);
         border-radius: 1.66vw;
     }
@@ -532,10 +683,139 @@ body {
         align-items: flex-start;
         width: fit-content;
         gap: 2vw;
-        padding: 5vw;
+        margin: 0 0 40vw 0;
     }
 
     .contact-icon {
-        height: max(3.75vw, 16px);
+        height: max(3.75vw, 13px);
+    }
+
+    .contact-link {
+        gap: max(2.5vw, 6px);
+    }
+
+    .banner-pic {
+        width: 93.75vw;
+        margin-bottom: 4.1vw;
+    }
+
+    .project-details {
+        width: 93.75vw;
+        gap: 4.1vw;
+    }
+
+    .left-bar {
+        border-left: 0.83vw solid var(--red);
+        gap: max(1.6vw, 8px);
+    }
+    
+    .left-bar div {
+        margin-left: 1.6vw;
+    }
+
+    .row {
+        gap: 1.6vw;
+    }
+
+    .row-text {
+        flex-direction: column !important;
+    }
+
+    .round-corners {
+        border-radius: 0.83vw;
+    }
+
+    .divider {
+        width: 0.83vw;
+    }
+
+    .goal {
+        padding: 2.9vw 7.5vw 2.9vw 7.5vw;
+        border-radius: 1.6vw;
+    }
+
+    .sub-block {
+        gap: 1.6vw;
+    }
+
+    .subpage {
+        padding-top: 15.625vw;
+    }
+
+    .subpage-splash {
+        width: 100%;
+        height: fit-content;
+        overflow: clip;
+        position: absolute;
+        margin-top: -52vw;
+    }
+
+    .subpage-splash img {
+        height: 100vw;
+    }
+
+    .tools-skills {
+        gap: max(0.83vw, 2px);
+    }
+
+    .close {
+        font-size: max(5.8vw, 32px);
+    }
+}
+
+@media(hover: hover) and (pointer: fine) {
+    nav a.headlink:hover {
+        background-color: var(--red);
+        color: var(--offwhite);
+    }
+    
+    nav a.headlink:hover svg {
+        color: var(--offwhite);
+    }
+
+    .headlogo:hover {
+        color: var(--red);
+    }
+
+    #sub-navbar a.headlink:hover {
+        background-color: var(--offwhite);
+        color: var(--red);
+    }
+    
+    #sub-navbar a.headlink:hover svg {
+        color: var(--red);
+    }
+    
+    #sub-navbar .headlogo:hover {
+        color: var(--offblack);
+    }
+
+    .card-base:hover {
+        background-color: var(--red);
+    }
+    
+    .card-base:hover .card-pic {
+        box-shadow: -22px 22px 0px 0px var(--offblack);
+    }
+    
+    .card-base:hover h3, .card-base:hover p, card-base:hover .card-header {
+        color: var(--offwhite);
+    }
+
+    .contact-link:hover {
+        color: var(--red);
+    }
+
+    .row img:hover {
+        opacity: 0.8;
+    }
+
+    .close:hover {
+        color: var(--red);
+        cursor: pointer;
+    }
+
+    .card-base:hover .card-pic {
+        box-shadow: -2.29vw 2.29vw 0px 0px var(--offblack);
     }
 }
