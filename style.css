@@ -127,6 +127,12 @@ p {
     transition: color 0.15s ease-in-out;
 }
 
+li {
+    font-size: 20px;
+    line-height: 1.36;
+    font-weight: 300;
+}
+
 .card-header {
     font-size: 24px;
     color: var(--red);
@@ -795,7 +801,7 @@ ul {
     }
     
     .card-base:hover .card-pic {
-        box-shadow: -22px 22px 0px 0px var(--offblack);
+        box-shadow: max(-2.29vw,-22px) min(2.29vw, 22px) 0px 0px var(--offblack);
     }
     
     .card-base:hover h3, .card-base:hover p, card-base:hover .card-header {
@@ -813,9 +819,5 @@ ul {
     .close:hover {
         color: var(--red);
         cursor: pointer;
-    }
-
-    .card-base:hover .card-pic {
-        box-shadow: -2.29vw 2.29vw 0px 0px var(--offblack);
     }
 }
