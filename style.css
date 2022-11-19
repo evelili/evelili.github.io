@@ -30,16 +30,30 @@ nav {
 
 /* header bar hover stuff */
 nav a.headlink, nav a.headlink svg {
-    transition: all 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
 /* logo in header bar */
 .headlogo {
     display: block;
+    position: absolute;
+    visibility: hidden;
     height: 56px;
     width: auto;
     color: var(--offblack);
-    transition: color 0.15s ease-in-out;
+    /* transition: color 0.15s ease-in-out; */
+}
+
+.headlogo.logo-active {
+    visibility: visible !important;
+    opacity: 1;
+	transition: visibility 0.2s ease, opacity 0.2s ease, color 0.15s ease-in-out;
+}
+
+.headlogo:not(.logo-active) {
+    visibility: hidden;
+    opacity: 0;
+	transition: visibility 0.35s ease, opacity 0.35s ease, color 0.15s ease-in-out;
 }
 
 /* icons in header bar*/
@@ -71,7 +85,7 @@ nav a.headlink, nav a.headlink svg {
     display: block;
     text-align: center;
     width: 192px;
-    min-width: 192px;
+    /* min-width: 192px; */
     text-decoration: none !important;
     filter: none !important;
     font-size: 24px;
@@ -82,12 +96,18 @@ nav a.headlink, nav a.headlink svg {
 }
 
 /* subpage header bar */
-#sub-navbar {
+.sub-navbar {
     background-color: var(--red);
 }
 
-#sub-navbar .headlogo, #sub-navbar .headicon, #sub-navbar .headlink {
+.sub-navbar .headlogo, .sub-navbar .headicon, .sub-navbar .headlink {
     color: var(--offwhite);
+}
+
+.sub-navbar .headlogo {
+    visibility: visible !important;
+    opacity: 1;
+	transition: color 0.15s ease-in-out;
 }
 
 /* text styling */
@@ -99,7 +119,7 @@ h1 {
 }
 
 h2 {
-    font-size: 72px;
+    font-size: 56px;
     font-weight: 500;
     text-align: center;
     margin: 0;
@@ -107,11 +127,10 @@ h2 {
 
 .subpage-header h2 {
     white-space: nowrap;
-    /* font-size: min(72px, 5.5vw); */
 }
 
 h3 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
     text-align: left;
     margin: 0;
@@ -119,30 +138,27 @@ h3 {
 }
 
 p {
-    font-size: 20px;
-    line-height: 1.36;
-    font-weight: 300;
     text-align: left;
     margin: 0;
     transition: color 0.15s ease-in-out;
 }
 
-li {
-    font-size: 20px;
+li, p {
+    font-size: 17px;
     line-height: 1.36;
     font-weight: 300;
 }
 
 .card-header {
-    font-size: 24px;
     color: var(--red);
     transition: color 0.15s ease-in-out;
+    font-size: 16px !important;
 }
 
 .paragraph {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .main-subtitle {
@@ -172,9 +188,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
-    padding-bottom: 68px;
+    gap: 18px;
+    padding-bottom: 48px;
     flex-wrap: wrap;
+}
+
+.section-tri {
+    height: 44px;
+    width: auto;
 }
 
 /* change the colour of section headers */
@@ -247,42 +268,50 @@ body {
 /* card column styling */
 .card-column {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 68px;
+    flex-direction: row;
+    width: min(1444px, 90%);
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     padding-bottom: 214px;
+    margin: auto;
 }
 
 .card-base {
     display: flex;
-    width: max(900px, min(80%, 1280px));
-    gap: max(31px, min(3.5%, 120px));
-    flex-direction: row;
-    justify-content: center;
+    width: 440px;
+    gap: 32px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: stretch;
     align-items: center;
     background-color: var(--offwhite);
-    padding-top: 79px;
-    padding-bottom: 79px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     transition: background-color 0.15s ease-in-out;
+    position: relative;
+    border-radius: 20px;
+    /* margin: 12px; */
 }
 
-.card-left {
+.card-column a {
     display: flex;
-    flex-direction: row;
+    align-self: stretch;
+    text-decoration: none;
+    color: var(--offblack);
+    margin: 12px;
 }
 
-.card-right {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.border {
-    border-style: solid;
-    border-width: 8px;
-    border-color: var(--offblack);
+.border::before {
     border-radius: 16px;
+    box-shadow: inset 0px 0px 0px 5px var(--offblack);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 5;
+    content: " ";
 }
 
 .card-pic {
@@ -296,6 +325,8 @@ body {
     margin: 0px 0px 22px 22px;
     transition: box-shadow 0.15s ease-in-out;
     background-color: var(--offblack);
+    position: relative;
+    border-radius: 16px;
 }
 
 .card-pic img {
@@ -303,11 +334,21 @@ body {
     object-fit: cover;
     min-width: 100%;
     min-height: 100%;
+    border-radius: 20px;
 }
 
 .card-text {
-    width: max(416px, min(46.25%, 592px));
+    /* width: max(416px, min(46.25%, 592px)); */
+    width: 340px;
     height: auto;
+}
+
+.card-text h3 {
+    font-size: 24px;
+}
+
+.card-text p {
+    font-size: 14px;
 }
 
 #portfolio-data, #adventures-data {
@@ -333,7 +374,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 24px;
+    gap: 16px;
     text-decoration: none;
     color: var(--offblack);
     align-items: center;
@@ -343,13 +384,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
-    padding-bottom: max(10vh, 80px);
+    padding-bottom: max(24vh, 80px);
 }
 
 .contact-icon {
-    height: 36px;
+    height: 30px;
     width: auto;
 }
 
@@ -390,13 +431,15 @@ body {
 
 .banner-pic {
     width: 900px;
-    aspect-ratio: 900 / 500;
+    aspect-ratio: 900 / 360;
     overflow: clip;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--offblack);
     margin-bottom: 40px;
+    position: relative;
+    border-radius: 16px;
 }
 
 .banner-pic img {
@@ -404,13 +447,15 @@ body {
     object-fit: cover;
     min-width: 100%;
     min-height: 100%;
+    background-color: var(--offblack);
+    border-radius: 20px;
 }
 
 .project-details {
     width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 36px;
     padding-bottom: min(5vw, 64px);
 }
 
@@ -421,7 +466,7 @@ body {
 }
 
 .subpage-text, ul {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 ul {
@@ -449,7 +494,7 @@ ul {
     width: 0px;
     height: auto;
     cursor: pointer;
-    transition: all 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
 }
 
 .modal {
@@ -484,7 +529,7 @@ ul {
 .close {
     position: absolute;
     color: var(--offwhite);
-    transition: all 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
     top: 2%;
     right: 3%;
     font-size: 56px;
@@ -537,12 +582,13 @@ ul {
 @media only screen and (max-width: 960px) {
 	nav {
         max-height: 10vw;
-        width: 100vw;
+        /* width: 100vw; */
     }
 
     .headlink {
-        width: 20vw;
-        min-width: 20vw;
+        /* width: 20vw; */
+        flex-shrink: 1;
+        min-width: auto;
         font-size: 2.5vw;
         font-weight: 500;
         padding-top: 3.5vw;
@@ -567,37 +613,33 @@ ul {
     }
 
     .section-header {
-        gap: 3vw;
+        gap: 1.875vw;
         padding-bottom: 5vw;
     }
 
     .section-tri {
-        height: max(5.5vw, 13px);
+        height: max(4.58vw, 13px);
         width: auto;
     }
 
     h2 {
-        font-size: max(7.5vw, 18px);
+        font-size: max(5.83vw, 18px);
     }
 
-    /* .subpage-header h2 {
-        font-size: 5.5vw;
-    } */
-
     h3 {
-        font-size: max(3.75vw, 16px);
+        font-size: max(2.92vw, 16px) !important;
     }
 
     .card-header, .subpage-text, ul {
-        font-size: max(2.5vw, 12px);
+        font-size: max(2.08vw, 12px) !important;
     }
 
-    p {
-        font-size: max(2vw, 12px);
+    li, p {
+        font-size: max(1.77vw, 12px) !important;
     }
 
     .paragraph {
-        gap: max(1.5vw, 9px);
+        gap: max(1.25vw, 9px);
     }
 
     .about-content {
@@ -647,7 +689,7 @@ ul {
     }
 
     .card-column {
-        gap: 5vw;
+        width: 100%;
         padding-bottom: 22.29vw;
     }
 
@@ -657,10 +699,7 @@ ul {
         gap: max(3vw, 16px);
         padding-top: 4.1vw;
         padding-bottom: 6.15vw;
-    }
-
-    .card-left, .card-right {
-        flex-direction: column;
+        border-radius: 2.08vw;
     }
     
     .card-pic {
@@ -668,6 +707,11 @@ ul {
         height: 75vw;
         box-shadow: -2.29vw 2.29vw 0px 0px var(--red);
         margin: 0px 0px 2.29vw 2.29vw;
+        border-radius: 1.66vw;
+    }
+
+    .card-pic img {
+        border-radius: 2.08vw;
     }
     
     .card-text {
@@ -676,11 +720,9 @@ ul {
         gap: 1.5vw !important;
     }
 
-    .border {
-        border-style: solid;
-        border-width: max(0.83vw, 2px);
-        border-color: var(--offblack);
+    .border::before {
         border-radius: 1.66vw;
+        box-shadow: inset 0px 0px 0px max(0.52vw, 2px) var(--offblack);
     }
 
     .contact-info {
@@ -693,21 +735,22 @@ ul {
     }
 
     .contact-icon {
-        height: max(3.75vw, 13px);
+        height: max(3.125vw, 13px);
     }
 
     .contact-link {
-        gap: max(2.5vw, 6px);
+        gap: max(1.66vw, 6px);
     }
 
     .banner-pic {
         width: 93.75vw;
         margin-bottom: 4.1vw;
+        border-radius: 1.66vw;
     }
 
     .project-details {
         width: 93.75vw;
-        gap: 4.1vw;
+        gap: 3.75vw;
     }
 
     .left-bar {
@@ -783,16 +826,16 @@ ul {
         color: var(--red);
     }
 
-    #sub-navbar a.headlink:hover {
+    .sub-navbar a.headlink:hover {
         background-color: var(--offwhite);
         color: var(--red);
     }
     
-    #sub-navbar a.headlink:hover svg {
+    .sub-navbar a.headlink:hover svg {
         color: var(--red);
     }
     
-    #sub-navbar .headlogo:hover {
+    .sub-navbar .headlogo:hover {
         color: var(--offblack);
     }
 

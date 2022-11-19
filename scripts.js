@@ -24,13 +24,13 @@ function resizeHeader() {
     let subhead = document.querySelector(".subpage-header h2");
     let banner = document.querySelector(".banner-pic");
     if (subhead != null) {
-        subhead.style.fontSize = "72px";
+        subhead.style.fontSize = "56px";
         let width = subhead.offsetWidth;
-        console.log("width: " + width);
-        console.log("banner: " + banner.offsetWidth);
+        // console.log("width: " + width);
+        // console.log("banner: " + banner.offsetWidth);
         let maxwidth = Math.min(775.0, banner.offsetWidth * 0.86);
         if (width > maxwidth) {
-            subhead.style.fontSize = ((maxwidth/width) * 72.0).toString() + "px";
+            subhead.style.fontSize = ((maxwidth/width) * 56.0).toString() + "px";
         } else if (width > banner.offsetWidth) {
             // subhead.style.fontSize = ((banner.offsetWidth/width) * 72.0).toString() + "px";
         } else {
