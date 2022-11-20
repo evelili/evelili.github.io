@@ -334,6 +334,8 @@ body {
     object-fit: cover;
     min-width: 100%;
     min-height: 100%;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
 }
 
@@ -410,7 +412,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 150px;
+    padding-top: 120px;
     padding-bottom: 16.25vw;
     background-image: url("img/site/subpage_footer_pattern.svg");
     background-repeat: no-repeat;
@@ -449,6 +451,8 @@ body {
     min-height: 100%;
     background-color: var(--offblack);
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .project-details {
@@ -497,6 +501,36 @@ ul {
     transition: opacity 0.15s ease-in-out;
 }
 
+.row iframe, .row video {
+    flex-grow: calc(var(--r));
+    display: block;
+    flex-basis: 0px;
+    width: 0px;
+    height: auto;
+}
+
+.picgrid-hue {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.picgrid-ba {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 50% 50%;
+}
+
+.picgrid-hue img, .picgrid-ba img {
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.picgrid-hue img:nth-last-child(2), .picgrid-hue img:last-child {
+    grid-column: span 2;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -509,32 +543,20 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .modal-content {
     max-width: 90%;
     max-height: 90%;
-}
-
-.modal-content {
     animation-name: zoom;
     animation-duration: 0.2s;
+    cursor: default;
 }
 
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
-}
-
-.close {
-    position: absolute;
-    color: var(--offwhite);
-    transition: color 0.15s ease-in-out;
-    top: 2%;
-    right: 3%;
-    font-size: 56px;
-    font-weight: 500;
-    margin: 0;
 }
 
 .divider {
@@ -788,7 +810,7 @@ ul {
     }
 
     .subpage {
-        padding-top: 15.625vw;
+        padding-top: 12.5vw;
     }
 
     .subpage-splash {
@@ -805,10 +827,6 @@ ul {
 
     .tools-skills {
         gap: max(0.83vw, 2px);
-    }
-
-    .close {
-        font-size: max(5.8vw, 32px);
     }
 }
 
@@ -855,12 +873,7 @@ ul {
         color: var(--red);
     }
 
-    .row img:hover {
+    .row img:hover, .picgrid-hue img:hover, .picgrid-ba img:hover {
         opacity: 0.8;
-    }
-
-    .close:hover {
-        color: var(--red);
-        cursor: pointer;
     }
 }

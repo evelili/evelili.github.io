@@ -2,8 +2,8 @@
 var modal = document.getElementById("modal-div");
 var img = document.getElementById("modal-img");
 
-// assign click function to each image on the page (will have .round-corners class)
-const pageimgs = document.querySelectorAll("img.round-corners");
+// assign click function to each image on the page
+const pageimgs = document.querySelectorAll("img.img-clickable");
 for (let i = 0; i < pageimgs.length; i++) {
     pageimgs[i].onclick = function() {
         modal.style.display = "flex";
@@ -11,8 +11,13 @@ for (let i = 0; i < pageimgs.length; i++) {
     }
 }
 
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
+// make child image eat the click
+img.onclick = function() {
+    event.stopPropagation();
+}
+
+// close when click outside image
+modal.onclick = function() {
     modal.style.display = "none";
 }
 
