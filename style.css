@@ -294,6 +294,7 @@ body {
 .about-pic {
     width: 30%;
     height: auto;
+    border-radius: 20px;
 }
 
 /* top splash styling */
@@ -556,6 +557,7 @@ ul {
     flex-basis: 0px;
     width: 0px;
     height: auto;
+    aspect-ratio: calc(var(--r));
 }
 
 .picgrid-hue {
@@ -698,7 +700,7 @@ ul {
     }
 
     h2 {
-        font-size: max(5.83vw, 20px);
+        font-size: max(5.83vw, 20px) !important;
     }
 
     h3 {
@@ -732,6 +734,7 @@ ul {
     .about-pic {
         width: 50vw;
         height: auto;
+        border-radius: 2.08vw;
     }
 
     #about-data {
