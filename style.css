@@ -38,7 +38,7 @@ nav a.headlink, nav a.headlink svg {
     display: block;
     position: absolute;
     visibility: hidden;
-    height: 56px;
+    height: 52px;
     width: auto;
     color: var(--offblack);
     /* transition: color 0.15s ease-in-out; */
@@ -59,7 +59,7 @@ nav a.headlink, nav a.headlink svg {
 /* icons in header bar*/
 .headicon {
     width: auto;
-    height: 17px;
+    height: 13px;
     object-fit: contain;
     color: var(--offblack);
 }
@@ -67,7 +67,7 @@ nav a.headlink, nav a.headlink svg {
 /* the link in header bar that's only the logo (nested)*/
 .logolink {
     display: block;
-    width: 54px;
+    width: 40px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -75,7 +75,7 @@ nav a.headlink, nav a.headlink svg {
 
 /* the div surrounding the header logo link*/
 .headlink.headleft {
-    padding-top: 20px;
+    padding-top: 18px;
     padding-bottom: 20px;
     margin-right: auto;
 }
@@ -84,11 +84,11 @@ nav a.headlink, nav a.headlink svg {
 .headlink {
     display: block;
     text-align: center;
-    width: 192px;
+    width: 152px;
     /* min-width: 192px; */
     text-decoration: none !important;
     filter: none !important;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--offblack);
     padding-top: 34px;
@@ -123,6 +123,10 @@ h2 {
     font-weight: 500;
     text-align: center;
     margin: 0;
+}
+
+.subpage-header {
+    padding-bottom: 48px !important;
 }
 
 .subpage-header h2 {
@@ -189,7 +193,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 18px;
-    padding-bottom: 48px;
+    padding-bottom: 30px;
     flex-wrap: wrap;
 }
 
@@ -221,6 +225,44 @@ body {
     background-size: auto max(35vh, 280px);
     background-position: center bottom;
 }
+
+/* stuff for fader; from here: https://christopheraue.net/design/fading-pages-on-load-and-unload */
+/* #fader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 6;
+	pointer-events: none;
+	background: var(--offwhite);
+	animation-duration: 300ms;
+	animation-timing-function: ease-in-out;
+}
+
+#fader:before {
+	content: 'fade';
+}
+
+@keyframes fade-out {
+	from {opacity: 1}
+	to {opacity: 0}
+}
+
+@keyframes fade-in {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+#fader.fade-out {
+	opacity: 0;
+	animation-name: fade-out;
+}
+
+#fader.fade-in {
+	opacity: 1;
+	animation-name: fade-in;
+} */
 
 /* page section stuff */
 #home-data, #about-data, #contact-data {
@@ -269,7 +311,7 @@ body {
 .card-column {
     display: flex;
     flex-direction: row;
-    width: min(1444px, 90%);
+    width: min(1444px, 97%);
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -354,7 +396,7 @@ body {
 }
 
 #portfolio-data, #adventures-data {
-    padding-top: 150px;
+    padding-top: 128px;
 }
 
 #adventures-data {
@@ -386,9 +428,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 700px;
+    width: 600px;
     margin: 0 auto;
-    padding-bottom: max(24vh, 80px);
+    /* padding-bottom: min(24vh, 80px); */
+    padding-bottom: 180px;
 }
 
 .contact-icon {
@@ -608,7 +651,7 @@ ul {
     }
 
     .headlink {
-        /* width: 20vw; */
+        width: 20vw;
         flex-shrink: 1;
         min-width: auto;
         font-size: 2.5vw;
@@ -636,7 +679,11 @@ ul {
 
     .section-header {
         gap: 1.875vw;
-        padding-bottom: 5vw;
+        padding-bottom: 3.125vw;
+    }
+
+    .subpage-header {
+        padding-bottom: 5vw !important;
     }
 
     .section-tri {
@@ -645,19 +692,23 @@ ul {
     }
 
     h2 {
-        font-size: max(5.83vw, 18px);
+        font-size: max(5.83vw, 20px);
     }
 
     h3 {
-        font-size: max(2.92vw, 16px) !important;
+        font-size: max(2.92vw, 14px);
     }
 
-    .card-header, .subpage-text, ul {
+    .subpage-text, ul {
         font-size: max(2.08vw, 12px) !important;
     }
 
+    .card-header {
+        font-size: max(1.66vw, 12px) !important;
+    }
+
     li, p {
-        font-size: max(1.77vw, 12px) !important;
+        font-size: max(1.77vw, 12px);
     }
 
     .paragraph {
@@ -677,11 +728,11 @@ ul {
         height: auto;
     }
 
-    #about-data, #contact-data {
+    #about-data {
         height: fit-content;
     }
 
-    #home-data, #about-data, #contact-data {
+    #home-data, #about-data {
         min-height: fit-content;
     }
 
@@ -706,13 +757,27 @@ ul {
         margin: 0;
     }
 
-    #about-data, #portfolio-data, #adventures-data, #contact-data {
+    #about-data {
         padding-top: 20vw;
+    }
+
+    #portfolio-data, #adventures-data {
+        padding-top: 13.33vw;
+    }
+
+    #contact-data {
+        /* padding-top: 20vh; */
+        min-height: 41.67vw;
+        height: 100vh;
     }
 
     .card-column {
         width: 100%;
         padding-bottom: 22.29vw;
+    }
+
+    .card-column a {
+        margin-top: 0;
     }
 
     .card-base {
@@ -742,18 +807,28 @@ ul {
         gap: 1.5vw !important;
     }
 
+    .card-text h3 {
+        font-size: max(2.5vw, 16px);
+    }
+    
+    .card-text p {
+        font-size: max(1.458vw, 12px);
+    }
+
     .border::before {
         border-radius: 1.66vw;
         box-shadow: inset 0px 0px 0px max(0.52vw, 2px) var(--offblack);
     }
 
     .contact-info {
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: flex-start;
         width: fit-content;
         gap: 2vw;
-        margin: 0 0 40vw 0;
+        /* margin: 0 0 40vw 0; */
+        padding-bottom: 0;
     }
 
     .contact-icon {
@@ -762,12 +837,18 @@ ul {
 
     .contact-link {
         gap: max(1.66vw, 6px);
+        margin-left: 12px;
+        margin-right: 12px;
     }
 
     .banner-pic {
         width: 93.75vw;
         margin-bottom: 4.1vw;
         border-radius: 1.66vw;
+    }
+
+    .banner-pic img {
+        border-radius: 2.08vw;
     }
 
     .project-details {

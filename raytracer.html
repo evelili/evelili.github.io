@@ -81,7 +81,7 @@
                     <h3>Overview</h3>
                     <div class="paragraph">
                         <p>
-                            The final assignment for my graphics course in winter 2022 was to build a raytracer in C++ from scratch. The purpose of the assignment was to demonstrate different techniques used in computer graphics. I used the following techniques in this project: shadows, reflections, depth of field, texture mapping, and cel shading. On top of the programming, I also created 3D models for three of the weapons from my [Battle Academia designs] and used my raytracer to render them in a short animation that illustrated these techniques.
+                            The final assignment for my graphics course in winter 2022 was to build a raytracer in C++ from scratch. The purpose of the assignment was to demonstrate different techniques used in computer graphics. I used the following techniques in this project: shadows, reflections, depth of field, texture mapping, and cel shading. On top of the programming, I also created 3D models for three of the weapons from my <a class="red-text" href="battle_academia_fan_skins.html">Battle Academia designs</a> and used my raytracer to render them in a short animation that illustrated these techniques.
                         </p>
                         <p>
                             Since this project was a school assignment I cannot share a public repository. If you would like to view the source code please reach out to me through the contact info provided on this site.
@@ -98,7 +98,7 @@
                     <h3>Sources</h3>
                     <div class="paragraph">
                         <p>
-                            I referred to Peter Shirley's [ray tracing books] while working on the programming aspects of this project, especially for implementing reflections and depth of field. I also followed [this guide] to implement multithreading to improve the rendering time.
+                            I referred to Peter Shirley's <a class="red-text" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">ray tracing books</a> while working on the programming aspects of this project, especially for implementing reflections and depth of field. I also followed <a class="red-text" href="https://medium.com/@phostershop/solving-multithreaded-raytracing-issues-with-c-11-7f018ecd76fa" target="_blank">this guide</a> to implement multithreading to improve the rendering time.
                         </p>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="sub-block">
-                    <h3>Rendering</h3>
+                    <h3>Rendering and Compositing</h3>
                     <div class="paragraph">
                         <p>
                             Once all my techniques were functional I set up a 3D scene in a lua file using the obj files of my 3D models. I split each part of the model up by colour to reduce the size of the bounding boxes and so I wouldn't have to modify my code to render a multi-coloured object.
@@ -193,14 +193,8 @@
                         <p>
                             I wanted a 360-degree rotation of the objects, so I used a shell script to generate lua files for each angle of the scene. However, even after implementing multithreading, an eight-core lab machine took around ten minutes to render each frame of the animation. 360 frames would take 60 hours! I instead decided to render every other frame to cut the rendering time in half. I then used another script to run each lua file one after the other and save the output.
                         </p>
-                    </div>
-                </div>
-
-                <div class="sub-block">
-                    <h3>Compositing</h3>
-                    <div class="paragraph">
                         <p>
-                            I took the 180 rendered images and put them together at 24 frames per second using Hitfilm Express. I also added audio effects to emphasize the “energy” in the weapons as well as [background music] for ambiance.
+                            Finally, I took the 180 rendered images and put them together at 24 frames per second using Hitfilm Express. I also added audio effects to emphasize the “energy” in the weapons as well as <a class="red-text" href="https://www.youtube.com/watch?v=uFCjVtJ2gJQ" target="_blank">background music</a> for ambiance.
                         </p>
                     </div>
                 </div>
