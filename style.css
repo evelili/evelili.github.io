@@ -1,39 +1,241 @@
-/* global variable (definitely scuffed) */
+@import url("https://rsms.me/inter/inter.css");
+
 :root {
-    --navheight: 80px;
+    --offwhite: #fdfbfb;
+    --red: #ef233c;
+    --grey: #8d99ae;
+    --offblack: #141522;
+    --transblack: #141522cc;
+    font-family: 'Inter', sans-serif;
 }
 
-/* text colours */
-.yellow-text {
-	color:#FFE335 !important;
-	text-decoration-color: #FFE335;
+.red-text {
+    color: var(--red) !important;
+    text-decoration-color: var(--red);
 }
 
-.green-text {
-	color: #3EFF35;
-	text-decoration-color: #3EFF35;
+/* main header bar */
+nav {
+    background-color: var(--offwhite);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 96px;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
 }
 
-body {
-    font-family: Bahnschrift, sans-serif;
-    font-size: 20px;
-    color: #f2f2f2;
-    background-color: #212121;
-    padding: 0;
+/* header bar hover stuff */
+nav a.headlink, nav a.headlink svg {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+/* logo in header bar */
+.headlogo {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    height: 52px;
+    width: auto;
+    color: var(--offblack);
+    /* transition: color 0.15s ease-in-out; */
+}
+
+.headlogo.logo-active {
+    visibility: visible !important;
+    opacity: 1;
+	transition: visibility 0.2s ease, opacity 0.2s ease, color 0.15s ease-in-out;
+}
+
+.headlogo:not(.logo-active) {
+    visibility: hidden;
+    opacity: 0;
+	transition: visibility 0.35s ease, opacity 0.35s ease, color 0.15s ease-in-out;
+}
+
+/* icons in header bar*/
+.headicon {
+    width: auto;
+    height: 13px;
+    object-fit: contain;
+    color: var(--offblack);
+}
+
+/* the link in header bar that's only the logo (nested)*/
+.logolink {
+    display: block;
+    width: 40px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* the div surrounding the header logo link*/
+.headlink.headleft {
+    padding-top: 18px;
+    padding-bottom: 20px;
+    margin-right: auto;
+}
+
+/* the links with words in the header bar */
+.headlink {
+    display: block;
+    text-align: center;
+    width: 152px;
+    /* min-width: 192px; */
+    text-decoration: none !important;
+    filter: none !important;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--offblack);
+    padding-top: 34px;
+    padding-bottom: 33px;
+}
+
+/* subpage header bar */
+.sub-navbar {
+    background-color: var(--red);
+}
+
+.sub-navbar .headlogo, .sub-navbar .headicon, .sub-navbar .headlink {
+    color: var(--offwhite);
+}
+
+.sub-navbar .headlogo {
+    visibility: visible !important;
+    opacity: 1;
+	transition: color 0.15s ease-in-out;
+}
+
+/* text styling */
+h1 {
+    font-size: min(144px, 10vw);
+    font-weight: 500;
+    text-align: center;
     margin: 0;
-	overflow-anchor: none;
 }
 
-/* from here: https://christopheraue.net/design/fading-pages-on-load-and-unload */
-#fader {
+h2 {
+    font-size: 56px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+.subpage-header {
+    padding-bottom: 48px !important;
+}
+
+.subpage-header h2 {
+    white-space: nowrap;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    transition: color 0.15s ease-in-out;
+}
+
+p {
+    text-align: left;
+    margin: 0;
+    transition: color 0.15s ease-in-out;
+}
+
+li, p {
+    font-size: 17px;
+    line-height: 1.36;
+    font-weight: 300;
+}
+
+.card-header {
+    color: var(--red);
+    transition: color 0.15s ease-in-out;
+    font-size: 16px !important;
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.main-subtitle {
+    font-size: min(64px, 4.44vw);
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding-bottom: max(10vh, 80px);
+}
+
+/* body styling */
+body {
+    background-color: var(--offwhite);
+    margin: 0;
+    padding: 0;
+}
+
+/* the outer wrapper of the main page */
+#main {
+    flex-direction: column;
+    display: flex;
+    gap: 0px;
+}
+
+/* wrapper for h2 (triangle icon and then text) */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.section-tri {
+    height: 44px;
+    width: auto;
+}
+
+/* change the colour of section headers */
+.header-white {
+    color: var(--offwhite);
+}
+
+.header-black svg {
+    color: var(--red);
+}
+
+/* divider pattern */
+.divider-pattern {
+    background-image: url("img/site/home_divider_pattern_repeating.svg");
+}
+
+.footer-pattern {
+    background-image: url("img/site/home_footer_pattern_repeating.svg");
+}
+
+.divider-pattern, .footer-pattern {
+    background-repeat: repeat-x;
+    background-size: auto max(35vh, 280px);
+    background-position: center bottom;
+}
+
+/* stuff for fader; from here: https://christopheraue.net/design/fading-pages-on-load-and-unload */
+/* #fader {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 1;
+	z-index: 6;
 	pointer-events: none;
-	background: #212121;
+	background: var(--offwhite);
 	animation-duration: 300ms;
 	animation-timing-function: ease-in-out;
 }
@@ -60,584 +262,699 @@ body {
 #fader.fade-in {
 	opacity: 1;
 	animation-name: fade-in;
-}
+} */
 
-/* custom scrollbar (might not be supported by all browsers) */
-body::-webkit-scrollbar {
-	width: 15px;
-}
-
-body::-webkit-scrollbar-track {
-	background-color:black;
-}
-
-body::-webkit-scrollbar-thumb {
-	background: #121212;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-	background: #f2f2f2;
-}
-
-/* title */
-h1 {
-    font-size: 144px;
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
-}
-
-/* headings */
-h2 {
-    font-size: 72px;
-    font-weight: normal;
-    margin: 20px 0 0 0;
-    text-align: center;
-}
-
-h3 {
-	font-family: Bahnschrift Light, Bahnschrift, sans-serif;
-    font-size: 24px;
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
-}
-
-/* other text styling */
-.main-subtitle {
-	font-family: Bahnschrift, sans-serif;
-	font-size: 36px;
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
-	width: auto;
-	line-height: normal;
-}
-
-.footlink {
-	margin-top: 4vh;
-	margin-bottom: 8vh;
-}
-
-p {
-    line-height: 150%;
-    font-family: Bahnschrift Light, Bahnschrift, sans-serif;
-	text-align: left;
-	width: 60vw;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-/* link styling */
-a {
-	text-decoration: none;
-	color: inherit;
-	filter: brightness(100%);
-	transition: all 0.2s ease;
-}
-
-a:hover {
-	filter: brightness(50%);
-	transition: all 0.2s ease;
-}
-
-/* thicker underline */
-u {
-    text-decoration-thickness: 3;
-}
-
-/* smaller caption */
-.small {
-    font-size: 80%;
-	text-align: center;
-	margin-top: 8px;
-}
-
-/* fix navbar in place */
-nav {
-	overflow: hidden;
-	background-color: #121212;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 2;
-	display: flex;
-	max-height: 80px;
-}
-
-/*fit header images*/
-.contain {
-	width: 100%;
-	height: 20px;
-	object-fit: contain;
-}
-
-/*fit logo images*/
-#logo1 {
-	width: 100%;
-	height: 58px;
-	object-fit: contain;
-    margin: 0;
-    padding: 0;
-    visibility: hidden;
-}
-
-#logo2, #logo3, #logo4, #logo5 {
-	width: 20%;
-	height: 58px;
-	object-fit: contain;
-	position: absolute;
-	left: 0;
-	visibility: hidden;
-}
-
-/* boxes in nav bar */
-.headlink {
-	display: block;
-	text-align: center;
-	text-decoration: none !important;
-	filter: none !important;
-	padding: 10px 0px 8px 0px;
-	font-size: 24px;
-	width: 20%;
-	transition: all 0.2s ease;
-}
-
-/* stuff for the dynamic changes (was a pain) */
-nav a:nth-child(1) {
-	border-bottom: 4px solid #f2f2f2;
-    line-height: 0px;
-}
-
-nav a:nth-child(1):hover {
-	background-color: #f2f2f2;
-}
-
-nav a:nth-child(1) > .active {
-	visibility: visible !important;
-	opacity: 1;
-	transition: visibility 0.2s ease, opacity 0.2s ease;
-}
-
-nav a:nth-child(1) > :not(.active) {
-	visibility: hidden !important;
-	opacity: 0;
-	transition: visibility 0.3s ease, opacity 0.3s ease;
-}
-
-nav a:nth-child(2) {
-	border-bottom: 4px solid #FF353F;
-}
-
-nav a:nth-child(2):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #FF353F;
-}
-
-nav a:nth-child(3) {
-	border-bottom: 4px solid #FFE335;
-}
-
-nav a:nth-child(3):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #FFE335;
-}
-
-nav a:nth-child(4) {
-	border-bottom: 4px solid #3EFF35;
-}
-
-nav a:nth-child(4):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #3EFF35;
-}
-
-nav a:nth-child(5) {
-	border-bottom: 4px solid #3546FF;
-}
-
-nav a:nth-child(5):hover {
-	background-color: #f2f2f2;
-	color: #121212;
-	border-bottom: 4px solid #3546FF;
-}
-/* end of header stuff (still a pain) */
-
-/* size the page sections depending on the size of the screen */
-section {
-	padding-top: var(--navheight);
-	min-height: calc(100vh - var(--navheight));
-}
-
-#home-data {
-	height: calc(100vh - var(--navheight));
+/* page section stuff */
+#home-data, #about-data, #contact-data {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-	background-image: url("main logo dark.svg");
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-size: auto min(75vw, 75vh);
-	background-position: center center;
-	background-origin: content-box;
 }
 
-#about-data, #portfolio-data, #projects-data {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+#home-data {
+    gap: min(24px, 1.66vw);
 }
 
-/* logo icon triangle thingys styling */
-.head-icon {
-	display: block;
-	text-align: center;
-	margin-top: 8vh;
-	margin-bottom: 10px;
+#home-data, #about-data, #contact-data {
+    min-height: 800px;
 }
 
-/* cards for home page */
-.card-image img {
-	width: 300px;
-	height: 300px;
-	object-fit: cover;
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: min(56px, 5%);
+    width: max(900px, min(58%, 1111px));
+    padding-bottom: max(10vh, 80px);
 }
 
-.card-image {
-	display: block;
-	text-align: center;
+.about-pic {
+    width: 30%;
+    height: auto;
 }
 
-.card {
-	display: flex;
-	flex-direction: column;
-	/*width: 300px;*/
-	gap: 10px;
-	word-wrap: break-word;
+/* top splash styling */
+.top-splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    overflow: clip;
+    position: absolute;
+    margin-top: -560px;
+    z-index: -1;
 }
 
-.card-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 3vw;
-	justify-content: center;
-	align-items: center;
-	/*width: 0;
-	min-width: 60vw;*/
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 5vw;
-	margin-right: 5vw;
+/* card column styling */
+.card-column {
+    display: flex;
+    flex-direction: row;
+    width: min(1444px, 97%);
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 214px;
+    margin: auto;
 }
 
-/* contact images and styling */
-.contact-image {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	align-items: center;
-	justify-content: center;
+.card-base {
+    display: flex;
+    width: 440px;
+    gap: 32px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: stretch;
+    align-items: center;
+    background-color: var(--offwhite);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    transition: background-color 0.15s ease-in-out;
+    position: relative;
+    border-radius: 20px;
+    /* margin: 12px; */
 }
 
-.contact-image img {
-	height: 75px;
-	object-fit: contain;
-	display: block;
-	margin: 0 auto;
+.card-column a {
+    display: flex;
+    align-self: stretch;
+    text-decoration: none;
+    color: var(--offblack);
+    margin: 12px;
 }
 
-.contact-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8vw;
-	justify-content: center;
-	align-items: center;
-	margin-top: 8vh;
-	margin-left: 8vw;
-	margin-right: 8vw;
-	margin-bottom: 8vh;
+.border::before {
+    border-radius: 16px;
+    box-shadow: inset 0px 0px 0px 5px var(--offblack);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 5;
+    content: " ";
+}
+
+.card-pic {
+    width: 320px;
+    height: 320px;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -22px 22px 0px 0px var(--red);
+    margin: 0px 0px 22px 22px;
+    transition: box-shadow 0.15s ease-in-out;
+    background-color: var(--offblack);
+    position: relative;
+    border-radius: 16px;
+}
+
+.card-pic img {
+    flex-shrink: 1;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.card-text {
+    /* width: max(416px, min(46.25%, 592px)); */
+    width: 340px;
+    height: auto;
+}
+
+.card-text h3 {
+    font-size: 24px;
+}
+
+.card-text p {
+    font-size: 14px;
+}
+
+#portfolio-data, #adventures-data {
+    padding-top: 128px;
+}
+
+#adventures-data {
+    background-image: url("img/site/home_splash_2_full.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+#about-data, #contact-data {
+    align-items: center;
+}
+
+#contact-data {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--offblack);
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    /* padding-bottom: min(24vh, 80px); */
+    padding-bottom: 180px;
+}
+
+.contact-icon {
+    height: 30px;
+    width: auto;
+}
+
+.footer-splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: -940px;
+    pointer-events: none;
 }
 
 /* subpage stuff */
 .subpage {
-	padding-top: var(--navheight);
-	min-height: calc(100vh - var(--navheight));
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 16.25vw;
+    background-image: url("img/site/subpage_footer_pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
 }
 
-/* logo banner */
-.singlelogo img, .fulllogo img {
-	max-width: 10vw;
+.subpage-splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    overflow: clip;
+    position: absolute;
+    margin-top: -500px;
+    z-index: -1;
 }
 
-.singlelogo, .fulllogo {
-	display: flex;
+.banner-pic {
+    width: 900px;
+    aspect-ratio: 900 / 360;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--offblack);
+    margin-bottom: 40px;
+    position: relative;
+    border-radius: 16px;
 }
 
-.logobanner {
-	display: grid;
-	grid-template-columns: auto auto auto auto auto;
-	height: 30vh;
-	column-gap: 2vw;
-	margin: 10px 0 10px 0;
-	padding: 0;
-	align-items: center;
+.banner-pic img {
+    flex-shrink: 1;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: var(--offblack);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
 }
 
-/* main huevember grid (pain) */
-.picgrid {
-	display: grid;
-	grid-template-columns: 15vw 15vw 15vw 15vw;
-	grid-template-rows: repeat(8, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 10px 0;
-	padding: 0;
+.project-details {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-bottom: min(5vw, 64px);
 }
 
-.picgrid-item img {
-	width: 15vw;
+.tools-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.picgrid-item {
-	overflow: hidden;
-	display: flex;
-	height: auto;
+.subpage-text, ul {
+    font-size: 20px;
 }
 
-.picgrid .picgrid-item:last-child img, .picgrid .picgrid-item:nth-last-child(2) img {
-	width: 30vw;
+ul {
+    margin: 0;
 }
 
-.picgrid .picgrid-item:last-child {
-	grid-column: 3 / 5;
+.sub-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.picgrid .picgrid-item:nth-last-child(2) {
-	grid-column: 1 / 3;
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 16px;
 }
 
-/* one row of four pics */
-.fourpicgrid {
-	display: grid;
-	grid-template-columns: 15vw 15vw 15vw 15vw;
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
+.row img {
+    flex-grow: calc(var(--r));
+    display: block;
+    flex-basis: 0px;
+    width: 0px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
 }
 
-/* two rows of three pics... there has to be a better way to do this lol*/
-.threetwogrid {
-	display: grid;
-	grid-template-columns: 15vw 15vw 15vw;
-	grid-template-rows: repeat(2, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
+.row iframe, .row video {
+    flex-grow: calc(var(--r));
+    display: block;
+    flex-basis: 0px;
+    width: 0px;
+    height: auto;
 }
 
-.twothreegrid {
-	display: grid;
-	grid-template-columns: 30vw 30vw;
-	grid-template-rows: repeat(3, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
+.picgrid-hue {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
-/* two by two */
-.twopic-item img {
-	width: 30vw;
+.picgrid-ba {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 50% 50%;
 }
 
-.twopic-item {
-	overflow: hidden;
-	display: flex;
-	height: auto;
+.picgrid-hue img, .picgrid-ba img {
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
 }
 
-.twotwopicgrid {
-	display: grid;
-	grid-template-columns: 30vw 30vw;
-	grid-template-rows: repeat(2, auto);
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
+.picgrid-hue img:nth-last-child(2), .picgrid-hue img:last-child {
+    grid-column: span 2;
 }
 
-/* and two by one */
-.twopicgrid {
-	display: grid;
-	grid-template-columns: 30vw 30vw;
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--transblack);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-/* three by one oh boy */
-.threepic-item img {
-	width: 20vw;
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    animation-name: zoom;
+    animation-duration: 0.2s;
+    cursor: default;
 }
 
-.threepic-item {
-	overflow: hidden;
-	display: flex;
-	height: auto;
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
 }
 
-.threepicgrid {
-	display: grid;
-	grid-template-columns: 20vw 20vw 20vw;
-	column-gap: 0;
-	row-gap: 0;
-	margin: 10px 0 0 0;
-	padding: 0;
+.divider {
+    display: block;
+    width: 8px;
+    height: auto;
+    background-color: var(--red);
+    flex-shrink: 0;
 }
 
-/* single squarish image */
-.halfimage img {
-	width: 30vw;
-	background-color: #121212;
-	margin: 10px 0 0 0;
-	display: flex;
+.round-corners {
+    border-radius: 8px;
 }
 
-.botimg {
-	margin: 10px 0 10px 0 !important;
+.bullet-list .subpage-text{
+    color: var(--red);
 }
 
-#kdahalfimg img {
-	max-width: 384px;
+.left-bar {
+    border-left: 8px solid var(--red);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* embed a video */
-.embedvid {
-	position: relative;
-	overflow: hidden;
-	width: 60vw;
-	padding-bottom: 33.75vw;
-	height: 0;
-	margin: 10px 0 0 0;
+.left-bar div {
+    margin-left: 16px;
 }
 
-.embedvid iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.goal {
+    background-color: var(--red);
+    padding: 28px 72px 28px 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
 }
 
-#mainvid {
-	margin: 10px 0 10px 0;
-}
-
-/* gif and other wide images */
-.wideimg {	
-	display: flex;
-	text-align: center;
-	margin: 10px 0 0 0;
-}
-
-.wideimg img {
-	object-fit: cover;
-	max-width: 60vw;
-}
-
-/* odd sized images */
-.oddsizeimages img {
-	object-fit: contain;
-	height: 20vw;
-	width: auto;
-}
-
-.oddsizeimages {
-	display: flex;
-	margin: 10px 0 0 0;
-	gap: 10px;
-}
-
-/* tall stuff for the recipe page */
-.tallsection img {
-	object-fit: contain;
-	height: 80vh;
-	width: auto;
-}
-.tallsection {
-	display: flex;
-	margin: 10px 0 0 0;
-	gap: 10px;
+.goal p {
+    color: var(--offwhite);
+    text-align: center;
 }
 
 /* for smaller screens */
-@media only screen and (max-width: 600px) {
-	body {
-		font-size: 16px;
-	}
+@media only screen and (max-width: 960px) {
+	nav {
+        max-height: 10vw;
+        /* width: 100vw; */
+    }
 
-	#logo5, #logo4, #logo3, #logo2, #logo1 {
-		height: calc(var(--navheight) - 20px);
-	}
+    .headlink {
+        width: 20vw;
+        flex-shrink: 1;
+        min-width: auto;
+        font-size: 2.5vw;
+        font-weight: 500;
+        padding-top: 3.5vw;
+        padding-bottom: 3.5vw;
+    }
 
-	h1 {
-		font-size: 24vw;
-	}
+    .headlink.headleft {
+        padding-top: 2.1vw;
+        padding-bottom: 2.1vw;
+    }
 
-	h2 {
-		font-size: 12vw;
-	}
+    .logolink {
+        width: 5.625vw;
+    }
 
-	.main-subtitle {
-		font-size: 6vw;
-	}
+    .headlogo {
+        height: 5.83vw;
+    }
 
-	h3 {
-		font-size: 4vw;
-		width: auto;
-	}
+    .headicon {
+        height: 1.77vw;
+    }
 
-	.contain {
-		height: calc(var(--navheight) * 0.25);
-	}
+    .section-header {
+        gap: 1.875vw;
+        padding-bottom: 3.125vw;
+    }
 
-	.card-image img {
-		width: 50vw;
-		height: 50vw;
-	}
+    .subpage-header {
+        padding-bottom: 5vw !important;
+    }
 
-	.card {
-		gap: 0;
-	}
+    .section-tri {
+        height: max(4.58vw, 13px);
+        width: auto;
+    }
 
-	.card-grid {
-		margin-top: 3vh;
-		margin-bottom: 3vh;
-	}
+    h2 {
+        font-size: max(5.83vw, 20px);
+    }
 
-	.head-icon img {
-		width: 12vw;
-	}
+    h3 {
+        font-size: max(2.92vw, 14px);
+    }
 
-	.head-icon {
-		margin-top: 4vh;
-	}
+    .subpage-text, ul {
+        font-size: max(2.08vw, 12px) !important;
+    }
 
-	.headlink {
-		font-size: 4vw;
-		width: 20%;
-		overflow: hidden;
-		height: calc(100vw * calc(58 / 600));
-	}
+    .card-header {
+        font-size: max(1.66vw, 12px) !important;
+    }
+
+    li, p {
+        font-size: max(1.77vw, 12px);
+    }
+
+    .paragraph {
+        gap: max(1.25vw, 9px);
+    }
+
+    .about-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+        width: 80vw;
+    }
+
+    .about-pic {
+        width: 50vw;
+        height: auto;
+    }
+
+    #about-data {
+        height: fit-content;
+    }
+
+    #home-data, #about-data {
+        min-height: fit-content;
+    }
+
+    #adventures-data {
+        background-image: url("img/site/home_splash_2.svg");
+        background-size: 100% auto;
+    }
+
+    .footer-pattern {
+        background-size: auto 20vh;
+    }
+
+    .top-splash {
+        margin-top: -30vw;
+    }
+
+    .top-splash img {
+        height: 70vw;
+    }
+
+    .footer-splash {
+        margin: 0;
+    }
+
+    #about-data {
+        padding-top: 20vw;
+    }
+
+    #portfolio-data, #adventures-data {
+        padding-top: 13.33vw;
+    }
+
+    #contact-data {
+        /* padding-top: 20vh; */
+        min-height: 41.67vw;
+        height: 100vh;
+    }
+
+    .card-column {
+        width: 100%;
+        padding-bottom: 22.29vw;
+    }
+
+    .card-column a {
+        margin-top: 0;
+    }
+
+    .card-base {
+        width: 90vw;
+        height: fit-content;
+        gap: max(3vw, 16px);
+        padding-top: 4.1vw;
+        padding-bottom: 6.15vw;
+        border-radius: 2.08vw;
+    }
+    
+    .card-pic {
+        width: 75vw;
+        height: 75vw;
+        box-shadow: -2.29vw 2.29vw 0px 0px var(--red);
+        margin: 0px 0px 2.29vw 2.29vw;
+        border-radius: 1.66vw;
+    }
+
+    .card-pic img {
+        border-radius: 2.08vw;
+    }
+    
+    .card-text {
+        width: 75vw;
+        height: auto;
+        gap: 1.5vw !important;
+    }
+
+    .card-text h3 {
+        font-size: max(2.5vw, 16px);
+    }
+    
+    .card-text p {
+        font-size: max(1.458vw, 12px);
+    }
+
+    .border::before {
+        border-radius: 1.66vw;
+        box-shadow: inset 0px 0px 0px max(0.52vw, 2px) var(--offblack);
+    }
+
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: fit-content;
+        gap: 2vw;
+        /* margin: 0 0 40vw 0; */
+        padding-bottom: 0;
+    }
+
+    .contact-icon {
+        height: max(3.125vw, 13px);
+    }
+
+    .contact-link {
+        gap: max(1.66vw, 6px);
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .banner-pic {
+        width: 93.75vw;
+        margin-bottom: 4.1vw;
+        border-radius: 1.66vw;
+    }
+
+    .banner-pic img {
+        border-radius: 2.08vw;
+    }
+
+    .project-details {
+        width: 93.75vw;
+        gap: 3.75vw;
+    }
+
+    .left-bar {
+        border-left: 0.83vw solid var(--red);
+        gap: max(1.6vw, 8px);
+    }
+    
+    .left-bar div {
+        margin-left: 1.6vw;
+    }
+
+    .row {
+        gap: 1.6vw;
+    }
+
+    .row-text {
+        flex-direction: column !important;
+    }
+
+    .round-corners {
+        border-radius: 0.83vw;
+    }
+
+    .divider {
+        width: 0.83vw;
+    }
+
+    .goal {
+        padding: 2.9vw 7.5vw 2.9vw 7.5vw;
+        border-radius: 1.6vw;
+    }
+
+    .sub-block {
+        gap: 1.6vw;
+    }
+
+    .subpage {
+        padding-top: 12.5vw;
+    }
+
+    .subpage-splash {
+        width: 100%;
+        height: fit-content;
+        overflow: clip;
+        position: absolute;
+        margin-top: -52vw;
+    }
+
+    .subpage-splash img {
+        height: 100vw;
+    }
+
+    .tools-skills {
+        gap: max(0.83vw, 2px);
+    }
+}
+
+@media(hover: hover) and (pointer: fine) {
+    nav a.headlink:hover {
+        background-color: var(--red);
+        color: var(--offwhite);
+    }
+    
+    nav a.headlink:hover svg {
+        color: var(--offwhite);
+    }
+
+    .headlogo:hover {
+        color: var(--red);
+    }
+
+    .sub-navbar a.headlink:hover {
+        background-color: var(--offwhite);
+        color: var(--red);
+    }
+    
+    .sub-navbar a.headlink:hover svg {
+        color: var(--red);
+    }
+    
+    .sub-navbar .headlogo:hover {
+        color: var(--offblack);
+    }
+
+    .card-base:hover {
+        background-color: var(--red);
+    }
+    
+    .card-base:hover .card-pic {
+        box-shadow: max(-2.29vw,-22px) min(2.29vw, 22px) 0px 0px var(--offblack);
+    }
+    
+    .card-base:hover h3, .card-base:hover p, card-base:hover .card-header {
+        color: var(--offwhite);
+    }
+
+    .contact-link:hover {
+        color: var(--red);
+    }
+
+    .row img:hover, .picgrid-hue img:hover, .picgrid-ba img:hover {
+        opacity: 0.8;
+    }
 }

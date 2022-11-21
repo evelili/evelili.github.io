@@ -2,142 +2,270 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>evelili | politiCHAOS</title>
-        <link rel="icon" href="main logo yellow dark.svg">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>politiCHAOS</title>
+        <!-- might switch to "portfolio" favicon logo? -->
+        <link rel="icon" href="img/site/main_logo.svg">
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script defer src="scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="scripts.js"></script>
     </head>
 
     <body>
         <header>
-            <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
-            <nav id="navbar">
-                <a id="hlogo" href="index.html#home-data" class="headlink">
-					<img id="logo1" class="headlogo-home-data" src="main logo.svg" alt="two interlocking white triangles">
-					<img id="logo2" class="headlogo-about-data" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
-					<img id="logo3" class="headlogo-projects-data active" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
-					<img id="logo4" class="headlogo-portfolio-data" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
-					<img id="logo5" class="headlogo-contact-data" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
-				</a>
-                <a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
-                <a class="active headlink" href="index.html#projects-data"><img class="contain" src="yellow.svg" alt="yellow triangle">projects</a>
-                <a class="headlink" href="index.html#portfolio-data"><img class="contain" src="green.svg" alt="green triangle">portfolio</a>
-                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, adventures, contact) -->
+            <nav class="sub-navbar">
+                <div class="headlink headleft">
+                    <!-- <img class="headlogo" src="page design elements/main logo.svg" alt="two interlocking triangles"> -->
+                    <a class="logolink" href="index.html#home-data">
+                        <svg class="headlogo" width="53" height="56" viewBox="0 0 53 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.5837 56L33.8075 52.0332L50.476 22.5429L52.6396 18.7164H48.2521L14.9153 18.7164H10.5277L12.6914 22.5429L29.3599 52.0332L31.5837 56V56ZM31.5837 45.5822L19.3028 23.8451L43.8646 23.8451L31.5837 45.5822V45.5822Z" fill="currentColor"/>
+                            <path d="M21.0559 0L18.8321 3.96677L2.16369 33.4571L0 37.2836H4.38752H37.7244H42.1119L39.9482 33.4571L23.2798 3.96677L21.0559 0V0ZM21.0559 10.4178L33.3369 32.1548H8.77503L21.0559 10.4178V10.4178Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <a class="headlink" href="index.html#about-data">
+                    <!-- <img class="headicon" src="page design elements/tri section about.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;About
+                </a>
+                <a class="headlink" href="index.html#portfolio-data">
+                    <!-- <img class="headicon" src="page design elements/tri section portfolio.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>  
+                    &nbsp;Portfolio
+                </a>
+                <a class="headlink" href="index.html#adventures-data">
+                    <!-- <img class="headicon" src="page design elements/tri section adventures.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Adventures
+                </a>
+                <a class="headlink" href="index.html#contact-data">
+                    <!-- <img class="headicon" src="page design elements/tri section contact.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Contact
+                </a>
             </nav>
         </header>
 
-        <svg id="fader"></svg>
-
         <div id="politichaos" class="subpage">
-            <div id="politichaos-header" class="head-icon">
-                <img src="yellow.svg" alt="a yellow triangle">
-                <h2>politiCHAOS</h2>
+            <div class="subpage-splash"><img src="img/site/subpage_splash_full.svg"></div>
+
+            <div class="section-header header-white subpage-header">
+                <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                    <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                </svg> 
+                <h2>politiCHAOS | Card Game</h2>
             </div>
-            <p><span class="yellow-text">programs //</span> Figma, Clip Studio Paint, nanDECK</p>
 
-            <p><span class="yellow-text">overview //</span> Myself and a classmate worked together to design and develop a card game as part of a game design course we took in fall 2020. I focused on incorporating user experience and player feedback into the development process and practiced iterative development as we refined the gameplay and mechanics. After the course we further refined the game and have playtested two prototype versions, and are currently gathering feedback to create a third version. The game design document from the course is available <a class="bodylink" href="https://drive.google.com/file/d/1oH9QqBdWJT2bHVAymZFgDBvJAC97DHrZ/view?usp=sharing"><span class="yellow-text"><u>here</u></span></a> for a more detailed report on our initial design process.</p>
+            <!-- banner image -->
+            <div class="banner-pic border"><img src="img/politichaos/politichaos_contents_2.png"></div>
 
-            <div class="twopicgrid botimg">
-                <div class="twopic-item">
-                    <img src="politichaos/politichaos front 2.png" alt="photo of a card game box with colourful characters">
+            <!-- page content -->
+            <div class="project-details">
+                <!-- tools and skills block -->
+                <div class="tools-skills">
+                    <p class="subpage-text"><span class="red-text">Tools:</span> Figma, Clip Studio Paint, nanDECK</p>
+                    <p class="subpage-text"><span class="red-text">Skills:</span> UX Research, Graphic Design, Game Design</p>
                 </div>
-                <div class="twopic-item">
-                    <img src="politichaos/politichaos back 2.png" alt="photo of the back of a card game box">
+
+                <!-- blocks of header + text -->
+                <div class="sub-block">
+                    <h3>Overview</h3>
+                    <div class="paragraph">
+                        <p>
+                            In fall 2020 I worked with a classmate to design a card game for the final project of our game design course. I lead playtesting sessions, incorporated player feedback into the development process, and designed both the cards and the rulebook for the game. After the course I continued to conduct playtests and created a second version to address player experience issues.
+                        </p>
+                        <p>
+                            The game design document from the course is available <a class="red-text" href="https://drive.google.com/file/d/1oH9QqBdWJT2bHVAymZFgDBvJAC97DHrZ/view?usp=share_link" target="_blank">here</a> for a more detailed report on the initial design process.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <p><span class="yellow-text">process //</span> Our game went through several revisions throughout the course. The original prompt was to combine two themes from a provided list, so we chose “fantasy” and “politics” for a simple reason: orcs in suits. With this in mind, the first version was a territorial acquisition game where players solved problems with resources to gain support in different regions for an election campaign. However, we received feedback almost immediately that this was over-complicated and boring; it felt like a copy of other games with no unique mechanics and a fantasy theme slapped over the top.</p>
-
-            <div class="wideimg">
-                <img src="politichaos/politichaos initial brainstorm.png" alt="screenshot of notes on a virtual whiteboard">
-            </div>
-
-            <p class="small">our initial brainstorming for the first version of the game</p>
-
-            <p>We then held a brainstorming session to decide a better direction for the game using the concepts of reverse brainstorming and removal to identify the key problems. Once we identified the problems we came up with ideas on how to reverse the problems into solutions. The second version of our game introduced cards and removed the support system, instead having players move around the board to play action cards in regions specified by problem cards. We then ran playtesting sessions of this game remotely (which was a challenge in and of itself), and received even more feedback. Unfortunately, some new flaws developed between versions one and two—mainly, every player commented on how useless it felt moving around the board, which was a relic from version one. The numbers and balance were wildly off and the core gameplay loop did not engage players. However, players liked the concept of fantasy politics and solving problems with cards in their hand.</p>
-
-            <div class="halfimage">
-                <img src="politichaos/politichaos map.png" alt="sketch of a fantasy map">
-            </div>
-
-            <p class="small">sketch of the board used in the second version</p>
-
-            <p>Once again we sat down to fix our game, this time using the “batting cage” approach where for half an hour we threw ideas at each other and wrote them down no matter how weird or terrible they seemed. During this brainstorming session one of the ideas we came up with was “remove the board”. While this seemed crazy at first, it was actually the key factor to fix our game. The board had carried over from the territorial-acquisition-style game of version one and was the largest complaint from players. Once we realized this, we focused on what a card-only problem-solving game would look like, and the final idea to tie everything together was that players would create a “board” with cards instead. This focused our vision of gameplay into the set-collecting card game that politiCHAOS is today.</p>
-
-            <div class="halfimage">
-                <img src="politichaos/politichaos prototype.png" alt="homemade printed card game cards">
-            </div>
-
-            <p class="small">the printed prototype I used for my first gameplay tests</p>
-
-            <p>So we had our idea. Next we needed a design. I decided on a lineless flat-colour style for the character artwork, white text on black background for the packaging and rulebook, and bold, primary colour accents in the logo and as the resource cards. With these ideas in mind as well as a time limit as the end of the course approached, I designed six characters for the card art and a logo. This was all done in Clip Studio, which in hindsight was not the best idea since I had to manually add text, art, and logos to every. Single. Card. The box also reused the card art since I had no time to make a unique cover image before the course due date.</p>
-
-            <div class="twopicgrid">
-                <div class="twopic-item">
-                    <img src="politichaos/politichaos front 1.png" alt="photo of a card game box">
+                <div class="sub-block">
+                    <h3>Finding Fun</h3>
+                    <div class="paragraph">
+                        <p>
+                            The game went through several revisions throughout the course. It actually started out as a territorial acquisition game, where players solved problems with resources to gain support in regions around a board for their election campaign. However, initial player feedback thought that this concept was over-complicated, boring, and had no unique mechanics.
+                        </p>
+                        <p>
+                            Cards were introduced in an attempt to solve the “no-fun” problem. The second version of the game instead had players move around the board to play action cards in specific regions. I then ran playtesting sessions (remotely, which was a challenge in and of itself) to test if cards made the game more fun.
+                        </p>
+                        <p>
+                            They did not. Players thought that moving around the board felt useless, the numbers and balance were wildly off, and the core gameplay loop was not engaging and repetitive. However, players also liked the concept of fantasy politics and solving problems with cards in their hand.
+                        </p>
+                    </div>
                 </div>
-                <div class="twopic-item">
-                    <img src="politichaos/politichaos contents 1.png" alt="spread out cards and rule page of a card game">
+
+                <!-- goal block -->
+                <div class="goal">
+                    <p>Goal: make gameplay more engaging without compromising positively-received mechanics</p>
                 </div>
-            </div>
 
-            <p class="small">the first professionally printed prototype</p>
-
-            <p>After the course was done, we decided to get a copy of politiCHAOS printed to assess the quality and gather more player feedback, as seen above. This version was mostly the same from the course, the only difference being that I had to condense the rules to fit on a double-sided piece of paper. I organized a playtest session (in person this time, thank goodness), and I was so glad that my friends had a blast learning and playing our game. I gathered feedback from everyone during the game and after the fact, with key points being around some unclear card interactions, difficulty reading cards upside down if you were on the wrong side of the table, and the rulebook not being detailed enough.</p>
-
-            <div class="halfimage">
-                <img src="politichaos/politichaos gameplay.JPG" alt="person sitting at table playing card game">
-            </div>
-
-            <p class="small">some actual gameplay (that's me!)</p>
-
-            <p>Since I felt a lot of these issues could be addressed with a larger rulebook, I chose a different box size from the company that printed the game so I could have a twenty-page booklet instead of a piece of paper. This also meant a larger box, so I decided to redesign the box as well. To do all this I used Figma for both the pages of the booklet and the box.</p>
-
-            <p>Then since I also needed to address the clarity issues on the cards, I wanted to add symbols corresponding to each resource that could be read while upside down. However, remember that my initial method was to manually make each card? This came back to bite me, so I decided for a fresh start with the card-making program nanDECK. This allowed me to “program” each card using data from a spreadsheet, which was way faster than by hand, and had the added bonus of aligning all my text perfectly—no more being off by a few pixels. The only issue I had was that the transparent .png artwork had a white border around them when I exported the cards, so I ended up fixing the art manually after generation. This was still much faster than doing everything by hand.</p>
-
-            <div class="oddsizeimages">
-                <img src="politichaos/politichaos nandeck.png" alt="screenshot of a programming interface">
-                <img src="politichaos/politichaos nandeck white outlines.png" alt="closeup of a drawing with white artifacts on the edges">
-            </div>
-
-            <p class="small">the nanDECK editor and the pesky white outlines</p>
-
-            <div class="fourpicgrid">
-                <div class="picgrid-item">
-                    <img src="politichaos/politichaos resource card 1.png" alt="green game card with a drawing of a character">
+                <div class="sub-block">
+                    <h3>When in Doubt, Throw it Out</h3>
+                    <div class="paragraph">
+                        <p>
+                            One of my favourite brainstorming methods is “brainwriting”, where no idea is rejected and you just throw ideas on paper no matter how terrible they may seem. It was by using this method that the key to the “no-fun” problem surfaced—just remove the board!
+                        </p>
+                        <p>
+                            The board had carried over from the territorial acquisition version of the game and was by far the largest player complaint. With the board gone, the gameplay shifted so that players created a “board” with cards instead. This focused the identity of the game into the set-collecting card game that politiCHAOS is today.
+                        </p>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="politichaos/politichaos resource card 2.png" alt="green game card with a drawing of a character">
+
+                <!-- row of blocks with divider bars -->
+                <div class="row row-text">
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Version 1</p>
+                            <ul>
+                                <li>Territorial acquisition game</li>
+                                <li>Solve problems to gain support in regions on a board</li>
+                                <li>Most regions wins</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bullet-list">
+                            <p class="subpage-text">Key Issues</p>
+                            <ul>
+                                <li>Complicated</li>
+                                <li>No unique mechanics</li>
+                            </ul>
+                        </div>
+
+                        <div class="bullet-list">
+                            <p class="subpage-text">Solutions</p>
+                            <ul>
+                                <li>Remove unnecessary systems (resources, buildings, votes)</li>
+                                <li>Introduce cards with unique gameplay effects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Version 2</p>
+                            <ul>
+                                <li>Collection game</li>
+                                <li>Solve problems drawn from a deck to earn points on a board</li>
+                                <li>Most points wins</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bullet-list">
+                            <p class="subpage-text">Key Issues</p>
+                            <ul>
+                                <li>Board feels irrelevant</li>
+                                <li>Repetitive gameplay</li>
+                            </ul>
+                        </div>
+
+                        <div class="bullet-list">
+                            <p class="subpage-text">Solutions</p>
+                            <ul>
+                                <li>Remove the board</li>
+                                <li>Increase the impact of cards with gameplay effects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Version 3</p>
+                            <ul>
+                                <li>Set collection game</li>
+                                <li>Solve available problems to complete sets</li>
+                                <li>First to reach goal wins</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="politichaos/politichaos problem card 1.png" alt="purple card game card">
+
+                <div class="sub-block">
+                    <h3>Side Matters</h3>
+                    <div class="paragraph">
+                        <p>
+                            I focused more on game design rather than physical design during the course due to its limited timeline. Because of this, the first cards were mostly text-based and created manually in Clip Studio Paint. This was a terrible idea since I had to add text, art, and logos to every card, and position every element by hand.
+                        </p>
+                        <p>
+                            I wanted to get a copy of politiCHAOS printed so I could conduct tests with a higher quality version than my paper-and-tape cards. However, to save money I tried to condense the rulebook onto a double-sided sheet of paper. I found that when you cut costs, it creates additional problems such as unclear card interactions and a lack of detail on how to set up the game. Lesson learned!
+                        </p>
+                        <p>
+                            Finally, the largest takeaway from playtests with the printed version was that cards were difficult to read if you were on the wrong side of the table. While the resource cards were colour-coordinated, the problem cards relied heavily on text to describe which cards were needed.
+                        </p>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="politichaos/politichaos problem card 2.png" alt="purple card game card">
+
+                <div class="goal">
+                    <p>Goal: improve card readability and write a more in-depth rulebook</p>
                 </div>
+
+                <div class="sub-block">
+                    <h3>Redesigns and Rulebooks</h3>
+                    <div class="paragraph">
+                        <p>
+                            I first decided to create a better rulebook. With a larger (and slightly more pricy) box, I could have a twenty-page booklet instead of a piece of paper. I used Figma to design each page of the rulebook as well as the layout of the box art.
+                        </p>
+                        <p>
+                            The next challenge was to address card clarity issues. I wanted to try adding symbols corresponding to each resource that could be read while upside down. However, remember that I had manually created each card? That came back to bite me, so I decided for a fresh start with the card-making program nanDECK. This allowed me to “program” each card using data from a spreadsheet, which was way faster than by hand, and had the added bonus of doing all the text alignment for me.
+                        </p>
+                        <p>
+                            With the cards successfully recreated in nanDECK, I added resource symbols, number totals to the problem cards, and listed resources based on how many were needed rather than alphabetically. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- <div class="divider"></div> -->
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_resource_card_1.png" style="--r: 752/1051">
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_resource_card_2.png" style="--r: 750/1050">
+                    <!-- <div class="divider"></div> -->
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_problem_card_1.png" style="--r: 752/1051">
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_problem_card_2.png" style="--r: 750/1050">
+                    <!-- <div class="divider"></div> -->
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_figma_rulebook.PNG" style="--r: 1316/591">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Final Product</h3>
+                    <div class="paragraph">
+                        <p>
+                            Finally, I had a second version of the game printed. Initial playtests with this version confirmed that the rulebook is easier to understand, the cards are easier to read upside down, and that most “edge-case” card interactions were addressed in the rules.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_front_2.png" style="--r: 3258/2444">
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_contents_2.png" style="--r: 4032/3024">
+                    <img class="round-corners img-clickable" src="img/politichaos/politichaos_open_2.png" style="--r: 2633/1975">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Next Steps</h3>
+                    <div class="paragraph">
+                        <p>
+                            While the second version is much better than the previous version, I'm still not done—I've already gathered more feedback from a different set of players and have more improvements to make regarding readability, rulebook clarity, and game length. However, I can see a definite improvement between versions and am committed to designing the best possible version of the game before getting it out into the world.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            
-            <p class="small">comparison of the cards after adding icons</p>
 
-            <div class="halfimage">
-                <img src="politichaos/politichaos rulebook figma.PNG" alt="screenshot of rulebook pages in Figma">
+            <!-- modal for images -->
+            <div id="modal-div" class="modal">
+                <img id="modal-img" class="modal-content">
             </div>
-
-            <p class="small">Figma screenshot of the new rulebook design</p>
-
-            <p>Finally, I had this second version of the game printed. While it's so much better than the previous version, I'm still not done—I've already gathered more feedback from a different set of players and have more improvements to make regarding readability and rulebook clarity, as well as game length. However, I can see a definite improvement between versions and am committed to designing the best possible version of our game before getting it out into the world. Stay tuned for updates; I'm sure you'll hear from me soon.</p>
-
-            <p><span class="yellow-text">reflection and learnings //</span> I've already addressed some of my learnings in the process section, such as the wonders of Figma and nanDECK, but I would also like to talk about my learnings around player feedback, user experience, and design. Throughout this whole process I've confirmed that listening to players is so much more important than our own perception as designers. It was really hard during the iteration process to hear that our game wasn't fun and didn't feel great to play. It was also hard to sit down together and turn a critical eye on our “baby” that we had worked so hard on, and it might have been easier to say “they're just a small group of players, they aren't our target audience, it's okay not to appeal to everyone”, and so on.</p>
-
-            <p>But the whole point of making a game is for the players. We needed to recognize when things weren't working, and I'm so much more happy with what our game became rather than the concept that it was. This constant process of gathering feedback and incorporating it is tough, especially when you have to spend time and energy reworking something you spent a lot of time on, but it is so worth it.</p>
-
-            <div class="halfimage botimg">
-                <img src="politichaos/politichaos cover art.png" alt="drawing of colourful characters as cover art for a card game">
-            </div>
-
-            <a id="footlink" class="footlink" href="politichaos.html#politichaos"><h3><u>back to top</u></h3></a>
         </div>
     </body>
 </html>

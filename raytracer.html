@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Raytracer</title>
+        <!-- might switch to "portfolio" favicon logo? -->
+        <link rel="icon" href="img/site/main_logo.svg">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, adventures, contact) -->
+            <nav class="sub-navbar">
+                <div class="headlink headleft">
+                    <!-- <img class="headlogo" src="page design elements/main logo.svg" alt="two interlocking triangles"> -->
+                    <a class="logolink" href="index.html#home-data">
+                        <svg class="headlogo" width="53" height="56" viewBox="0 0 53 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.5837 56L33.8075 52.0332L50.476 22.5429L52.6396 18.7164H48.2521L14.9153 18.7164H10.5277L12.6914 22.5429L29.3599 52.0332L31.5837 56V56ZM31.5837 45.5822L19.3028 23.8451L43.8646 23.8451L31.5837 45.5822V45.5822Z" fill="currentColor"/>
+                            <path d="M21.0559 0L18.8321 3.96677L2.16369 33.4571L0 37.2836H4.38752H37.7244H42.1119L39.9482 33.4571L23.2798 3.96677L21.0559 0V0ZM21.0559 10.4178L33.3369 32.1548H8.77503L21.0559 10.4178V10.4178Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <a class="headlink" href="index.html#about-data">
+                    <!-- <img class="headicon" src="page design elements/tri section about.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;About
+                </a>
+                <a class="headlink" href="index.html#portfolio-data">
+                    <!-- <img class="headicon" src="page design elements/tri section portfolio.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>  
+                    &nbsp;Portfolio
+                </a>
+                <a class="headlink" href="index.html#adventures-data">
+                    <!-- <img class="headicon" src="page design elements/tri section adventures.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Adventures
+                </a>
+                <a class="headlink" href="index.html#contact-data">
+                    <!-- <img class="headicon" src="page design elements/tri section contact.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Contact
+                </a>
+            </nav>
+        </header>
+
+        <div id="raytracer" class="subpage">
+            <div class="subpage-splash"><img src="img/site/subpage_splash_full.svg"></div>
+
+            <div class="section-header header-white subpage-header">
+                <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                    <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                </svg> 
+                <h2>Raytracer</h2>
+            </div>
+
+            <!-- banner image -->
+            <div class="banner-pic border"><img src="img/raytracer/cover_frame.png"></div>
+            
+            <div class="project-details">
+                <!-- tools and skills block -->
+                <div class="tools-skills">
+                    <p class="subpage-text"><span class="red-text">Tools:</span> C++, Blender, Hitfilm Express</p>
+                    <p class="subpage-text"><span class="red-text">Skills:</span> Programming, 3D Modeling, Animation</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Overview</h3>
+                    <div class="paragraph">
+                        <p>
+                            The final assignment for my graphics course in winter 2022 was to build a raytracer in C++ from scratch. The purpose of the assignment was to demonstrate different techniques used in computer graphics. I used the following techniques in this project: shadows, reflections, depth of field, texture mapping, and cel shading. On top of the programming, I also created 3D models for three of the weapons from my <a class="red-text" href="battle_academia_fan_skins.html">Battle Academia designs</a> and used my raytracer to render them in a short animation that illustrated these techniques.
+                        </p>
+                        <p>
+                            Since this project was a school assignment I cannot share a public repository. If you would like to view the source code please reach out to me through the contact info provided on this site.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- goal block -->
+                <div class="goal">
+                    <p>Goal: build a raytracer and render a short animation</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Sources</h3>
+                    <div class="paragraph">
+                        <p>
+                            I referred to Peter Shirley's <a class="red-text" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">ray tracing books</a> while working on the programming aspects of this project, especially for implementing reflections and depth of field. I also followed <a class="red-text" href="https://medium.com/@phostershop/solving-multithreaded-raytracing-issues-with-c-11-7f018ecd76fa" target="_blank">this guide</a> to implement multithreading to improve the rendering time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Technique 1: Shadows</h3>
+                    <div class="paragraph">
+                        <p>
+                            I had already implemented simple shadow rays in a previous assignment, so I was able to carry over the same functionality into the final raytracer. When a ray hits a non-reflective object or maximum recursion depth is reached, it casts a shadow ray towards the light source. If an object is in the way of the shadow ray and the light, the intersection point is in shadow.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <img class="round-corners img-clickable" src="img/raytracer/example_1.png" style="--r: 500/500;max-width: 500px;">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Technique 2: Reflections</h3>
+                    <div class="paragraph">
+                        <p>
+                            If a primary ray hits a reflective surface, it is reflected over the surface's normal to get the reflection ray. That new ray is then treated as a primary ray and traced recursively until it either hits a non-reflective surface or the depth of recursion exceeds the limit.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <img class="round-corners img-clickable" src="img/raytracer/example_2.png" style="--r: 500/500;max-width: 500px;">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Technique 3: Depth of Field</h3>
+                    <div class="paragraph">
+                        <p>
+                            I created a function to randomly generate a point on a disc located at the eye point and cast multiple rays from the eye point towards each pixel. This caused the narrowing “cone” effect that cameras in real life use. The focal plane is determined by the view vector passed into the scene for easy per-scene modification, while the radius of the disc and sample sizes are controlled in the raytracer.
+                        </p>
+                        <p>
+                            The final animation uses only five samples since additional samples increase the rendering time, so the visuals look a bit “grainy” as a result.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <img class="round-corners img-clickable" src="img/raytracer/example_3.png" style="--r: 500/500;max-width: 500px;">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Technique 4: Texture Mapping</h3>
+                    <div class="paragraph">
+                        <p>
+                            I used more of a “solid texture” mapping approach since I don't read from a file but instead generate a colour based on the intersection point. In the case of these gradients, I used the local horizontal distance on the mesh. I also used a three-colour gradient, so a t value < 0.5 is mapped between the first two colours while a t value >= 0.5 is mapped between the last two colours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <img class="round-corners img-clickable" src="img/raytracer/example_4.png" style="--r: 500/500;max-width: 500px;">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Technique 5: Cel Shading</h3>
+                    <div class="paragraph">
+                        <p>
+                            I mapped the diffuse colour of an intersected object as well as the colour from the Phong shading at that intersection to HSL colour space. I compared the lightness values, and depending on the difference in lightness between the Phong value and the diffuse material the resulting colour was mapped to either a dark, mid, or light tone.
+                        </p>
+                        <p>
+                            The animation only uses cel shading on the non-gradient parts of the weapons in order to still clearly demonstrate texture mapping.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <img class="round-corners img-clickable" src="img/raytracer/example_5.png" style="--r: 500/500;max-width: 500px;">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Rendering and Compositing</h3>
+                    <div class="paragraph">
+                        <p>
+                            Once all my techniques were functional I set up a 3D scene in a lua file using the obj files of my 3D models. I split each part of the model up by colour to reduce the size of the bounding boxes and so I wouldn't have to modify my code to render a multi-coloured object.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row"">
+                    <img class="round-corners img-clickable" src="img/raytracer/gun_whole.png" style="--r: 1156/648;">
+                    <img class="round-corners img-clickable" src="img/raytracer/gun_parts.png" style="--r: 1263/669;">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            I wanted a 360-degree rotation of the objects, so I used a shell script to generate lua files for each angle of the scene. However, even after implementing multithreading, an eight-core lab machine took around ten minutes to render each frame of the animation. 360 frames would take 60 hours! I instead decided to render every other frame to cut the rendering time in half. I then used another script to run each lua file one after the other and save the output.
+                        </p>
+                        <p>
+                            Finally, I took the 180 rendered images and put them together at 24 frames per second using Hitfilm Express. I also added audio effects to emphasize the “energy” in the weapons as well as <a class="red-text" href="https://www.youtube.com/watch?v=uFCjVtJ2gJQ" target="_blank">background music</a> for ambiance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Final Product</h3>
+                </div>
+
+                <div class="row" style="overflow: hidden;padding-top: min(100%, 500px);position: relative;justify-content: center;">
+                    <video class="round-corners" width="100%" height="100%" controls style="max-width: 500px;max-height:500px;position:absolute;top:0;width:100%;height:100%;--r:500/500;margin:auto;">
+                        <source src="img/raytracer/final_animation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Next Steps</h3>
+                    <div class="paragraph">
+                        <p>
+                            My code is definitely not flawless, but it functions as intended and I am very proud of how it turned out. While I don't have an interest in expanding the raytracer part of this project, I hope to apply the computer graphics techniques I learned from this course in my future 3D modeling endeavors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- modal for images -->
+            <div id="modal-div" class="modal">
+                <img id="modal-img" class="modal-content">
+            </div>
+        </div>
+    </body>
+</html>

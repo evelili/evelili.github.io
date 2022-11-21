@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Elysium Demo</title>
+        <!-- might switch to "portfolio" favicon logo? -->
+        <link rel="icon" href="img/site/main_logo.svg">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, adventures, contact) -->
+            <nav class="sub-navbar">
+                <div class="headlink headleft">
+                    <!-- <img class="headlogo" src="page design elements/main logo.svg" alt="two interlocking triangles"> -->
+                    <a class="logolink" href="index.html#home-data">
+                        <svg class="headlogo" width="53" height="56" viewBox="0 0 53 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.5837 56L33.8075 52.0332L50.476 22.5429L52.6396 18.7164H48.2521L14.9153 18.7164H10.5277L12.6914 22.5429L29.3599 52.0332L31.5837 56V56ZM31.5837 45.5822L19.3028 23.8451L43.8646 23.8451L31.5837 45.5822V45.5822Z" fill="currentColor"/>
+                            <path d="M21.0559 0L18.8321 3.96677L2.16369 33.4571L0 37.2836H4.38752H37.7244H42.1119L39.9482 33.4571L23.2798 3.96677L21.0559 0V0ZM21.0559 10.4178L33.3369 32.1548H8.77503L21.0559 10.4178V10.4178Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <a class="headlink" href="index.html#about-data">
+                    <!-- <img class="headicon" src="page design elements/tri section about.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;About
+                </a>
+                <a class="headlink" href="index.html#portfolio-data">
+                    <!-- <img class="headicon" src="page design elements/tri section portfolio.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>  
+                    &nbsp;Portfolio
+                </a>
+                <a class="headlink" href="index.html#adventures-data">
+                    <!-- <img class="headicon" src="page design elements/tri section adventures.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Adventures
+                </a>
+                <a class="headlink" href="index.html#contact-data">
+                    <!-- <img class="headicon" src="page design elements/tri section contact.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Contact
+                </a>
+            </nav>
+        </header>
+
+        <div id="elysiumdemo" class="subpage">
+            <div class="subpage-splash"><img src="img/site/subpage_splash_full.svg"></div>
+
+            <div class="section-header header-white subpage-header">
+                <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                    <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                </svg> 
+                <h2>Elysium Demo | Digital Game</h2>
+            </div>
+
+            <!-- banner image -->
+            <div class="banner-pic border"><img src="img/elysium_demo/demo3_log.png"></div>
+
+            <div class="project-details">
+                <!-- tools and skills block -->
+                <div class="tools-skills">
+                    <p class="subpage-text"><span class="red-text">Tools:</span> Unity, C#, Figma, Clip Studio Paint, Inky</p>
+                    <p class="subpage-text"><span class="red-text">Skills:</span> Programming, Game Design, UX Research, UI Design, Animation</p>
+                </div>
+
+                <!-- blocks of header + text -->
+                <div class="sub-block">
+                    <h3>Overview</h3>
+                    <div class="paragraph">
+                        <p>
+                            A week before the final exam of my undergrad career I procrastinated on studying so hard that I made a visual novel instead. I programmed a framework in Unity that worked with a scripting language (ink) to add graphics, sound, and additional gameplay mechanics. During the entire development I followed an iterative process where I constantly collected and implemented feedback from my playtesters.
+                        </p>
+                        <p>
+                            You can play <a class="red-text" href="https://evelili.itch.io/elysium-demo" target="_blank">the final demo</a> on itch.io with the password "elysiumdemo". If you would like to view the source code, please reach out to me through the contact info provided on this site.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Starting From Scratch</h3>
+                    <div class="paragraph">
+                        <p>
+                            I actually came up with the original concept for this game in 2019. However, a certain global event derailed my life and this project lay untouched in the depths of Google Drive until April 2022. In my efforts to avoid my final final, I stumbled upon the old documents and had a revelation: what better way to procrastinate than to procrastinate on something useful?
+                        </p>
+                        <p>
+                            But I had no art assets, no music, and no idea how to use Unity to make a visual novel. Sure, I had a two-year-old script for the dialogue, but how can you make a game out of that?
+                        </p>
+                    </div>
+                </div>
+
+                <!-- goal block -->
+                <div class="goal">
+                    <p>Goal: find a way to integrate a script with Unity in the format of a visual novel</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Introducing ink</h3>
+                    <div class="paragraph">
+                        <p>
+                            According to their website, ink is <a class="red-text" href="https://www.inklestudios.com/ink/" target="_blank">“a narrative scripting language for games”</a>. ink is open source, documented, and has Unity integration—exactly what I needed for this project. I downloaded inky, the ink editor, and got to work on the script.
+                        </p>
+                        <p>
+                            Before I even touched Unity, though, I needed to think about visuals. Since ink's framework is more similar to a choose-your-own-adventure story, there aren't any built-in commands for visual novel elements (backgrounds, character sprites, music, etc). I ended up using the tag system with my own syntax for Unity to parse and interpret commands, though there are certainly other ways to achieve the same thing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Version 1: The Devil's in the Details</h3>
+                    <div class="paragraph">
+                        <p>
+                            About four days after I started I ended up with something that could pass as a game. It implemented a system where players picked from three choices until they selected the right one to advance the story. I threw it up on itch.io and sat in on as many playtests as I could. I divided feedback into three larger categories: gameplay (game mechanics and game UX), creative (story, art, sound, and design), and technical (bugs and interface UX).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo1_1.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo1_2.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo1_3.png" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            The most important feedback area at this stage was gameplay. Visual novels are very non-linear and story-focused, while adventure games tend to be more linear with game-like systems. Because the demo had a linear story with no gameplay, all of the playtesters fell into one of two camps: those who didn't like the game because they couldn't affect the story, and those who didn't like the game because it wasn't a game at all.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row of blocks with divider bars -->
+                <div class="row row-text">
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Story-driven Players</p>
+                            <ul>
+                                <li>Plays a game for the narrative</li>
+                                <li>Gameplay mechanics should enhance the story and not feel tacked out</li>
+                                <li>Like branching decisions and choices that affect the narrative</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bullet-list">
+                            <p class="subpage-text">Liked</p>
+                            <ul>
+                                <li>The characters and setting</li>
+                                <li>The "plot twist"</li>
+                            </ul>
+                        </div>
+
+                        <div class="bullet-list">
+                            <p class="subpage-text">Disliked</p>
+                            <ul>
+                                <li>The choice system (felt "mechanical")</li>
+                                <li>Couldn't affect the story</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Gameplay-driven Players</p>
+                            <ul>
+                                <li>Plays a game for the skill elements</li>
+                                <li>Interesting gameplay is important to enjoy a story</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bullet-list">
+                            <p class="subpage-text">Liked</p>
+                            <ul>
+                                <li>The concept of gameplay (playing as a bartender and interacting with patrons)</li>
+                            </ul>
+                        </div>
+
+                        <div class="bullet-list">
+                            <p class="subpage-text">Disliked</p>
+                            <ul>
+                                <li>The gameplay; it wasn't engaging</li>
+                                <li>Interacting with the patron character feels flat</li>
+                                <li>Doesn't feel like actions have consequences</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Version 2: Players Should Be Drivers, Not Passengers</h3>
+                    <div class="paragraph">
+                        <p>
+                            After I sorted through the feedback I got to work on the next iteration. This version didn't make any major changes to visuals, instead focusing on reworking the gameplay system (the “tab settlement”). Now, instead of choosing between three options with only one correct answer, the player instead chose dialogue options to affect the flow of the conversation. However, the only affected elements were the order and some lines of dialogue, not the outcome.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo2_1.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo2_2.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo2_3.png" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            This version of the game also extended the script to accommodate the system. However, feedback indicated that this wasn't much of an improvement from the original in terms of gameplay. One playtester noted that some of the lack of agency stemmed from the player's character coming to conclusions on her own, rather than the player making those connections themselves. Furthermore, this lack of agency is negative for both groups of players (those who like interactive stories, and those who like games for their mechanics).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="goal">
+                    <p>Goal: find a way to incorporate satisfying player interaction into a linear story</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Version 3: Power to the Players</h3>
+                    <div class="paragraph">
+                        <p>
+                            With this new focus on player agency, I once again reworked the main gameplay to include more player interaction. The conversation “flow” remained the same, but this time the player's character only gathered information and did not make any conclusions on her own. Once the player explored all necessary conversation topics, they then made connections between related ideas to solve the mystery. I also added a score system based on how many mistakes the player made, where the score would then be used later on in the game to unlock extra stories.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo3_1.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo3_3.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo3_4.png" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            This new format let players feel like they were the ones in control, not the character. Furthermore, since it was now possible to make wrong connections and lose points, players had motivation to engage with the story and find the right answer. And since wrong answers only affected points, story-focused players didn't need to worry about getting a “game over” and missing out on the rest of the game.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row row-text">
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Story-driven Players</p>
+                            <ul>
+                                <li>Liked the extended narrative</li>
+                                <li>Felt that making "connections" enhanced the mystery-solving aspect of the story</li>
+                                <li>The gameplay is not too challenging and does not get in the way narrative progression</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Gameplay-driven Players</p>
+                            <ul>
+                                <li>Liked the "connection" system</li>
+                                <li>Felt that their choices had more of an influence on the story</li>
+                                <li>Appreciated the short / integrated "tutorial" since the system isn't complex</li>
+                                <li>Interested in the point system and getting better scores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>A Fresh Coat of Paint</h3>
+                    <div class="paragraph">
+                        <p>
+                            In the third version I finally started designing UI elements to replace the temporary versions. This included the logo, the dialogue box, popup menus, the main menu, and more. I again followed an iterative process to make sure that I got feedback on each element. At this stage I also implemented other requested features, such as a dialogue log and sound controls, since I found it made more sense to implement those features when I had polished assets to work with.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo3_log.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo3_title.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo3_ideas.png" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            At this point I also started to implement many quality-of-life features on both the visual and the programming side. Many of them stemmed directly from playtest feedback, such as implementing a delay between text advancement to avoid accidentally double-skipping on short lines. I also rebuilt the game framework to improve both performance and functionality.
+                        </p>
+                        <p>
+                            Finally, this version also implemented animated sprites. However, they were not implemented in an efficient or reusable manner, and the animation controller ended up becoming an unreadable mess. The sprites work, sure, and they look good, but this aspect of the framework needs to be revisited sooner rather than later.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo_idea.gif" style="--r: 560/315">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/sprite_mess.png" style="--r: 1572/826">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Final Product</h3>
+                    <div class="paragraph">
+                        <p>
+                            Initial playtests show that this version of the game is the best version so far. The visuals and additional UI controls allow for a smoother user experience, and players liked how the new gameplay allowed for both player interaction and more interactions between game characters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/elysium_demo/demo3_title_chapters.png" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Next Steps</h3>
+                    <div class="paragraph">
+                        <p>
+                            I am much more satisfied with the gameplay in the third iteration of the demo. Going forward I aim to expand on the framework's functionality and to complete the remaining chapters of the game. I also have received feedback on the points system and other aspects of the demo, and will continue to address player concerns throughout development. While much of what I created for the demo will likely not make it to the final version, I believe that the extra time I spent to create a demo and playtest it will be invaluable when it comes to making the final product.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- modal for images -->
+            <div id="modal-div" class="modal">
+                <img id="modal-img" class="modal-content">
+            </div>
+        </div>
+    </body>
+</html>

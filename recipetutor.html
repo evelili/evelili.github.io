@@ -2,139 +2,278 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>evelili | RecipeTutor</title>
-        <link rel="icon" href="main logo yellow dark.svg">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RecipeTutor</title>
+        <!-- might switch to "portfolio" favicon logo? -->
+        <link rel="icon" href="img/site/main_logo.svg">
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script defer src="scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="scripts.js"></script>
     </head>
 
     <body>
         <header>
-            <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
-            <nav id="navbar">
-                <a id="hlogo" href="index.html#home-data" class="headlink">
-					<img id="logo1" class="headlogo-home-data" src="main logo.svg" alt="two interlocking white triangles">
-					<img id="logo2" class="headlogo-about-data" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
-					<img id="logo3" class="headlogo-projects-data active" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
-					<img id="logo4" class="headlogo-portfolio-data" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
-					<img id="logo5" class="headlogo-contact-data" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
-				</a>
-                <a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
-                <a class="active headlink" href="index.html#projects-data"><img class="contain" src="yellow.svg" alt="yellow triangle">projects</a>
-                <a class="headlink" href="index.html#portfolio-data"><img class="contain" src="green.svg" alt="green triangle">portfolio</a>
-                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, adventures, contact) -->
+            <nav class="sub-navbar">
+                <div class="headlink headleft">
+                    <!-- <img class="headlogo" src="page design elements/main logo.svg" alt="two interlocking triangles"> -->
+                    <a class="logolink" href="index.html#home-data">
+                        <svg class="headlogo" width="53" height="56" viewBox="0 0 53 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.5837 56L33.8075 52.0332L50.476 22.5429L52.6396 18.7164H48.2521L14.9153 18.7164H10.5277L12.6914 22.5429L29.3599 52.0332L31.5837 56V56ZM31.5837 45.5822L19.3028 23.8451L43.8646 23.8451L31.5837 45.5822V45.5822Z" fill="currentColor"/>
+                            <path d="M21.0559 0L18.8321 3.96677L2.16369 33.4571L0 37.2836H4.38752H37.7244H42.1119L39.9482 33.4571L23.2798 3.96677L21.0559 0V0ZM21.0559 10.4178L33.3369 32.1548H8.77503L21.0559 10.4178V10.4178Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <a class="headlink" href="index.html#about-data">
+                    <!-- <img class="headicon" src="page design elements/tri section about.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;About
+                </a>
+                <a class="headlink" href="index.html#portfolio-data">
+                    <!-- <img class="headicon" src="page design elements/tri section portfolio.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>  
+                    &nbsp;Portfolio
+                </a>
+                <a class="headlink" href="index.html#adventures-data">
+                    <!-- <img class="headicon" src="page design elements/tri section adventures.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Adventures
+                </a>
+                <a class="headlink" href="index.html#contact-data">
+                    <!-- <img class="headicon" src="page design elements/tri section contact.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Contact
+                </a>
             </nav>
         </header>
 
-        <svg id="fader"></svg>
-
         <div id="recipetutor" class="subpage">
-            <div id="outtolaunch-header" class="head-icon">
-                <img src="yellow.svg" alt="a yellow triangle">
-                <h2>RecipeTutor</h2>
+            <div class="subpage-splash"><img src="img/site/subpage_splash_full.svg"></div>
+
+            <div class="section-header header-white subpage-header">
+                <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                    <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                </svg> 
+                <h2>RecipeTutor | Cooking App</h2>
             </div>
-            <p><span class="yellow-text">programs //</span> Figma, Miro</p>
 
-            <p><span class="yellow-text">overview //</span> I worked as part of a team of five to design a functional prototype of an application around the theme “supporting obtaining new skills”. We wanted to show the potential of a cooking application with a focus on progression and practical experience, as well as design solutions to some of the barriers in learning to cook. Over the course of the term we learned and practiced many parts of the design process, such as design evaluation, creating personas, user interviews, iterative design, prototyping, and HCI research methods.</p>
+            <!-- banner image -->
+            <div class="banner-pic border"><img src="img/recipetutor/recipetutor_sketches.jpg"></div>
 
-            <div class="threepicgrid botimg">
-                <div class="threepic-item">
-                    <img src="recipetutor/recipetutor ss 1.png" alt="screenshot of a mobile recipe application">
+            <div class="project-details">
+                <!-- tools and skills block -->
+                <div class="tools-skills">
+                    <p class="subpage-text"><span class="red-text">Tools:</span> Figma, Miro</p>
+                    <p class="subpage-text"><span class="red-text">Skills:</span> UX Research, UI Design</p>
                 </div>
-                <div class="threepic-item">
-                    <img src="recipetutor/recipetutor ss 2.png" alt="screenshot of a mobile recipe application">
+
+                <!-- blocks of header + text -->
+                <div class="sub-block">
+                    <h3>Overview</h3>
+                    <div class="paragraph">
+                        <p>
+                            I worked as part of a team of five to design a function prototype of a cooking application that helped users learn to cook through recipes. This app was to show the potential of cooking with a focus on progression and practical experience, as well as to identify barriers that prevent people from learning to cook. During this project I learned and implemented parts of the design process such as design evaluation, personas, user interviews, iterative design, and prototyping.
+                        </p>
+                        <p>
+                            The final project article detailing the design process is available <a class="red-text" href="https://medium.com/cs449-649-f21-uwaterloo/recipetutor-a-better-approach-to-learning-apps-8820773f1fd0" target="_blank">here</a>.
+                        </p>
+                    </div>
                 </div>
-                <div class="threepic-item">
-                    <img src="recipetutor/recipetutor ss 3.png" alt="screenshot of a mobile recipe application">
+
+                <div class="sub-block">
+                    <h3>Building a Base</h3>
+                    <div class="paragraph">
+                        <p>
+                            The first step of this project was identifying the application's purpose. A value proposition canvas was created using information gathered from background research on learning applications as well as preliminary interviews with potential users. Furthermore, my research into gamification identified both benefits and drawbacks of gamification and learning apps.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_value_canvas.jpg" style="--r: 1024/834">
+                </div>
+
+                <!-- row of blocks with divider bars -->
+                <div class="row row-text">
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Gamification and Learning</p>
+                            <ul>
+                                <li>Uses motivating game aspects to make learning engaging</li>
+                                <li>Common aspects are goals, challenges, progression, and rewards</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bullet-list">
+                            <p class="subpage-text">Benefits</p>
+                            <ul>
+                                <li>Progression aspects allow users to view change over time and feel a sense of progress toward goals</li>
+                                <li>Can provide concrete feedback, such as with progress bars and badges</li>
+                            </ul>
+                        </div>
+
+                        <div class="bullet-list">
+                            <p class="subpage-text">Drawbacks</p>
+                            <ul>
+                                <li>Can punish failures (for example, losing a life for making a mistake)</li>
+                                <li>Can create stress, such as with maintaining streaks, which hinders motivation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- goal block -->
+                <div class="goal">
+                    <p>Goal: identify target users and the barriers preventing them from learning to cook</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Personas and Problems</h3>
+                    <div class="paragraph">
+                        <p>
+                            Seven personas were generated, followed by interviews with potential users of the app. I revised the interview script and conducted semi-structured interviews with candidates remotely. Once all interviews were complete the team met together to compare data using Miro to categorize information into an affinity diagram. This discussion process clarified three key learning barriers for the app to target.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_affinity_diagram.jpg" style="--r: 8747/5601">
+                </div>
+
+                <div class="row row-text">
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Barrier 1</p>
+                            <ul>
+                                <li>Recipes are static and do not accommodate individual users or scenarios</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Barrier 2</p>
+                            <ul>
+                                <li>Recipe results from search engines can overwhelm, ignore user factors, and lack credibility</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="left-bar">
+                        <div class="bullet-list">
+                            <p class="subpage-text">Barrier 3</p>
+                            <ul>
+                                <li>Users must adapt to recipes and lack personalization resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Inverting the Cooking Process</h3>
+                    <div class="paragraph">
+                        <p>
+                            The following diagrams illustrate the standard process of cooking compared with the application's “inverted” process. Rather than having users follow static, impersonal recipes, recipes are instead dynamic and user-centric, allowing for more control and personalization over the cooking process.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_process_old.jpg" style="--r: 1024/957">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_process_new.jpg" style="--r: 1024/1881">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Core Features</h3>
+                    <div class="paragraph">
+                        <p>
+                            The core features of the application were determined through an ideation process involving idea generation, discussion, categorization, and a final vote. My job was to design progression features to encourage user motivation and visualize progression.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="goal">
+                    <p>Goal: create designs for progression systems accessed from a user's profile</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Sketches and Wireframes</h3>
+                    <div class="paragraph">
+                        <p>
+                            The first design activity I did was “Crazy 8” sketches, where I had thirty seconds to do a brief sketch for eight different designs. I used this activity to sketch layout ideas for achievements, stats, ratings systems, and more. These sketches then became the basis for a more refined concept of user flow around progression and motivation systems.
+                        </p>
+                        <p>
+                            Using my preliminary research into gamification and motivation systems at the start of the project, I had to make sure to consider potential negative impacts of progression systems during the design process. For example, streaks can be motivating for some users but stressful for others. In the end I focused on the idea of “helping users paint a better picture of their progression” with a log-like section that displayed a record of what recipes they made, a statistics section to show the usage of different cooking skills, and achievements that users could motivate themselves to complete.
+                        </p>
+                        <p>
+                            I then moved to Figma to sketch out a basic interactive prototype for the profile and achievement systems. My section of the prototype was then used in task-based user interviews to gather feedback and identify design problems. In these interviews participants had issues with the vague naming of the “Progress” tab and were confused why achievements were displayed in multiple places.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_sketches.jpg" style="--r: 4089/3912">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_wireframe.PNG" style="--r: 833/823">
+                </div>
+                
+                <div class="sub-block">
+                    <h3>Lo-fi to Hi-fi</h3>
+                    <div class="paragraph">
+                        <p>
+                            After finalizing the design for each part of the application and implementing minor changes to other features, it was time to create the high-fidelity prototype. Since I had prior Figma experience, I and another teammate set up all the text styles, colors, and base components needed to build the different screens of the app. I also got to try out Figma's (at the time) newly-released interactive components, which made dropdown categories with multiple variants much less of a headache to figure out.
+                        </p>
+                        <p>
+                            Once all the preparation was complete I once again designed the profile section, completing both the layouts and the wiring of that portion of the prototype.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_components.png" style="--r: 2818/5240">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_calendar.png" style="--r: 828/1801">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_achievements.png" style="--r: 828/1768">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_skill_page.png" style="--r: 828/1792">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Final Product</h3>
+                    <div class="paragraph">
+                        <p>
+                            The high-fidelity prototype was tested with heuristic evaluations and cognitive walkthroughs designed to evaluate the app's navigation, recipe page, and profile page. These evaluations showed an improved response to the recipe page's design and that the issues around wording and achievements in the profile page had been addressed. While I will not be working any further on this project, I believe there is merit in this project's design for both learning to cook and learning applications as a whole.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_ss_1.png" style="--r: 1008/1952">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_ss_2.png" style="--r: 1008/1952">
+                    <img class="round-corners img-clickable" src="img/recipetutor/recipetutor_ss_3.png" style="--r: 1008/1952">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Next Steps</h3>
+                    <div class="paragraph">
+                        <p>
+                            The final evaluations still pointed out some issues with the app’s design that need to be addressed, such as under-designed and unexplained features and some unintuitive navigation patterns, in particular the swipe navigation on recipe steps.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <p><span class="yellow-text">process //</span> I'll actually link our team's end-of-term <a class="bodylink" href="https://medium.com/cs449-649-f21-uwaterloo/recipetutor-a-better-approach-to-learning-apps-8820773f1fd0"><span class="yellow-text"><u>Medium article</u></span></a> detailing our design process to give a general rundown of the whole project. Since that article is more high-level and a bit of a read, I'll also discuss some of the more granular design decisions and my own prototyping experience here.</p>
-
-            <p>The first real “design” activity we did were “Crazy 8” sketches, where we had 8 x 30 seconds to come up with 8 designs. While we didn't feel like the activity had much worth at the time, I do have to admit it's good to try and generate as many ideas as possible at the start of the design process without dwelling too much on the details. For instance, I was in charge of designing progression and motivation features. Since I have a bit of experience with gamification I used this activity to design quick layout ideas for achievements, stats, rating systems, and more. These sketches then became the basis for a more complete sketch of a user flow around progression and motivation located in the user's profile.</p>
-
-            <div class="halfimage">
-                <img src="recipetutor/recipetutor crazy 8.png" alt="sketches of application screens">
+            <!-- modal for images -->
+            <div id="modal-div" class="modal">
+                <img id="modal-img" class="modal-content">
             </div>
-
-            <p class="small">my crazy 8 sketches</p>
-
-            <div class="wideimg">
-                <img src="recipetutor/recipetutor sketches.jpg" alt="sketches of application screens">
-            </div>
-
-            <p class="small">the cleaner sketch derived from the crazy 8 designs</p>
-
-            <p>From the sketches we then moved to Figma to create simple, blocked out versions of each feature. At this point all five of us had our “own” feature to design, though we later focused on mine (progression and achievement) and another teammate's feature (dynamic recipes) since we decided they made up the core parts of the app. We wired up these two features and conducted some user interviews to gather feedback. Most of the usability issues were in the recipe section, but there were some important points made about the profile page such as confusion around achievements in multiple places and the vague naming of the “Progress” tab.</p>
-
-            <div class="halfimage">
-                <img src="recipetutor/recipetutor paper proto profile.PNG" alt="screenshot of an application wireframe">
-            </div>
-
-            <p class="small">my prototype design of the profile page</p>
-
-            <div class="wideimg">
-                <img src="recipetutor/recipetutor paper proto recipe.PNG" alt="screenshot of an application wireframe">
-            </div>
-
-            <p class="small">prototype of the main recipe page (designed by another group member)</p>
-
-            <p>Since the recipe page needed a design overhaul, we decided to use a type of iterative design. A second teammate made changes to the first design, then I made my own version of this second design, and another teammate made changes to my design to make a third, and so on. This was in part due to our busy schedules forcing us to work asynchronously, but also allowed us the time to more clearly show our design ideas instead of trying to explain them during a discussion.</p>
-
-            <div class="tallsection">
-                <img src="recipetutor/recipetutor iteration 1.png" alt="screenshot of a page in a recipe application">
-                <img src="recipetutor/recipetutor iteration 2.png" alt="screenshot of a page in a recipe application">
-                <img src="recipetutor/recipetutor iteration 3.png" alt="screenshot of a page in a recipe application">
-                <img src="recipetutor/recipetutor iteration 4.png" alt="screenshot of a page in a recipe application">
-                <img src="recipetutor/recipetutor iteration 5.png" alt="screenshot of a page in a recipe application">
-            </div>
-
-            <p class="small">the initial design and the four iterations in order</p>
-
-            <p>After the recipe page redesign we got to work on the high-fidelity prototype. Since myself and another teammate had prior Figma experience, we set up all the components such as text styles, colours, buttons, dropdown indicators, and headers. I also got to try out Figma's (at the time) newly-released interactive components, which made dropdown categories with multiple variants much less of a headache to figure out. After we created the components the whole team worked together to put all the pages together. I once again worked on the profile section and completed both the screens and wiring of that portion of the app.</p>
-
-            <div class="wideimg">
-                <img src="recipetutor/recipetutor design components.png" alt="screenshot of design components and elements in Figma">
-            </div>
-
-            <p class="small">some of our components and our colours + font schemes</p>
-            
-            <p>Finally, we wired up the whole prototype in time for our final testing sessions, consisting of heuristic evaluation from our peers and a cognitive walkthrough. While we did not have the chance to implement the feedback into our prototype, we all agreed that there is still much to be improved on in the future.</p>
-
-            <div class="wideimg">
-                <img src="recipetutor/recipetutor final prototype peek.PNG" alt="screenshot of prototype wiring in Figma">
-            </div>
-
-            <p class="small">that's a lot of spaghetti</p>
-
-            <p><span class="yellow-text">reflection and learnings //</span> This was another learning experience in working as a team. I wholeheartedly believe that listening to others' ideas and giving positive, constructive feedback is an important part of the design process. However, we did encounter some hiccups during the design process where we had to have heavy discussion about how to implement certain features.</p>
-
-            <p>For example, while some members of the team had a more concrete idea about how skills would work—a recipe has skill tags and users can search for recipes that use a skill—other members wanted a more dynamic approach that wouldn't work with a tagging system—users enter skills that they used during a recipe, in order to accommodate those who use different skills or skip over skills when omitting parts of the recipe. We didn't end up agreeing on how this should function, since both sides had valid reasons and criticisms, but we were able to come up with a plan to move on from the issue with little-to-no conflict afterwards.</p>
-
-            <div class="halfimage">
-                <img src="recipetutor/recipetutor tags.png" alt="screenshot of tags in a recipe application">
-            </div>
-
-            <p class="small">the tag system, which was not incorporated in the final design</p>
-
-            <p>We had a similar debate about the rating system, which originally presented the user with a long list of skills to rate when they completed a recipe. This related slightly to the tagging issue, since one design had a shorter, fixed list of skills that would correspond to the recipe's skill tags, while the other design had a longer more encompassing list to cover skills the user might have been interested in tracking. We did manage to agree that the long list was visually intimidating, and solved this by moving “optional” skills to a dropdown the user could open to enter new skills. However, this was a good example of finding a solution to preserve the intentions behind both designs while still solving an overall design flaw.</p>
-
-            <div class="tallsection">
-                <img src="recipetutor/recipetutor ratings.png" alt="screenshot of a page in a recipe application">
-                <img src="recipetutor/recipetutor rate dropdown.PNG" alt="screenshot of a page in a recipe application">
-            </div>
-
-            <p class="small">the ratings page redesign, with the "optional" skills moved to a dropdown menu</p>
-
-            <p>In the end, while I will not be working any further on this project, I am still very grateful to have worked with my teammates on this project. I fully believe there is merit in this design and that we have identified possible solutions to the barrier of learning to cook, as well as a general approach to learning apps as a whole.</p>
-
-            <div class="wideimg botimg">
-                <img src="recipetutor/recipetutor logo big.png" alt="text logo for RecipeTutor">
-            </div>
-
-            <a id="footlink" class="footlink" href="recipetutor.html#recipetutor"><h3><u>back to top</u></h3></a>
         </div>
     </body>
 </html>

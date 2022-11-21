@@ -2,230 +2,197 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>evelili | huevember</title>
-        <link rel="icon" href="main logo green dark.svg">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Huevember</title>
+        <!-- might switch to "portfolio" favicon logo? -->
+        <link rel="icon" href="img/site/main_logo.svg">
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script defer src="scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="scripts.js"></script>
     </head>
 
     <body>
         <header>
-            <!-- header bar, links to the 5 different sections (home, about, portfolio, projects, contact) -->
-            <nav id="navbar">
-                <a id="hlogo" href="index.html#home-data" class="headlink">
-					<img id="logo1" class="headlogo-home-data" src="main logo.svg" alt="two interlocking white triangles">
-					<img id="logo2" class="headlogo-about-data" src="main logo red.svg" alt="an interlocking white triangle and red triangle">
-					<img id="logo3" class="headlogo-projects-data" src="main logo yellow.svg" alt="an interlocking white triangle and yellow triangle">
-					<img id="logo4" class="headlogo-portfolio-data active" src="main logo green.svg" alt="an interlocking white triangle and green triangle">
-					<img id="logo5" class="headlogo-contact-data" src="main logo blue.svg" alt="an interlocking white triangle and blue triangle">
-				</a>
-                <a id="heightcheck" class="headlink" href="index.html#about-data"><img class="contain" src="red.svg" alt="red triangle">about</a>
-                <a class="headlink" href="index.html#projects-data"><img class="contain" src="yellow.svg" alt="yellow triangle">projects</a>
-                <a class="active headlink" href="index.html#portfolio-data"><img class="contain" src="green.svg" alt="green triangle">portfolio</a>
-                <a class="headlink" href="index.html#contact-data"><img class="contain" src="blue.svg" alt="blue triangle">contact</a>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, adventures, contact) -->
+            <nav class="sub-navbar">
+                <div class="headlink headleft">
+                    <!-- <img class="headlogo" src="page design elements/main logo.svg" alt="two interlocking triangles"> -->
+                    <a class="logolink" href="index.html#home-data">
+                        <svg class="headlogo" width="53" height="56" viewBox="0 0 53 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.5837 56L33.8075 52.0332L50.476 22.5429L52.6396 18.7164H48.2521L14.9153 18.7164H10.5277L12.6914 22.5429L29.3599 52.0332L31.5837 56V56ZM31.5837 45.5822L19.3028 23.8451L43.8646 23.8451L31.5837 45.5822V45.5822Z" fill="currentColor"/>
+                            <path d="M21.0559 0L18.8321 3.96677L2.16369 33.4571L0 37.2836H4.38752H37.7244H42.1119L39.9482 33.4571L23.2798 3.96677L21.0559 0V0ZM21.0559 10.4178L33.3369 32.1548H8.77503L21.0559 10.4178V10.4178Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <a class="headlink" href="index.html#about-data">
+                    <!-- <img class="headicon" src="page design elements/tri section about.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;About
+                </a>
+                <a class="headlink" href="index.html#portfolio-data">
+                    <!-- <img class="headicon" src="page design elements/tri section portfolio.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>  
+                    &nbsp;Portfolio
+                </a>
+                <a class="headlink" href="index.html#adventures-data">
+                    <!-- <img class="headicon" src="page design elements/tri section adventures.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Adventures
+                </a>
+                <a class="headlink" href="index.html#contact-data">
+                    <!-- <img class="headicon" src="page design elements/tri section contact.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Contact
+                </a>
             </nav>
         </header>
 
-        <svg id="fader"></svg>
 
         <div id="huevember" class="subpage">
-            <div id="huevember-header" class="head-icon">
-                <img src="green.svg" alt="a green triangle">
-                <h2>huevember</h2>
+            <div class="subpage-splash"><img src="img/site/subpage_splash_full.svg"></div>
+
+            <div class="section-header header-white subpage-header">
+                <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                    <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                </svg> 
+                <h2>Huevember</h2>
             </div>
 
-            <p><span class="green-text">programs //</span> Clip Studio Paint</p>
+            <!-- banner image -->
+            <div class="banner-pic border"><img src="img/huevember/23.png" style="object-position: bottom;"></div>
 
-            <p><span class="green-text">overview //</span> I had a lot of fun with this project. The goal was to create one piece of art every day of November using a set of 30 preselected hues. I love working with limited colour palettes, and Huevember was a great exercise to learn more about colour theory (and to fiddle around with this lineless style).</p>
+            <!-- page content -->
+            <div class="project-details">
+                <!-- tools and skills block -->
+                <div class="tools-skills">
+                    <p class="subpage-text"><span class="red-text">Tools:</span> Clip Studio Paint</p>
+                    <p class="subpage-text"><span class="red-text">Skills:</span> Graphic Design</p>
+                </div>
 
-            <div class="picgrid">
-                <div class="picgrid-item">
-                    <img src="huevember/1.png" alt="yellow drawing of girl">
+                <!-- blocks of header + text -->
+                <div class="sub-block">
+                    <h3>Overview</h3>
+                    <div class="paragraph">
+                        <p>
+                            In November 2020 I participated in the “Huevember” challenge, where an artist creates a piece of art every day of November using a set of 30 preselected hues. I love working with limited colour palettes, and Huevember was a great exercise to learn more about colour theory as well as ease myself back into digital art.
+                        </p>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/2.png" alt="yellow drawing of girl">
+
+                <!-- goal block -->
+                <div class="goal">
+                    <p>Goal: finish all thirty drawings in one month</p>
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/3.png" alt="yellow drawing of girl">
+
+                <div class="sub-block">
+                    <h3>Planning</h3>
+                    <div class="paragraph">
+                        <p>
+                            I chose the four K/DA members as subjects since they had a variety of outfits to reference and at the time were very popular on social media. I only planned out which member in which outfit I wanted on each day; the pose and palettes were created day to day. I treated every 2 days as a pair, partly to ease pressure if I fell behind a day and partly to encourage more variance between pieces.
+                        </p>
+                        <p>
+                            Since I wanted each of the four K/DA members to have an equal amount of pieces, I featured two characters each in the last two days. Those days are also the only ones where I designed the outfits, and it was freeing to end the project drawing whatever I wanted.
+                        </p>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/4.png" alt="yellow drawing of girl">
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/huevember/29.png" style="--r: 3840/2160">
+                    <img class="round-corners img-clickable" src="img/huevember/30.png" style="--r: 3840/2160">
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/5.png" alt="orange drawing of girl">
+
+                <div class="sub-block">
+                    <h3>Learnings and Reflections</h3>
+                    <div class="paragraph">
+                        <p>
+                            Overall I feel that my artistic ability improved over the course of the month. The later pieces are more detailed and have greater attention to form than some of the earlier ones, while also taking less time to create since I improved my workflow as the month went on. However, I also feel that the pieces in the middle around the dark blue section are the weakest of the month—the contrast between the lightest and darkest shades is not enough, and many of the details are lost because of this. 
+                        </p>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/6.png" alt="orange drawing of girl">
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/huevember/10.png" style="--r: 1890/2160">
+                    <img class="round-corners img-clickable" src="img/huevember/bad_contrast_1.png" style="--r: 1890/2160">
+                    <img class="round-corners img-clickable" src="img/huevember/23.png" style="--r: 1890/2160">
+                    <img class="round-corners img-clickable" src="img/huevember/bad_contrast_2.png" style="--r: 1890/2160">
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/7.png" alt="orange drawing of girl">
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            Design wise, my biggest lesson about colour theory was how much the hue of a colour changes the mood of the whole piece. For example, even though the provided hue was at the same point on the colour picker, all the violets and blues seem much “darker” than the yellows and limes.
+                        </p>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/8.png" alt="orange drawing of girl">
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/huevember/17.png" style="--r: 1890/2160">
+                    <img class="round-corners img-clickable" src="img/huevember/example_dark.png" style="--r: 1890/2160">
+                    <img class="round-corners img-clickable" src="img/huevember/22.png" style="--r: 1890/2160">
+                    <img class="round-corners img-clickable" src="img/huevember/example_light.png" style="--r: 1890/2160">
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/9.png" alt="red drawing of girl">
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            As well, since I was limited to a single hue, I had to learn how to better use tints and shades instead of relying on multiply layers and hue shifting. While “don't shade with black” is still deeply ingrained into me, it's also important to learn when and how to break the rules.
+                        </p>
+                    </div>
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/10.png" alt="pink drawing of girl">
+
+                <div class="sub-block">
+                    <h3>Final Product</h3>
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/11.png" alt="pink drawing of girl">
+
+                <div class="picgrid-hue round-corners">
+                    <img class="img-clickable" src="img/huevember/1.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/2.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/3.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/4.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/5.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/6.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/7.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/8.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/9.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/10.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/11.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/12.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/13.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/14.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/15.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/16.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/17.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/18.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/19.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/20.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/21.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/22.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/23.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/24.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/25.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/26.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/27.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/28.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/29.png" style="--r: 1890/2160">
+                    <img class="img-clickable" src="img/huevember/30.png" style="--r: 1890/2160">
                 </div>
-                <div class="picgrid-item">
-                    <img src="huevember/12.png" alt="pink drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/13.png" alt="pink drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/14.png" alt="purple drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/15.png" alt="purple drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/16.png" alt="purple drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/17.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/18.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/19.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/20.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/21.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/22.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/23.png" alt="green drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/24.png" alt="green drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/25.png" alt="green drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/26.png" alt="green drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/27.png" alt="green drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/28.png" alt="green drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/29.png" alt="green drawing of two girls">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/30.png" alt="yellow drawing of two girls">
-                </div>
+
             </div>
 
-            <p><span class="green-text">process //</span> I only planned out which member in which outfit I wanted on each day; the pose and palettes were created day to day. I treated every 2 days as a pair, partly to ease pressure if I fell behind a day and partly to encourage more variance between pieces. If everyone was at a 3/4 angle looking left that would be quite boring! Then, since I wanted each of the four K/DA members to have an equal amount of pieces, I featured two characters each in the last two days. Those days are also the only ones where I designed the outfits, and it was freeing to end the project drawing whatever I wanted.</p>
-
-            <div class="fourpicgrid">
-                <div class="picgrid-item">
-                    <img src="huevember/9.png" alt="red drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/11.png" alt="pink drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/13.png" alt="pink drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/15.png" alt="purple drawing of girl">
-                </div>
+            <!-- modal for images -->
+            <div id="modal-div" class="modal">
+                <img id="modal-img" class="modal-content">
             </div>
-
-            <p class="small">it'd be so visually boring if I only did 3/4 looking left pieces like this</p>
-
-            <p><span class="green-text">reflection and learnings //</span> Looking back I can see that the later pieces have more details and attention to form than some of the earlier pieces, marking some improvement, though I feel the pieces in the middle around the dark blue section are the weakest—the contrast between the lightest and darkest shades is not enough, and many of the details are lots because of this. I also discovered how much fun it was to detail baggy sleeves and jackets on day 5. Some of them turned out better than others, but I'm especially proud of Akali's jacket on day 28.</p>
-
-            <div class="threetwogrid">
-                <div class="picgrid-item">
-                    <img src="huevember/10.png" alt="pink drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember bad contrast 1.png" alt="greyscale drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember bad contrast 1 markup.png" alt="greyscale drawing of girl with red shapes">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/23.png" alt="green drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember bad contrast 4.png" alt="greyscale drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember bad contrast 4 markup.png" alt="greyscale drawing of girl with red shapes">
-                </div>
-            </div>
-
-            <p class="small">examples of bad contrast; some areas become unreadable</p>
-            
-            <div class="threetwogrid">
-                <div class="picgrid-item">
-                    <img src="huevember/5.png" alt="orange drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember ok contrast 1.png" alt="greyscale drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember ok contrast 1 markup.png" alt="greyscale drawing of girl with red shapes">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/21.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember ok contrast 2.png" alt="greyscale drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember ok contrast 2 markup.png" alt="greyscale drawing of girl with red shapes">
-                </div>
-            </div>
-
-            <p class="small">better use of contrast; less effect on readability even when contrast is low</p>
-
-            <p>Design wise, my biggest lesson about colour theory was how much the hue of a colour changes the mood of the whole piece. For instance, even though the provided hue was at the same point on the colour picker, all the violets and blues seem much “darker” than the yellows and limes. As well, since I was limited to a single hue, I had to learn how to better use tints and shades instead of relying on multiply layers and hue shifting. While “don't shade with black” is still deeply ingrained into me, it's also important to learn when and how to break the rules.</p>
-
-            <div class="halfimage">
-                <img src="huevember/colour darkness example.png" alt="three colour wheels showing red yellow and blue, and a greyscale version below">
-            </div>
-
-            <p class="small">in greyscale it appears that blue is much "darker" than yellow</p>
-
-            <div class="fourpicgrid">
-                <div class="picgrid-item">
-                    <img src="huevember/17.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/22.png" alt="blue drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember dark.png" alt="greyscale drawing of girl">
-                </div>
-                <div class="picgrid-item">
-                    <img src="huevember/huevember light.png" alt="greyscale drawing of girl">
-                </div>
-            </div>
-
-            <p class="small">pieces can feel "dark" or "light" depending on the colours used</p>
-
-            <a id="footlink" class="footlink" href="huevember.html#huevember"><h3><u>back to top</u></h3></a>
         </div>
     </body>
 </html>
