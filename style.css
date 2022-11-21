@@ -274,6 +274,7 @@ body {
 
 #home-data {
     gap: min(24px, 1.66vw);
+    visibility: visible;
 }
 
 #home-data, #about-data, #contact-data {
@@ -397,6 +398,11 @@ body {
 
 #portfolio-data, #adventures-data {
     padding-top: 128px;
+    overflow-x: hidden;
+}
+
+#portfolio-data {
+    visibility: visible;
 }
 
 #adventures-data {
