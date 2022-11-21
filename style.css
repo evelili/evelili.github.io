@@ -217,7 +217,7 @@ body {
 }
 
 .footer-pattern {
-    background-image: url("img/site/home_footer_pattern_repeating.svg");
+    background-image: url("img/site/home_footer_pattern_repeating_edit.svg");
 }
 
 .divider-pattern, .footer-pattern {
@@ -302,7 +302,7 @@ body {
     justify-content: center;
     width: 100%;
     height: fit-content;
-    overflow: clip;
+    overflow: hidden;
     position: absolute;
     margin-top: -560px;
     z-index: -1;
@@ -360,7 +360,7 @@ body {
 .card-pic {
     width: 320px;
     height: 320px;
-    overflow: clip;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -474,7 +474,7 @@ body {
     justify-content: center;
     width: 100%;
     height: fit-content;
-    overflow: clip;
+    overflow: hidden;
     position: absolute;
     margin-top: -500px;
     z-index: -1;
@@ -483,7 +483,7 @@ body {
 .banner-pic {
     width: 900px;
     aspect-ratio: 900 / 360;
-    overflow: clip;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -903,7 +903,7 @@ ul {
     .subpage-splash {
         width: 100%;
         height: fit-content;
-        overflow: clip;
+        overflow: hidden;
         position: absolute;
         margin-top: -52vw;
     }
