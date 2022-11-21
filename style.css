@@ -212,19 +212,15 @@ body {
 }
 
 /* divider pattern */
-.divider-pattern-1 {
-    background-image: url("img/site/home_divider_pattern_repeating.svg");
-}
-
-.divider-pattern-2 {
-    background-image: url("img/site/home_divider_pattern_repeating_2.svg");
+.divider-pattern {
+    background-image: url("img/site/home_divider_pattern_repeating_lines.svg");
 }
 
 .footer-pattern {
     background-image: url("img/site/home_footer_pattern_repeating_edit.svg");
 }
 
-.divider-pattern-1, .divider-pattern-2, .footer-pattern {
+.divider-pattern, .footer-pattern {
     background-repeat: repeat-x;
     background-size: auto max(35vh, 280px);
     background-position: center bottom;
