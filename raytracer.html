@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Raytracer</title>
+        <title>Ray Tracer</title>
         <!-- might switch to "portfolio" favicon logo? -->
         <link rel="icon" href="img/site/main_logo.svg">
         <link rel="stylesheet" href="style.css">
@@ -64,7 +64,7 @@
                     <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
                     <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
                 </svg> 
-                <h2>Raytracer</h2>
+                <h2>Ray Tracer</h2>
             </div>
 
             <!-- banner image -->
@@ -81,7 +81,7 @@
                     <h3>Overview</h3>
                     <div class="paragraph">
                         <p>
-                            The final assignment for my graphics course in winter 2022 was to build a raytracer in C++ from scratch. The purpose of the assignment was to demonstrate different techniques used in computer graphics. I used the following techniques in this project: shadows, reflections, depth of field, texture mapping, and cel shading. On top of the programming, I also created 3D models for three of the weapons from my <a class="red-text" href="battle_academia_fan_skins.html">Battle Academia designs</a> and used my raytracer to render them in a short animation that illustrated these techniques.
+                            The final assignment for my graphics course in winter 2022 was to build a ray tracer in C++ from scratch. The purpose of the assignment was to demonstrate different techniques used in computer graphics. I used the following techniques in this project: shadows, reflections, depth of field, texture mapping, and cel shading. On top of the programming, I also created 3D models for three of the weapons from my <a class="red-text" href="battle_academia_fan_skins.html">Battle Academia designs</a> and used my ray tracer to render them in a short animation that illustrated these techniques.
                         </p>
                         <p>
                             Since this project was a school assignment I cannot share a public repository. If you would like to view the source code please reach out to me through the contact info provided on this site.
@@ -91,7 +91,7 @@
 
                 <!-- goal block -->
                 <div class="goal">
-                    <p>Goal: build a raytracer and render a short animation</p>
+                    <p>Goal: build a ray tracer and render a short animation</p>
                 </div>
 
                 <div class="sub-block">
@@ -107,7 +107,7 @@
                     <h3>Technique 1: Shadows</h3>
                     <div class="paragraph">
                         <p>
-                            I had already implemented simple shadow rays in a previous assignment, so I was able to carry over the same functionality into the final raytracer. When a ray hits a non-reflective object or maximum recursion depth is reached, it casts a shadow ray towards the light source. If an object is in the way of the shadow ray and the light, the intersection point is in shadow.
+                            I had already implemented simple shadow rays in a previous assignment, so I was able to carry over the same functionality into the final ray tracer. When a ray hits a non-reflective object or maximum recursion depth is reached, it casts a shadow ray towards the light source. If an object is in the way of the shadow ray and the light, the intersection point is in shadow.
                         </p>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     <h3>Technique 3: Depth of Field</h3>
                     <div class="paragraph">
                         <p>
-                            I created a function to randomly generate a point on a disc located at the eye point and cast multiple rays from the eye point towards each pixel. This caused the narrowing “cone” effect that cameras in real life use. The focal plane is determined by the view vector passed into the scene for easy per-scene modification, while the radius of the disc and sample sizes are controlled in the raytracer.
+                            I created a function to randomly generate a point on a disc located at the eye point and cast multiple rays from the eye point towards each pixel. This caused the narrowing “cone” effect that cameras in real life use. The focal plane is determined by the view vector passed into the scene for easy per-scene modification, while the radius of the disc and sample sizes are controlled in the ray tracer.
                         </p>
                         <p>
                             The final animation uses only five samples since additional samples increase the rendering time, so the visuals look a bit “grainy” as a result.
@@ -214,7 +214,7 @@
                     <h3>Next Steps</h3>
                     <div class="paragraph">
                         <p>
-                            My code is definitely not flawless, but it functions as intended and I am very proud of how it turned out. While I don't have an interest in expanding the raytracer part of this project, I hope to apply the computer graphics techniques I learned from this course in my future 3D modeling endeavors.
+                            My code is definitely not flawless, but it functions as intended and I am very proud of how it turned out. While I don't have an interest in expanding the ray tracer part of this project, I hope to apply the computer graphics techniques I learned from this course in my future 3D modeling endeavors.
                         </p>
                     </div>
                 </div>
