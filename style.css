@@ -800,7 +800,7 @@ ul {
     
     .card-pic {
         width: 75vw;
-        height: 75vw;
+        height: 40vw;
         box-shadow: -2.29vw 2.29vw 0px 0px var(--red);
         margin: 0px 0px 2.29vw 2.29vw;
         border-radius: 1.66vw;
