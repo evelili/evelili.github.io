@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prom Dress Animation</title>
+        <!-- might switch to "portfolio" favicon logo? -->
+        <link rel="icon" href="img/site/main_logo.svg">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- header bar, links to the 5 different sections (home, about, portfolio, adventures, contact) -->
+            <nav class="sub-navbar">
+                <div class="headlink headleft">
+                    <!-- <img class="headlogo" src="page design elements/main logo.svg" alt="two interlocking triangles"> -->
+                    <a class="logolink" href="index.html#home-data">
+                        <svg class="headlogo" width="53" height="56" viewBox="0 0 53 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.5837 56L33.8075 52.0332L50.476 22.5429L52.6396 18.7164H48.2521L14.9153 18.7164H10.5277L12.6914 22.5429L29.3599 52.0332L31.5837 56V56ZM31.5837 45.5822L19.3028 23.8451L43.8646 23.8451L31.5837 45.5822V45.5822Z" fill="currentColor"/>
+                            <path d="M21.0559 0L18.8321 3.96677L2.16369 33.4571L0 37.2836H4.38752H37.7244H42.1119L39.9482 33.4571L23.2798 3.96677L21.0559 0V0ZM21.0559 10.4178L33.3369 32.1548H8.77503L21.0559 10.4178V10.4178Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <a class="headlink" href="index.html#about-data">
+                    <!-- <img class="headicon" src="page design elements/tri section about.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;About
+                </a>
+                <a class="headlink" href="index.html#portfolio-data">
+                    <!-- <img class="headicon" src="page design elements/tri section portfolio.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5583 33.8968L47.4739 33.8968L41.6563 26.6061L18.7917 26.6061L12.5583 33.8968Z" fill="currentColor"/>
+                        <path d="M30.4318 0L27.2706 5.6389L3.57577 47.5605L0.5 53H6.73702H54.1266H60.3636L57.2879 47.5605L33.5931 5.6389L30.4318 0ZM30.4318 14.8092L47.8896 45.7093H12.974L30.4318 14.8092Z" fill="currentColor"/>
+                    </svg>  
+                    &nbsp;Portfolio
+                </a>
+                <a class="headlink" href="index.html#adventures-data">
+                    <!-- <img class="headicon" src="page design elements/tri section adventures.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Adventures
+                </a>
+                <a class="headlink" href="index.html#contact-data">
+                    <!-- <img class="headicon" src="page design elements/tri section contact.svg"> -->
+                    <svg class="headicon" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                    </svg>
+                    &nbsp;Contact
+                </a>
+            </nav>
+        </header>
+
+        <div id="promdress" class="subpage">
+            <div class="subpage-splash"><img src="img/site/subpage_splash_full.svg"></div>
+
+            <div class="section-header header-white subpage-header">
+                <svg class="section-tri" width="61" height="53" viewBox="0 0 61 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48.3054 19.1032L13.3898 19.1032L19.2075 26.3939L42.072 26.3939L48.3054 19.1032Z" fill="currentColor"/>
+                    <path d="M30.4317 53L33.593 47.3611L57.2878 5.43955L60.3635 0H54.1265L6.73693 0H0.499908L3.57567 5.43955L27.2705 47.3611L30.4317 53ZM30.4317 38.1908L12.9739 7.29071L47.8895 7.29071L30.4317 38.1908Z" fill="currentColor"/>
+                </svg> 
+                <h2>Prom Dress Animation</h2>
+            </div>
+
+            <!-- banner image -->
+            <div class="banner-pic border"><img src="img/prom_dress/thumbnail.png"></div>
+
+            <div class="project-details">
+                <!-- tools and skills block -->
+                <div class="tools-skills">
+                    <p class="subpage-text"><span class="red-text">Tools:</span> Clip Studio Paint, Hitfilm Express, Blender</p>
+                    <p class="subpage-text"><span class="red-text">Skills:</span> Animation, Video Editing, 3D Modeling</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Overview</h3>
+                    <div class="paragraph">
+                        <p>
+                            One of my favourite pastimes-slash-habits is to imagine “music videos” to go alongside songs I listen to. Sometimes I get ideas I really want to turn into animations, but that often doesn't happen due to a lack of time, skill limits, or both.
+                        </p>
+                        <p>
+                            Thankfully, one of my other favourite pastimes is productive procrastination. When I heard the song <a class="red-text" href="https://www.youtube.com/watch?v=AeUeLzBO0go" target="_blank">Prom Dress by mxmtoon</a>, I immediately knew that I wanted to bring the “music video” in my head to life—partly because I felt it was just outside my skill limits in a way that I would have to grow as an artist to achieve it, but also partly because the idea was angsty and dramatic and I am always going to take the opportunity to make my audience suffer :)
+                        </p>
+                        <p>
+                            So, disregarding all the lessons I'd learned from my previous animations for the time being, I rolled up my metaphorical sleeves and got to work.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- goal block -->
+                <div class="goal">
+                    <p>Goal: use animation as storytelling medium for a central character</p>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Animatic</h3>
+                    <div class="paragraph">
+                        <p>
+                            First things first: I needed to get my ideas out of my head and onto some digital paper. My go-to method is to create a 2x1 table in a document, paste the song lyrics in the left column, adjust them so each phrase is on its own line according to when I have scenes change, and then describe each phrase in the right column adjacent to the corresponding line.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rowgroup">
+                    <div class="row" style="justify-content: center;">
+                        <img class="round-corners img-clickable" src="img/prom_dress/comparison_1.png" style="--r: 777/154;max-width: 600px;">
+                    </div>
+    
+                    <div class="row" style="justify-content: center;">
+                        <img class="round-corners img-clickable" src="img/prom_dress/comparison_2.gif" style="--r: 600/338;max-width: 600px;">
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            Once I have a table charted out, I usually just start boarding from the beginning and work my way to the end. However, this time I needed to take a pit stop at the 3D modeling station (Blender) before I could get on the road. I wanted one of the key parts of the animation to be a sword, but I also did not want to put myself through the suffering of drawing a sword in perspective over and over. So, the obvious solution was to 3D model the sword and then reuse it in all the shots that needed it.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/prom_dress/sword_ref.png" style="--r: 1890/2160">
+                    <img class="round-corners img-clickable" src="img/prom_dress/sword_preview.gif" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            Some of the details on the crossguard are slightly different in the animation compared to the actual model. I realized later on that I wanted to use a different design, but because all I needed was the sword for the general perspective, it wasn't very hard to change the design a bit.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/prom_dress/sword_compare_1.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/prom_dress/sword_compare_2.png" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            After I modeled the sword and imported it into Clip Studio, I then carried on with my standard process and finished the animatic.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="overflow: hidden;padding-top: 56.25%;position: relative;">
+                    <iframe class="round-corners" width="100%" height="100%" src="https://www.youtube.com/embed/4zjt4v5mcUg?modestbranding=1" frameborder="0" allowfullscreen style="--r: 1920/1080;position:absolute;left:0;top:0;width:100%;height:100%"></iframe>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Pre-Animation Preparation</h3>
+                    <div class="paragraph">
+                        <p>
+                            Before I started on the final animation, I first needed to figure out the colour palette and overall “style” I wanted to achieve. My <a class="red-text" href="villain.html">previous animation</a> used the actual colours of the characters and objects, which would have been fine to do again, but this time I wanted to try working with a limited colour palette instead. The characters from My Little Pony have very vibrant colours in their designs, and since this animation included some shots with six different characters, the colour tests I did were far too noisy for my liking. Instead, I settled on a more monochromatic palette with pink and gold as accent colours for certain details.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/prom_dress/colour_test_1.png" style="--r: 2304/1296">
+                    <img class="round-corners img-clickable" src="img/prom_dress/colour_test_2.png" style="--r: 2304/1296">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Animating</h3>
+                    <div class="paragraph">
+                        <p>
+                            Despite how many times I say I've learned my lesson, I once again forgot to break the animatic file into multiple files for the different scenes. This didn't have much of an effect on my workflow, thankfully, but it did mean managing hundreds of layers, saving multiple copies of files so I could flatten things without worrying I'd lose something, and swearing that next time I'll remember to set things up properly, for real.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <img class="round-corners img-clickable" src="img/prom_dress/task_manager.png" style="--r: 760/27;max-width: 760px;">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            In terms of actually animating, I again followed the general process outlined in this <a class="red-text" href="https://www.youtube.com/watch?v=CAgOngMU1k4" target="_blank">tutorial</a>. This time I put more effort into using multiple animation folders for the different “depths” of animation, rather than trying to do everything in a single folder. I had to consider this all the way back in the animatic stage, which you can see with the different colours used in the sketch to separate which parts I wanted in different folders.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/prom_dress/timeline.png" style="--r: 1871/257">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            Once everything was lined and coloured, the final step was to “flatten” everything down into frames for export. I prefer to create “final” versions of each frame rather than work with the different layers since it's easier to edit together one set of frames, rather than having to match up every set of frames from every animation folder in the scene. And, since I work with aliasing to make the colouring process easier, the edges of the images need to be softened out before export to give it a more polished look. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/prom_dress/aliasing_1.png" style="--r: 854/480">
+                    <img class="round-corners img-clickable" src="img/prom_dress/aliasing_2.png" style="--r: 854/480">
+                </div>
+
+                <div class="sub-block">
+                    <h3>Compositing and Editing</h3>
+                    <div class="paragraph">
+                        <p>
+                            This time I ACTUALLY learned a lesson, and instead of putting every frame directly onto the timeline (as I had been conditioned to do since working with Windows Movie Maker), I instead created a composite shot for each individual scene first and then combined all the shots together in the timeline afterward. If I want to add any effects to a scene that take place over time, I can't do that if I'm working with a sequence of 40 different images. But clips are treated as a single entity, so they're the perfect solution for frame-by-frame animations like these.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/prom_dress/composite_1.png" style="--r: 1541/641">
+                    <img class="round-corners img-clickable" src="img/prom_dress/composite_2.png" style="--r: 1558/668">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            I also pushed my editing skills a bit and tried my hand at some generated effects with the “glitches”. I found it easiest for me to create one long composite shot with the glitch effect, then trim various parts of it and set the layer blending mode overtop of the whole animation, since often the glitches were used as a transition and trying to add them directly to the clips meant they wouldn't connect nicely between them.
+                        </p>
+                        <p>
+                            Finally, I added some subtle chromatic aberration to each shot to set the atmosphere, as well as a vignette around the edges to give the flat colors some depth. Initially I had planned to use grain effects in some shots, such as in the scene with the shattered portrait, but I unfortunately found out that no matter how cool it looks in the editor, video codecs and noise don't mix well. So those effects had to be scrapped.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img class="round-corners img-clickable" src="img/prom_dress/artifacts_1.png" style="--r: 1920/1080">
+                    <img class="round-corners img-clickable" src="img/prom_dress/artifacts_2.png" style="--r: 1920/1080">
+                </div>
+
+                <div class="sub-block">
+                    <div class="paragraph">
+                        <p>
+                            I learned a lot about animating and editing over the course of this project, and I am incredibly proud of how it turned out—exactly like I saw in my head, except now as an actual animation that other people can see too.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <h3>Final Product</h3>
+                </div>
+
+                <div class="row" style="overflow: hidden;padding-top: 56.25%;position: relative;">
+                    <iframe class="round-corners" width="100%" height="100%" src="https://www.youtube.com/embed/fqcTQwntKv0?modestbranding=1" frameborder="0" allowfullscreen style="--r: 1920/1080;position:absolute;left:0;top:0;width:100%;height:100%"></iframe>
+                </div>
+
+            </div>
+
+            <!-- modal for images -->
+            <div id="modal-div" class="modal">
+                <img id="modal-img" class="modal-content">
+            </div>
+        </div>
+    </body>
+</html>

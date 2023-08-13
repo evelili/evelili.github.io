@@ -142,7 +142,7 @@ h3 {
 }
 
 p {
-    text-align: left;
+    text-align: justify;
     margin: 0;
     transition: color 0.15s ease-in-out;
 }
@@ -509,7 +509,7 @@ body {
     width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 32px;
     padding-bottom: min(5vw, 64px);
 }
 
@@ -536,6 +536,14 @@ ul {
 .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 16px;
+}
+
+.rowgroup {
+    display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
     gap: 16px;
@@ -862,12 +870,13 @@ ul {
 
     .project-details {
         width: 93.75vw;
-        gap: 3.75vw;
+        gap: 3.33vw;
     }
 
     .left-bar {
         border-left: 0.83vw solid var(--red);
         gap: max(1.6vw, 8px);
+        width: 100% !important;
     }
     
     .left-bar div {
