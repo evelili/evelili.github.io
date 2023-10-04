@@ -142,9 +142,13 @@ h3 {
 }
 
 p {
-    text-align: justify;
+    /* text-align: justify; */
     margin: 0;
     transition: color 0.15s ease-in-out;
+}
+
+.justify-para {
+    text-align: justify;
 }
 
 li, p {
@@ -463,10 +467,19 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding-top: 120px;
-    padding-bottom: 16.25vw;
+    /* padding-bottom: 16.25vw;
     background-image: url("img/site/subpage_footer_pattern.svg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100%; */
+    /*COULDNT FIGURE THIS OUT YET*/
+    padding-bottom: 156px;
+    background-image: url("img/site/subpage_footer_pattern_repeating.svg");
+    background-repeat: repeat-x;
+    background-size: 1200px;
+    /* padding-bottom: min(16.25vw, 312px);
+    background-image: url("img/site/subpage_footer_pattern_repeating.svg");
+    background-repeat: repeat-x;
+    background-size: auto 280px; */
     background-position: center bottom;
 }
 
@@ -510,7 +523,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding-bottom: min(5vw, 64px);
+    padding-bottom: min(3.33vw, 32px);
 }
 
 .tools-skills {
@@ -801,7 +814,7 @@ ul {
         width: 90vw;
         height: fit-content;
         gap: max(3vw, 16px);
-        padding-top: 4.1vw;
+        padding-top: 6.15vw;
         padding-bottom: 6.15vw;
         border-radius: 2.08vw;
     }
@@ -859,7 +872,8 @@ ul {
     }
 
     .banner-pic {
-        width: 93.75vw;
+        /* width: 93.75vw; */
+        width: 90vw;
         margin-bottom: 4.1vw;
         border-radius: 1.66vw;
     }
@@ -869,7 +883,8 @@ ul {
     }
 
     .project-details {
-        width: 93.75vw;
+        /* width: 93.75vw; */
+        width: 90vw;
         gap: 3.33vw;
     }
 
@@ -914,6 +929,9 @@ ul {
 
     .subpage {
         padding-top: 12.5vw;
+        background-image: url("img/site/subpage_footer_pattern.svg");
+        padding-bottom: 16.25vw;
+        background-size: 100%;
     }
 
     .subpage-splash {
