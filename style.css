@@ -147,9 +147,9 @@ p {
     transition: color 0.15s ease-in-out;
 }
 
-.justify-para {
+/* .justify-para {
     text-align: justify;
-}
+} */
 
 li, p {
     font-size: 17px;
@@ -338,8 +338,25 @@ body {
     padding-bottom: 48px;
     transition: background-color 0.15s ease-in-out;
     position: relative;
-    border-radius: 20px;
+    border-radius: 16px;
+    /* border-radius: 20px; */
     /* margin: 12px; */
+}
+
+#contact-data .card-column {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card-base.contact-card {
+    width: 196px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    gap: 16px;
+}
+
+.contact-card h3 {
+    font-size: 18px;
 }
 
 .card-column a {
@@ -353,6 +370,20 @@ body {
 .border::before {
     border-radius: 16px;
     box-shadow: inset 0px 0px 0px 3px var(--offblack);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 5;
+    content: " ";
+}
+
+.dropshadow::before {
+    border-radius: 16px;
+    /* box-shadow: inset 0px 0px 0px 3px var(--offblack); */
+    box-shadow: -2px 2px 12px 0px var(--grey);
+    mix-blend-mode: multiply;
     bottom: 0;
     left: 0;
     right: 0;
@@ -423,6 +454,35 @@ body {
 #contact-data {
     position: relative;
     overflow: hidden;
+    /* height: fit-content; */
+}
+
+.contact-pic {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contact-pic img {
+    flex-shrink: 1;
+    object-fit: cover;
+    width: 75%;
+    height: 75%;
+    /* transition: filter 0.15s ease-in-out; */
+    filter: brightness(0%) saturate(100%) invert(27%) sepia(97%) saturate(2364%) hue-rotate(335deg) brightness(90%) contrast(110%);
+    /* min-width: 100%; */
+    /* min-height: 100%; */
+}
+
+.contact-hover {
+    position: absolute;
+    filter: brightness(0%) saturate(100%) invert(100%) !important;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
 }
 
 .contact-link {
@@ -708,7 +768,7 @@ ul {
 
     .section-header {
         gap: 1.875vw;
-        padding-bottom: 3.125vw;
+        padding-bottom: max(3.125vw, 18px);
     }
 
     .subpage-header {
@@ -787,18 +847,23 @@ ul {
         margin: 0;
     }
 
-    #about-data {
+    /* #about-data {
         padding-top: 20vw;
-    }
+    } */
 
-    #portfolio-data, #adventures-data {
+    #about-data, #portfolio-data, #adventures-data {
         padding-top: 13.33vw;
     }
 
     #contact-data {
-        /* padding-top: 20vh; */
+        /* padding-top: 13.33vw; */
         min-height: 41.67vw;
-        height: 100vh;
+        /* height: 86vh; */
+        height: fit-content;
+    }
+
+    #contact-data .card-column {
+        width: 90vw;
     }
 
     .card-column {
@@ -808,6 +873,8 @@ ul {
 
     .card-column a {
         margin-top: 0;
+        margin-left: 6px;
+        margin-right: 6px;
     }
 
     .card-base {
@@ -816,7 +883,18 @@ ul {
         gap: max(3vw, 16px);
         padding-top: 6.15vw;
         padding-bottom: 6.15vw;
-        border-radius: 2.08vw;
+        border-radius: 1.66vw;
+        /* border-radius: 2.08vw; */
+    }
+
+    .card-base.contact-card {
+        width: fit-content;
+        padding: 2.39vw;
+        gap: 1.66vw;
+    }
+
+    .contact-card h3 {
+        font-size: max(1.875vw, 12px);
     }
     
     .card-pic {
@@ -845,9 +923,15 @@ ul {
         font-size: max(1.458vw, 12px);
     }
 
+    .dropshadow::before {
+        border-radius: 1.66vw;
+        box-shadow: -0.21vw 0.21vw 1.25vw 0px var(--grey);
+        /* box-shadow: inset 0px 0px 0px max(0.21vw, 2px) var(--offblack); */
+    }
+
     .border::before {
         border-radius: 1.66vw;
-        box-shadow: inset 0px 0px 0px max(0.52vw, 2px) var(--offblack);
+        box-shadow: inset 0px 0px 0px max(0.31vw, 2px) var(--offblack);
     }
 
     .contact-info {
@@ -859,6 +943,11 @@ ul {
         gap: 2vw;
         /* margin: 0 0 40vw 0; */
         padding-bottom: 0;
+    }
+
+    .contact-pic {
+        width: max(15.625vw, 125px);
+        height: max(15.625vw, 125px);
     }
 
     .contact-icon {
@@ -988,6 +1077,10 @@ ul {
     
     .card-base:hover h3, .card-base:hover p, card-base:hover .card-header {
         color: var(--offwhite);
+    }
+
+    .card-base:hover .contact-hover {
+        opacity: 1;
     }
 
     .contact-link:hover {
