@@ -2,7 +2,8 @@
 
 :root {
     --offwhite: #fdfbfb;
-    --red: #ef233c;
+    /* --red: #ef233c; */
+    --red: #F14F63;
     --grey: #8d99ae;
     --offblack: #141522;
     --transblack: #141522cc;
@@ -112,6 +113,7 @@ nav a.headlink, nav a.headlink svg {
 
 /* text styling */
 h1 {
+    color: var(--offblack);
     font-size: min(144px, 10vw);
     font-weight: 500;
     text-align: center;
@@ -164,12 +166,14 @@ li, p {
 }
 
 .paragraph {
+    color: var(--offblack);
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
 .main-subtitle {
+    color: var(--offblack);
     font-size: min(64px, 4.44vw);
     font-weight: 400;
     text-align: center;
@@ -209,6 +213,10 @@ body {
 /* change the colour of section headers */
 .header-white {
     color: var(--offwhite);
+}
+
+.header-black {
+    color: var(--offblack);
 }
 
 .header-black svg {
@@ -473,7 +481,7 @@ body {
     width: 75%;
     height: 75%;
     /* transition: filter 0.15s ease-in-out; */
-    filter: brightness(0%) saturate(100%) invert(27%) sepia(97%) saturate(2364%) hue-rotate(335deg) brightness(90%) contrast(110%);
+    filter: brightness(0%) saturate(100%) invert(49%) sepia(46%) saturate(2819%) hue-rotate(319deg) brightness(92%) contrast(106%);
     /* min-width: 100%; */
     /* min-height: 100%; */
 }
@@ -593,6 +601,7 @@ body {
 }
 
 .subpage-text, ul {
+    color: var(--offblack);
     font-size: 20px;
 }
 
